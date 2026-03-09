@@ -1,10 +1,11 @@
+/* GLOBAL */
 body {
-    background-color: #111;
+    background-color: #0d0d0d;
     color: #d9d9d9;
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 0;
-    padding: 40px 20px;
+    padding: 0;
 }
 
 /* HERO SECTION */
@@ -20,8 +21,8 @@ body {
 }
 
 h1 {
-    font-size: 3.8rem;
-    color: #e5e5e5;
+    font-size: 3.2rem;
+    color: #ffffff;
     margin-bottom: 10px;
 }
 
