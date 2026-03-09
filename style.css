@@ -1,0 +1,89 @@
+/* GLOBAL */
+body {
+    background-color: #0d0d0d;
+    color: #d9d9d9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #111, #0d0d0d);
+}
+
+.logo {
+    width: 90px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #d9d9d9;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    border-top: 1px solid #333;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* EMAIL BOX */
+.email-box {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 12px;
+    width: 280px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+/* BUTTONS */
+.button, button {
+    background-color: #4da6ff;
+    color: #0d0d0d;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover, button:hover {
+    background-color: #1a8cff;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #777;
+}
