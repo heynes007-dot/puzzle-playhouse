@@ -7,7 +7,7 @@ document.querySelector(this.getAttribute("href"))
 });
 
 // Set your next puzzle release date here
-const releaseDate = new Date("April 1, 2025 00:00:00").getTime();
+const releaseDate = new Date("April 1, 2026 18:00:00").getTime();
 
 const countdownElement = document.getElementById("countdown");
 
