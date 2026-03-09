@@ -98,11 +98,20 @@ footer {
 .social-links img {
     width: 32px;
     height: 32px;
-    filter: invert(90%); /* makes icons silver/white */
+    filter: invert(90%); /* silver icons */
     opacity: 0.85;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, filter 0.2s ease;
 }
 
 .social-links img:hover {
     opacity: 1;
+}
+
+/* GOLD INSTAGRAM ICON */
+.gold-icon img {
+    filter: brightness(0) saturate(100%) invert(74%) sepia(57%) saturate(748%) hue-rotate(12deg) brightness(101%) contrast(92%);
+}
+
+.gold-icon img:hover {
+    filter: brightness(0) saturate(100%) invert(83%) sepia(92%) saturate(1400%) hue-rotate(10deg) brightness(110%) contrast(100%);
 }
