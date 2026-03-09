@@ -1,45 +1,88 @@
-body{
-font-family:Arial;
-margin:0;
-background:#0d0d0d;
-color:white;
-text-align:center;
+body {
+    background-color: #0d0d0d;
+    color: #d9d9d9;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
-.hero{
-padding:160px 20px;
-background:linear-gradient(#000,#111);
+/* HERO SECTION */
+.hero {
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #111, #0d0d0d);
 }
 
-.section{
-padding:100px 20px;
+.logo {
+    width: 90px;
+    margin-bottom: 20px;
+    opacity: 0.9;
 }
 
-.dark{
-background:#161616;
+h1 {
+    font-size: 3.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-h1{
-font-size:70px;
-letter-spacing:5px;
+.tagline {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #d9d9d9;
 }
 
-.btn{
-display:inline-block;
-margin-top:20px;
-padding:18px 45px;
-background:white;
-color:black;
-text-decoration:none;
-border-radius:40px;
-font-weight:bold;
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    border-top: 1px solid #333;
 }
 
-input{
-padding:16px;
-width:300px;
-max-width:80%;
-border-radius:30px;
-border:none;
-margin-top:20px;
+h2 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* EMAIL BOX */
+.email-box {
+    margin-top: 20px;
+}
+
+input[type="email"] {
+    padding: 12px;
+    width: 280px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+/* BUTTONS */
+.button, button {
+    background-color: #4da6ff;
+    color: #0d0d0d;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.button:hover, button:hover {
+    background-color: #1a8cff;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #777;
 }
