@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Puzzle Playhouse – Book Collections</title>
+<title>Puzzle Playhouse – Book Catalogue</title>
 
 <style>
 
@@ -15,50 +15,49 @@ body{
 }
 
 .container{
-    max-width:900px;
+    max-width:1200px;
     margin:auto;
     padding:40px 20px;
 }
 
-/* HEADER LINK WITH LOGO */
-.header {
-    margin-bottom: 20px;
+/* HEADER */
+
+.header{
+    margin-bottom:30px;
 }
 
-.home-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: silver;
-    text-decoration: none;
-    font-size: 42px;
-    font-weight: bold;
-}
-
-.home-link:hover {
-    color: #dcdcdc;
-}
-
-.header-logo {
-    width: 60px;
-    height: auto;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
-}
-
-h2{
+.home-link{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
     color:silver;
-    margin-top:40px;
+    text-decoration:none;
+    font-size:42px;
+    font-weight:bold;
 }
 
-p{
-    color:silver;
-    font-size:18px;
-    line-height:1.6;
+.home-link:hover{
+    color:#dcdcdc;
 }
+
+.header-logo{
+    width:60px;
+}
+
+/* AMAZON VIEWER */
+
+.catalogue-frame{
+    width:100%;
+    height:900px;
+    border:1px solid silver;
+    margin-top:30px;
+}
+
+/* BUTTON */
 
 .button{
     display:inline-block;
-    margin:15px;
+    margin:25px;
     padding:14px 28px;
     font-size:18px;
     color:black;
@@ -70,12 +69,6 @@ p{
 
 .button:hover{
     background:#c0c0c0;
-}
-
-.book-box{
-    border:1px solid silver;
-    padding:25px;
-    margin-top:30px;
 }
 
 footer{
@@ -92,45 +85,31 @@ footer{
 
 <div class="container">
 
-<!-- CLICKABLE HEADER -->
+<!-- HEADER -->
 <div class="header">
-    <a href="index.html" class="home-link">
-        <img src="logo.png" alt="Puzzle Playhouse Logo" class="header-logo">
-        <span>Puzzle Playhouse</span>
-    </a>
+<a href="index.html" class="home-link">
+<img src="logo.png" class="header-logo">
+<span>Puzzle Playhouse</span>
+</a>
 </div>
 
-<h2>Our Puzzle Book Collections</h2>
+<h2>Puzzle Playhouse Book Catalogue</h2>
 
-<p>Explore our full range of books — perfect for kids, families, and puzzle lovers of all ages.</p>
+<p>Browse the full Puzzle Playhouse collection of puzzle books, journals and sketchbooks.</p>
 
-<div class="book-box">
-    <h2>🧩 Puzzle Books</h2>
-    <p>Browse and discover all available puzzle books.</p>
+<a class="button" href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">
+View Full Author Page
+</a>
 
-    <a class="button" href="https://mybook.to/PuzzlePlayhouse" target="_blank">
-        View Our Puzzle Books
-</div>
+<!-- AMAZON AUTHOR PAGE EMBED -->
 
-    <div class="book-box">
-    <h2>🧩 Journals and Notebooks</h2>
-    <p>Browse and discover all our Journals and Notebooks.</p>
-
-    <a class="button" href="https://mybook.to/Journals_and_Notebooks" target="_blank">
-        View Our Journals and Notebooks
-</div>
-    
-<div class="book-box">
-    <h2>🛒 Colouring and Drawing Books</h2>
-    <p>Download and print puzzle packs instantly from our Etsy shop.</p>
-
-    <a class="button" href="https://mybook.to/Colouring_and_drawing" target="_blank">
-        View Our Colouring and Drawing Books
-    </a>
-</div>
+<iframe 
+class="catalogue-frame"
+src="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true">
+</iframe>
 
 <footer>
-    <p>© Puzzle Playhouse – Book Collections</p>
+<p>© Puzzle Playhouse</p>
 </footer>
 
 </div>
