@@ -163,4 +163,12 @@ button:hover {
 .icon-pinterest {
     width: 28px;
 }
-   
+   /* Adjust YouTube icon size */
+.icon-youtube {
+    transform: scale(1.25);
+}
+/* Add space below social icons */
+.social-links {
+    margin-bottom: 40px;
+}
+
