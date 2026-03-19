@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Join the Puzzle Playhouse Email List</title>
+<title>Puzzle Playhouse</title>
 
 <style>
 
@@ -20,44 +21,75 @@ body{
     padding:40px 20px;
 }
 
-/* HEADER LINK WITH LOGO */
-.header {
-    margin-bottom: 20px;
+/* LOGO */
+
+.logo{
+    width:100px;
+    margin-bottom:10px;
 }
 
-.home-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: silver;
-    text-decoration: none;
-    font-size: 42px;
-    font-weight: bold;
-}
+/* HEADINGS */
 
-.home-link:hover {
-    color: #dcdcdc;
-}
-
-.header-logo {
-    width: 60px;
-    height: auto;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
+h1{
+    font-size:42px;
+    margin:10px 0;
 }
 
 h2{
-    color:silver;
     margin-top:40px;
 }
 
+/* TEXT */
+
 p{
-    color:silver;
     font-size:18px;
     line-height:1.6;
 }
 
+/* BUTTONS */
+
+.button{
+    display:block;
+    margin:15px auto;
+    padding:14px 28px;
+    width:260px;
+    font-size:18px;
+    color:black;
+    background:silver;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.button:hover{
+    background:#c0c0c0;
+}
+
+/* SOCIAL ICONS */
+
+.socials{
+    margin-top:50px;
+}
+
+.socials a{
+    margin:0 10px;
+    display:inline-block;
+}
+
+.socials img{
+    width:30px;
+    filter: brightness(0) invert(0.8); /* silver */
+    transition:0.3s;
+}
+
+.socials img:hover{
+    filter: brightness(0) invert(0.7) sepia(1) saturate(5) hue-rotate(20deg); /* gold */
+}
+
+/* FOOTER */
+
 footer{
-    margin-top:60px;
+    margin-top:40px;
     font-size:14px;
     opacity:0.7;
 }
@@ -70,42 +102,50 @@ footer{
 
 <div class="container">
 
-<!-- CLICKABLE HEADER -->
-<div class="header">
-    <a href="index.html" class="home-link">
-        <img src="logo.png" alt="Puzzle Playhouse Logo" class="header-logo">
-        <span>Puzzle Playhouse</span>
-    </a>
-</div>
+<!-- LOGO -->
+<img src="logo.png" class="logo" alt="Puzzle Playhouse Logo">
 
-<h2>Join the Puzzle Playhouse Email List</h2>
+<h1>🧩 Puzzle Playhouse</h1>
 
-<p>Sign up to receive free monthly puzzles, colouring pages, and special bonuses.</p>
+<p>
+Fun, creative and educational books designed for kids and families.
+</p>
 
-<!-- MAILERLITE FORM -->
-<div class="ml-embedded" data-form="eMFUOQ"></div>
-<script src="https://assets.mailerlite.com/js/universal.js" defer></script>
+<p>
+We create engaging <strong>puzzle books</strong>, <strong>colouring books</strong>, 
+<strong>journals</strong>, <strong>logs</strong> and <strong>notebooks</strong> 
+to help children learn, relax and enjoy screen-free time.
+</p>
 
-<footer>
-    <p>© Puzzle Playhouse – Email Sign‑Up</p>
-</footer>
+<!-- BUTTONS -->
 
-</div>
+<h2>Explore</h2>
 
-</body>
-</html>
-    </section>
-<section class="section">
-    <h2>Monthly Puzzle Giveaway</h2>
-    <p>See this month’s challenge and download your free puzzle!</p>
-    <a href="monthly-puzzle.html" class="button">Go to Monthly Puzzle</a>
-</section>
-    
-    <!-- BOOKS SECTION -->
-    <section class="section">
-        <h2>Explore Puzzle Playhouse Books</h2>
-        <p>Love puzzles? Discover more books here.</p>
-        <a href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" class="button" target="_blank">View Puzzle Books</a>
+<a class="button" href="monthly-puzzle.html">
+🎁 Monthly Free Puzzle
+</a>
+
+<a class="button" href="sign_up.html">
+📩 Join Free Puzzle Club
+</a>
+
+<a class="button" href="bookcollections.html">
+📚 Browse Book Collection
+</a>
+
+<h2>Shop</h2>
+
+<a class="button" href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">
+🛒 View on Amazon
+</a>
+
+<a class="button" href="https://www.etsy.com/uk/shop/AH10Creations?ref=lp_mys_mfts" target="_blank">
+🖨️ Shop on Etsy
+</a>
+
+<!-- SOCIAL MEDIA -->
+
+
     </section>
     <h3 class="follow-heading">Follow Us</h3>
 <div class="social-links">
