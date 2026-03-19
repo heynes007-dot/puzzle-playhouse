@@ -149,4 +149,18 @@ button:hover {
     transform: scale(1.1);
     opacity: 0.85;
 }
+.icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* fine‑tune individual logos */
+.icon-youtube {
+    width: 36px;
+}
+
+.icon-pinterest {
+    width: 28px;
+}
    
