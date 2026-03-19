@@ -55,6 +55,24 @@ p{
     line-height:1.6;
 }
 
+/* SIGNUP BUTTON */
+.signup-button{
+    display:inline-block;
+    margin:30px auto;
+    padding:14px 28px;
+    font-size:20px;
+    color:black;
+    background:silver;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.signup-button:hover{
+    background:#c0c0c0;
+}
+
 /* SOCIAL ICONS */
 .follow-heading{
     margin-top:50px;
@@ -106,10 +124,55 @@ footer{
 
     <p>Sign up to receive free monthly puzzles, colouring pages, and special bonuses.</p>
 
-    <!-- MAILERLITE FORM WITH SAFE FALLBACK -->
-    <div id="signup-area">
-        <p style="opacity:0.6;">Loading signup form…</p>
+    <!-- SIGNUP BUTTON -->
+    <button class="signup-button ml-onclick-form" onclick="ml('show', 'eMFUOQ', true)">
+        📩 Click Here to Sign Up
+    </button>
+
+    <!-- FALLBACK MESSAGE IF SCRIPT FAILS -->
+    <noscript>
+        <p style="color:silver; margin-top:20px;">
+            Our signup form requires JavaScript. Please enable it and try again.
+        </p>
+    </noscript>
+
+    <div id="fallback-message" style="display:none; margin-top:20px; color:silver;">
+        Our signup form is temporarily unavailable. Please check back soon — we’d love to have you join us.
     </div>
 
+    <!-- MAILERLITE SCRIPT -->
     <script>
-    document.addEventListener("DOMContent
+    const script = document.createElement("script");
+    script.src = "https://assets.mailerlite.com/js/universal.js";
+    script.onload = () => console.log("MailerLite loaded");
+    script.onerror = () => {
+        document.getElementById("fallback-message").style.display = "block";
+    };
+    document.body.appendChild(script);
+    </script>
+
+    <!-- SOCIAL MEDIA -->
+    <h3 class="follow-heading">Follow Us</h3>
+    <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/ah10admi" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@AHPuzzles" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+        </a>
+        <a href="https://uk.pinterest.com/Puzzle_Playhouse/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest">
+        </a>
+    </div>
+
+    <footer>
+        <p>© Puzzle Playhouse – Email Sign‑Up</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
