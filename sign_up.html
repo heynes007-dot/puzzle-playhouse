@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Join the Puzzle Playhouse Email List</title>
 
-<!-- MAILERLITE UNIVERSAL SCRIPT (REQUIRED) -->
+<!-- MAILERLITE UNIVERSAL SCRIPT -->
 <script>
     (function(w,d,e,u,f,l,n){
         w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments)};
@@ -12,119 +12,18 @@
         n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
     })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 
-    ml('account', '2200264'); /* YOUR REAL ACCOUNT ID */
+    ml('account', '2200264'); /* Your real account ID */
 </script>
 <!-- END MAILERLITE UNIVERSAL -->
 
-<style>
-body{
-    background:black;
-    color:silver;
-    font-family:Arial, Helvetica, sans-serif;
-    text-align:center;
-    margin:0;
-    padding:0;
-}
-
-.container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
-}
-
-/* HEADER LINK WITH LOGO */
-.header {
-    margin-bottom: 20px;
-}
-
-.home-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    color: silver;
-    text-decoration: none;
-    font-size: 42px;
-    font-weight: bold;
-}
-
-.home-link:hover {
-    color: #dcdcdc;
-}
-
-.header-logo {
-    width: 60px;
-    height: auto;
-    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
-}
-
-/* HEADINGS & TEXT */
-h2{
-    margin-top:40px;
-}
-
-p{
-    font-size:18px;
-    line-height:1.6;
-}
-
-/* SIGNUP BUTTON */
-.signup-button{
-    display:inline-block;
-    margin:30px auto;
-    padding:14px 28px;
-    font-size:20px;
-    color:black;
-    background:silver;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-.signup-button:hover{
-    background:#c0c0c0;
-}
-
-/* SOCIAL ICONS */
-.follow-heading{
-    margin-top:50px;
-    font-size:20px;
-}
-
-.socials{
-    margin-top:15px;
-}
-
-.socials a{
-    margin:0 10px;
-    display:inline-block;
-}
-
-.socials img{
-    width:32px;
-    height:32px;
-    filter: brightness(0) invert(1);
-    transition:0.3s;
-}
-
-.socials img:hover{
-    filter: brightness(1) sepia(1) saturate(5) hue-rotate(20deg);
-}
-
-/* FOOTER */
-footer{
-    margin-top:50px;
-    font-size:14px;
-    opacity:0.7;
-}
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- CLICKABLE HEADER -->
+    <!-- HEADER -->
     <div class="header">
         <a href="index.html" class="home-link">
             <img src="logo.png" alt="Puzzle Playhouse Logo" class="header-logo">
@@ -132,30 +31,38 @@ footer{
         </a>
     </div>
 
-    <h2>Join the Puzzle Playhouse Email List</h2>
+    <!-- HERO / TITLE -->
+    <section class="hero">
+        <img src="logo.png" class="logo" alt="Puzzle Playhouse Logo">
+        <h1>Join Our Email List</h1>
+        <p class="tagline">Free monthly puzzles, colouring pages, and fun bonuses for kids and families.</p>
+    </section>
 
-    <p>Sign up to receive free monthly puzzles, colouring pages, and special bonuses.</p>
+    <!-- SIGNUP BUTTON -->
+    <section class="section">
+        <h2>Sign Up</h2>
+        <p>Tap the button below to open the signup form.</p>
 
-    <!-- SIGNUP BUTTON (THIS OPENS YOUR POPUP FORM) -->
-    <button class="signup-button ml-onclick-form" onclick="ml('show', 'eMFUOQ', true)">
-        📩 Click Here to Sign Up
-    </button>
+        <button class="button ml-onclick-form" onclick="ml('show', 'eMFUOQ', true)">
+            📩 Click Here to Join the Puzzle Club
+        </button>
 
-    <!-- FALLBACK MESSAGE IF MAILERLITE FAILS -->
-    <div id="fallback-message" style="display:none; margin-top:20px; color:silver;">
-        Our signup form is temporarily unavailable. Please check back soon — we’d love to have you join us.
-    </div>
+        <!-- FALLBACK MESSAGE -->
+        <div id="fallback-message" style="display:none; margin-top:20px; color:#d9d9d9;">
+            Our signup form is temporarily unavailable. Please check back soon — we’d love to have you join us.
+        </div>
 
-    <script>
-        // If the MailerLite script fails to load, show the fallback message
-        window.addEventListener("error", () => {
-            document.getElementById("fallback-message").style.display = "block";
-        });
-    </script>
+        <script>
+            window.addEventListener("error", () => {
+                document.getElementById("fallback-message").style.display = "block";
+            });
+        </script>
+    </section>
 
     <!-- SOCIAL MEDIA -->
     <h3 class="follow-heading">Follow Us</h3>
-    <div class="socials">
+
+    <div class="social-links">
         <a href="https://www.facebook.com/" target="_blank">
             <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
         </a>
@@ -170,8 +77,9 @@ footer{
         </a>
     </div>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© Puzzle Playhouse – Email Sign‑Up</p>
+        © Puzzle Playhouse – Email Sign‑Up
     </footer>
 
 </div>
