@@ -1,4 +1,6 @@
-/* GLOBAL */
+/* --------------------------------------------------
+   GLOBAL STYLES
+-------------------------------------------------- */
 body {
     background-color: #0d0d0d;
     color: #d9d9d9;
@@ -8,7 +10,9 @@ body {
     padding: 0;
 }
 
-/* HERO SECTION */
+/* --------------------------------------------------
+   HERO SECTION
+-------------------------------------------------- */
 .hero {
     padding: 80px 20px;
     background: linear-gradient(to bottom, #111, #0d0d0d);
@@ -32,7 +36,9 @@ h1 {
     color: #d9d9d9;
 }
 
-/* SECTIONS */
+/* --------------------------------------------------
+   SECTIONS
+-------------------------------------------------- */
 .section {
     padding: 60px 20px;
     border-top: 1px solid #333;
@@ -49,7 +55,9 @@ p {
     margin-bottom: 20px;
 }
 
-/* EMAIL BOX */
+/* --------------------------------------------------
+   EMAIL INPUT (if used)
+-------------------------------------------------- */
 .email-box {
     margin-top: 20px;
 }
@@ -63,8 +71,11 @@ input[type="email"] {
     margin-right: 10px;
 }
 
-/* BUTTONS */
-.button, button {
+/* --------------------------------------------------
+   BUTTONS
+-------------------------------------------------- */
+.button,
+button {
     background-color: #4da6ff;
     color: #0d0d0d;
     padding: 12px 22px;
@@ -77,56 +88,14 @@ input[type="email"] {
     font-weight: bold;
 }
 
-.button:hover, button:hover {
+.button:hover,
+button:hover {
     background-color: #1a8cff;
 }
 
-/* FOOTER */
-footer {
-    padding: 30px;
-    font-size: 0.9rem;
-    color: #777;
-}
-/* SOCIAL ICONS */
-.social-links {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
-
-.social-links img {
-    width: 32px;
-    height: 32px;
-    filter: invert(90%); /* silver icons */
-    opacity: 0.85;
-    transition: opacity 0.2s ease, filter 0.2s ease;
-}
-
-.social-links img:hover {
-    opacity: 1;
-}
-
-/* GOLD INSTAGRAM ICON */
-.gold-icon img {
-    filter: brightness(0) saturate(100%) invert(74%) sepia(57%) saturate(748%) hue-rotate(12deg) brightness(101%) contrast(92%);
-}
-
-.gold-icon img:hover {
-    filter: brightness(0) saturate(100%) invert(83%) sepia(92%) saturate(1400%) hue-rotate(10deg) brightness(110%) contrast(100%);
-}
-/* FOLLOW US HEADING */
-.follow-heading {
-    font-size: 1.6rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
-    color: #d9d9d9; /* metallic silver */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: bold;
-    opacity: 0.9;
-}
-/* HEADER LINK WITH LOGO */
+/* --------------------------------------------------
+   HEADER LINK WITH LOGO
+-------------------------------------------------- */
 .header {
     margin-bottom: 20px;
 }
@@ -142,7 +111,7 @@ footer {
 }
 
 .home-link:hover {
-    color: #dcdcdc; /* subtle silver glow */
+    color: #dcdcdc;
 }
 
 .header-logo {
@@ -151,4 +120,11 @@ footer {
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
 }
 
-
+/* --------------------------------------------------
+   SOCIAL ICONS (FULL COLOUR)
+-------------------------------------------------- */
+.follow-heading {
+    font-size: 1.6rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+   
