@@ -123,8 +123,30 @@ button:hover {
 /* --------------------------------------------------
    SOCIAL ICONS (FULL COLOUR)
 -------------------------------------------------- */
-.follow-heading {
-    font-size: 1.6rem;
-    margin-top: 50px;
-    margin-bottom: 20px;
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.social-links a {
+    width: 40px;      /* uniform box */
+    height: 40px;     /* uniform box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-links img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;   /* keeps proportions correct */
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
    
