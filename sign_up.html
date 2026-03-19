@@ -47,31 +47,12 @@ body{
 
 /* HEADINGS & TEXT */
 h2{
-    color:silver;
     margin-top:40px;
 }
 
 p{
-    color:silver;
     font-size:18px;
     line-height:1.6;
-}
-
-/* BUTTONS */
-.button{
-    display:inline-block;
-    margin:20px 10px 0;
-    padding:12px 24px;
-    font-size:16px;
-    color:black;
-    background:silver;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:bold;
-}
-
-.button:hover{
-    background:#c0c0c0;
 }
 
 /* SOCIAL ICONS */
@@ -90,8 +71,9 @@ p{
 }
 
 .socials img{
-    width:30px;
-    filter: brightness(0) invert(0.9);
+    width:32px;
+    height:32px;
+    filter: brightness(0) invert(1);
     transition:0.3s;
 }
 
@@ -101,7 +83,7 @@ p{
 
 /* FOOTER */
 footer{
-    margin-top:40px;
+    margin-top:50px;
     font-size:14px;
     opacity:0.7;
 }
@@ -124,38 +106,10 @@ footer{
 
     <p>Sign up to receive free monthly puzzles, colouring pages, and special bonuses.</p>
 
-    <!-- MAILERLITE FORM -->
-    <div class="ml-embedded" data-form="eMFUOQ"></div>
-    <script src="https://assets.mailerlite.com/js/universal.js" defer></script>
-
-    <!-- NAV BUTTONS -->
-    <div>
-        <a class="button" href="index.html">⬅ Back to Home</a>
-        <a class="button" href="monthly-puzzle.html">🎁 Monthly Free Puzzle</a>
+    <!-- MAILERLITE FORM WITH SAFE FALLBACK -->
+    <div id="signup-area">
+        <p style="opacity:0.6;">Loading signup form…</p>
     </div>
 
-    <!-- SOCIAL MEDIA -->
-    <h3 class="follow-heading">Follow Us</h3>
-    <div class="socials">
-        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/facebook.svg" alt="Facebook">
-        </a>
-        <a href="https://www.instagram.com/ah10admi" target="_blank" aria-label="Instagram">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/instagram.svg" alt="Instagram">
-        </a>
-        <a href="https://www.youtube.com/@AHPuzzles" target="_blank" aria-label="YouTube">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/youtube.svg" alt="YouTube">
-        </a>
-        <a href="https://uk.pinterest.com/Puzzle_Playhouse/" target="_blank" aria-label="Pinterest">
-            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/pinterest.svg" alt="Pinterest">
-        </a>
-    </div>
-
-    <footer>
-        <p>© Puzzle Playhouse – Email Sign‑Up</p>
-    </footer>
-
-</div>
-
-</body>
-</html>
+    <script>
+    document.addEventListener("DOMContent
