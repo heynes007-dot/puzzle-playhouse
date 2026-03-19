@@ -65,25 +65,42 @@ p{
     background:#c0c0c0;
 }
 
-/* SOCIAL ICONS */
-.socials{
-    margin-top:20px;
+/* SOCIAL ICONS — UNIFORM SIZE */
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 40px;
 }
 
-.socials a{
-    margin:0 10px;
-    display:inline-block;
+.social-links a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.socials img{
-    width:32px;
-    height:32px;
-    filter: brightness(0) invert(1); /* makes icons silver */
-    transition:0.3s;
+.social-links img,
+.icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.socials img:hover{
-    filter: brightness(1) sepia(1) saturate(5) hue-rotate(20deg);
+.social-links img:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+}
+
+.icon-youtube {
+    transform: scale(1.25);
+}
+
+.icon-pinterest {
+    transform: scale(0.85);
 }
 
 /* FOOTER */
