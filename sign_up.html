@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <title>Join the Puzzle Playhouse Email List</title>
 
+<!-- MAILERLITE UNIVERSAL SCRIPT (REQUIRED) -->
+<script>
+    (function(w,d,e,u,f,l,n){
+        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments)};
+        l=d.createElement(e);l.async=1;l.src=u;
+        n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
+    })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+
+    ml('account', '2200264'); /* YOUR REAL ACCOUNT ID */
+</script>
+<!-- END MAILERLITE UNIVERSAL -->
+
 <style>
 body{
     background:black;
@@ -121,3 +133,48 @@ footer{
     </div>
 
     <h2>Join the Puzzle Playhouse Email List</h2>
+
+    <p>Sign up to receive free monthly puzzles, colouring pages, and special bonuses.</p>
+
+    <!-- SIGNUP BUTTON (THIS OPENS YOUR POPUP FORM) -->
+    <button class="signup-button ml-onclick-form" onclick="ml('show', 'eMFUOQ', true)">
+        📩 Click Here to Sign Up
+    </button>
+
+    <!-- FALLBACK MESSAGE IF MAILERLITE FAILS -->
+    <div id="fallback-message" style="display:none; margin-top:20px; color:silver;">
+        Our signup form is temporarily unavailable. Please check back soon — we’d love to have you join us.
+    </div>
+
+    <script>
+        // If the MailerLite script fails to load, show the fallback message
+        window.addEventListener("error", () => {
+            document.getElementById("fallback-message").style.display = "block";
+        });
+    </script>
+
+    <!-- SOCIAL MEDIA -->
+    <h3 class="follow-heading">Follow Us</h3>
+    <div class="socials">
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/ah10admi" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
+        </a>
+        <a href="https://www.youtube.com/@AHPuzzles" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
+        </a>
+        <a href="https://uk.pinterest.com/Puzzle_Playhouse/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest">
+        </a>
+    </div>
+
+    <footer>
+        <p>© Puzzle Playhouse – Email Sign‑Up</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
