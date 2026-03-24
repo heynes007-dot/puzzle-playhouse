@@ -251,12 +251,40 @@ button:hover {
     filter: drop-shadow(0 0 6px rgba(0,0,0,0.25)); /* slightly stronger glow */
 }
 
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px 0;
+}
+
+/* Wrapper ensures perfect centering */
+.footer-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* Logo styling */
+.footer-logo {
+    width: 50px;              /* smaller size */
+    height: auto;
+    display: block;
+    transition: transform 0.25s ease, filter 0.25s ease;
+    filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
+}
+
+/* Hover effect */
+.footer-logo:hover {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.35));
+}
+
 /* Footer links */
 .footer-links {
     display: flex;
     justify-content: center;
     gap: 25px;
-    margin-top: 10px;
 }
 
 .footer-links a {
