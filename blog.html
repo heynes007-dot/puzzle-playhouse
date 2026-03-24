@@ -4,137 +4,136 @@
     <title>Puzzle Playhouse Blog</title>
     
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f5f5f5;
-        }
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f5f5f5;
+    }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
+    .container {
+        max-width: 1000px;
+        margin: auto;
+        padding: 20px;
+    }
 
-        h1, h2 {
-            text-align: center;
-        }
+    h1, h2 {
+        text-align: center;
+    }
 
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .intro {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
-        .featured {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    .featured {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-        .featured h2 {
-            margin-top: 0;
-        }
+    .featured h2 {
+        margin-top: 0;
+    }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+    }
 
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
 
-        .card h3 {
-            margin-top: 0;
-        }
+    .card h3 {
+        margin-top: 0;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 15px;
-            background: black;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
+    .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
 
-        .cta {
-            text-align: center;
-            margin-top: 50px;
-            padding: 30px;
-            background: black;
-            color: white;
-            border-radius: 10px;
-        }
+    .cta {
+        text-align: center;
+        margin-top: 50px;
+        padding: 30px;
+        background: black;
+        color: white;
+        border-radius: 10px;
+    }
 
-        .cta a {
-            background: white;
-            color: black;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            
-            .cta a:hover {
-    background: #ffd700; /* gold */
-    color: black;
-    box-shadow: 0 0 12px #ffd700;
-    transition: 0.25s ease;
-        }
-            
-        * FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 90px;
-    padding: 40px 0;
-}
+    .cta a {
+        background: white;
+        color: black;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
 
-/* Wrapper ensures perfect centering */
-.footer-logo-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
-}
+    /* GOLD GLOW ON HOVER */
+    .cta a:hover {
+        background: #ffd700; /* gold */
+        color: black;
+        box-shadow: 0 0 12px #ffd700;
+        transition: 0.25s ease;
+    }
 
-/* Logo styling */
-.footer-logo {
-    width: 55px;              /* smaller size */
-    height: auto;
-    display: block;
-    transition: transform 0.25s ease, filter 0.25s ease;
-    filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
-}
+    /* FOOTER */
+    .footer {
+        text-align: center;
+        margin-top: 90px;  /* extra space above logo */
+        padding: 40px 0;
+    }
 
-/* Hover effect */
-.footer-logo:hover {
-    transform: scale(1.15);
-    filter: drop-shadow(0 0 8px rgba(0,0,0,0.35));
-}
+    .footer-logo-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
 
-/* Footer links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-}
+    .footer-logo {
+        width: 55px;
+        height: auto;
+        display: block;
+        transition: transform 0.25s ease, filter 0.25s ease;
+        filter: drop-shadow(0 0 4px rgba(0,0,0,0.2));
+    }
 
-.footer-links a {
-    color: black;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.8;
-}
+    .footer-logo:hover {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 8px rgba(0,0,0,0.35));
+    }
 
-.footer-links a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
-    </style>
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .footer-links a {
+        color: black;
+        text-decoration: none;
+        font-size: 14px;
+        opacity: 0.8;
+    }
+
+    .footer-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+</style>
+    
 </head>
 
 <body>
