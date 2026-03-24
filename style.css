@@ -238,10 +238,10 @@ button:hover {
 
 /* Logo button */
 .footer-logo {
-    width: 55px;          /* smaller, cleaner */
+    width: 30px;          /* smaller, cleaner */
     height: auto;
     display: block;
-    margin: 0 auto 15px;  /* perfectly centred */
+    margin: 0 auto 20px;  /* perfectly centred */
     filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
     transition: transform 0.25s ease, filter 0.25s ease;
 }
