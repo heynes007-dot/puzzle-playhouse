@@ -233,29 +233,6 @@ button:hover {
     text-align: center;
     margin-top: 60px;
     padding: 40px 0;
-    color: #555;
-}
-
-/* Logo button */
-.footer-logo {
-    width: 30px;          /* smaller, cleaner */
-    height: auto;
-    display: block;
-    margin: 0 auto 20px;  /* perfectly centred */
-    filter: drop-shadow(0 0 4px rgba(0,0,0,0.15));
-    transition: transform 0.25s ease, filter 0.25s ease;
-}
-
-.footer-logo:hover {
-    transform: scale(1.12);                     /* subtle zoom */
-    filter: drop-shadow(0 0 6px rgba(0,0,0,0.25)); /* slightly stronger glow */
-}
-
-/* FOOTER */
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 40px 0;
 }
 
 /* Wrapper ensures perfect centering */
@@ -267,7 +244,7 @@ button:hover {
 
 /* Logo styling */
 .footer-logo {
-    width: 50px;              /* smaller size */
+    width: 55px;              /* smaller size */
     height: auto;
     display: block;
     transition: transform 0.25s ease, filter 0.25s ease;
