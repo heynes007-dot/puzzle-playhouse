@@ -33,5 +33,14 @@
     "link": "https://www.amazon.co.uk/dp/B0DSTY85TP",
     "newRelease": false
 
+  },
+  {
+    "title": "Food Critic",
+    "emoji": "🍔",
+    "description": "The Food Critic’s Notebook.",
+    "image": "Food_Critic_book.png",
+    "link": "https://www.amazon.co.uk/dp/B0DSTY85TP",
+    "newRelease": false
+
   }
 ]
