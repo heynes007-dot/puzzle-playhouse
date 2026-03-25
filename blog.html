@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Puzzle Playhouse Books</title>
+    <title>Puzzle Playhouse Blog</title>
     
     <style>
     body {
@@ -25,34 +25,35 @@
         margin-bottom: 40px;
     }
 
-    /* GRID */
+    .featured {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .featured h2 {
+        margin-top: 0;
+    }
+
     .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
     }
 
-    /* BOOK CARD */
     .card {
         background: white;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        text-align: center;
-    }
-
-    .card img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 15px;
     }
 
     .card h3 {
         margin-top: 0;
     }
 
-    /* BUTTON */
     .btn {
         display: inline-block;
         margin-top: 10px;
@@ -61,17 +62,8 @@
         color: white;
         text-decoration: none;
         border-radius: 5px;
-        transition: 0.25s ease;
     }
 
-    /* GOLD HOVER EFFECT */
-    .btn:hover {
-        background: #ffd700;
-        color: black;
-        box-shadow: 0 0 12px #ffd700;
-    }
-
-    /* CTA */
     .cta {
         text-align: center;
         margin-top: 50px;
@@ -87,19 +79,20 @@
         padding: 10px 20px;
         text-decoration: none;
         border-radius: 5px;
-        transition: 0.25s ease;
     }
 
+    /* GOLD GLOW ON HOVER */
     .cta a:hover {
-        background: #ffd700;
+        background: #ffd700; /* gold */
         color: black;
         box-shadow: 0 0 12px #ffd700;
+        transition: 0.25s ease;
     }
 
     /* FOOTER */
     .footer {
         text-align: center;
-        margin-top: 90px;
+        margin-top: 90px;  /* extra space above logo */
         padding: 40px 0;
     }
 
@@ -140,47 +133,50 @@
         text-decoration: underline;
     }
 </style>
-    
 </head>
 
 <body>
 
 <div class="container">
+  
 
-    <h1>📚 Puzzle Playhouse Books</h1>
+    <h1>Puzzle Playhouse Blog</h1>
     <p class="intro">
-        Explore our collection of puzzle books, journals, and activity books designed for fun, focus, and relaxation.
+        Tips, activities, and brain games to keep your mind sharp and entertained.
     </p>
 
-    <!-- BOOK GRID -->
+    <!-- FEATURED POST -->
+    <div class="featured">
+        <h2>🧠 Benefits of Puzzle Books for Adults</h2>
+        <p>Discover how puzzles can improve memory, reduce stress, and boost focus.</p>
+        <a href="#" class="btn">Read More</a>
+    </div>
+
+    <!-- BLOG GRID -->
     <div class="grid">
 
         <div class="card">
-            <img src="images/sleep-book.jpg" alt="Sleep Tracker Journal">
-            <h3>😴 Sleep Tracker Journal</h3>
-            <p>Track and improve your sleep with this 120-day guided journal.</p>
-            <a href="https://www.amazon.co.uk/dp/B0G3H93W9H" class="btn" target="_blank">View Book</a>
+            <h3>👨‍👩‍👧 Puzzle Activities for Kids</h3>
+            <p>Fun and educational ideas to keep kids engaged at home.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="card">
-            <img src="images/football-book.jpg" alt="Football Puzzle Book">
-            <h3>⚽ Football Puzzle Book</h3>
-            <p>Word searches and puzzles for football fans of all ages.</p>
-            <a href="#" class="btn">View Book</a>
+            <h3>🧩 Improve Memory with Word Searches</h3>
+            <p>Simple puzzles that strengthen focus and brain function.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="card">
-            <img src="images/christmas-book.jpg" alt="Christmas Puzzle Book">
-            <h3>🎄 Christmas Puzzle Book</h3>
-            <p>Festive puzzles perfect for relaxing during the holidays.</p>
-            <a href="#" class="btn">View Book</a>
+            <h3>📵 Screen-Free Activities</h3>
+            <p>Engaging alternatives to reduce screen time for all ages.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
 
         <div class="card">
-            <img src="images/astronaut-book.jpg" alt="Astronaut Sketch Book">
-            <h3>🚀 Astronaut Sketch Book</h3>
-            <p>Creative sketch space for kids who love space and adventure.</p>
-            <a href="#" class="btn">View Book</a>
+            <h3>😌 Relaxation Through Puzzles</h3>
+            <p>Use puzzles to unwind and improve mental wellbeing.</p>
+            <a href="#" class="btn">Read More</a>
         </div>
 
     </div>
@@ -189,13 +185,11 @@
     <div class="cta">
         <h2>🎁 Get Free Puzzles</h2>
         <p>Join our community and receive exclusive puzzles and updates.</p>
-        <a href="sign_up.html">Sign Up</a>
+        <a href="sign_up.html">sign up</a>
     </div>
+ <!-- Footer -->
 
-</div>
-
-<!-- Footer -->
-<footer class="footer">
+   <footer class="footer">
     <div class="footer-logo-wrapper">
         <a href="index.html">
             <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
@@ -209,6 +203,7 @@
         <a href="terms.html">Terms</a>
     </div>
 </footer>
+
 
 </body>
 </html>
