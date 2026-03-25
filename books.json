@@ -7,10 +7,17 @@
     "link": "https://www.amazon.co.uk/dp/B0G3H93W9H"
   },
   {
-    "title": "Football Puzzle Book",
+    "title": "Football Word Search Book",
     "emoji": "⚽",
-    "description": "Word searches and puzzles for football fans.",
+    "description": "Word searches for football fans.",
     "image": "images/football-book.jpg",
     "link": "https://www.amazon.co.uk/dp/B0DSCJZ8F7"
+  },
+  {
+    "title": "Dino Word Search",
+    "emoji": "🦖",
+    "description": "Word searches for the prehistoric fans.",
+    "image": "images/football-book.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0DSTY85TP"
   }
 ]
