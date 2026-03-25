@@ -5,6 +5,7 @@
     "description": "Track and improve your sleep with this 120-day guided journal.",
     "image": "images/sleep-book.jpg",
     "link": "https://www.amazon.co.uk/dp/B0G3H93W9H"
+    "newRelease": true
   },
   {
     "title": "Football Word Search Book",
@@ -12,6 +13,8 @@
     "description": "Word searches for football fans.",
     "image": "images/football-book.jpg",
     "link": "https://www.amazon.co.uk/dp/B0DSCJZ8F7"
+    "newRelease": false
+
   },
   {
     "title": "Dino Word Search",
@@ -19,6 +22,8 @@
     "description": "Word searches for the prehistoric fans.",
     "image": "images/Dino_word_search.jpg",
     "link": "https://www.amazon.co.uk/dp/B0DSTY85TP"
+    "newRelease": false
+
   },
   {
     "title": "Ice Hockey Crosswords",
@@ -26,5 +31,7 @@
     "description": "Ice Hockey crosswords fun for all ages.",
     "image": "images/Ice_Hocky_X.jpg",
     "link": "https://www.amazon.co.uk/dp/B0DSTY85TP"
+    "newRelease": false
+
   }
 ]
