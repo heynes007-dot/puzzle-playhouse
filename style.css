@@ -261,13 +261,13 @@ button:hover {
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 35px;
 }
 
 .footer-links a {
-    color: black;
+    color: silver;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 18px;
     opacity: 0.8;
 }
 
