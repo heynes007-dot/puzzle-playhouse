@@ -1,0 +1,71 @@
+<form id="contactForm" action="https://formsubmit.co/el/lebapi" method="POST">
+
+    <!-- Disable CAPTCHA -->
+    <input type="hidden" name="_captcha" value="false">
+
+    <!-- Redirect after submit -->
+    <input type="hidden" name="_next" value="https://heynes007-dot.github.io/puzzle-playhouse/sign_up.html">
+
+    <label>Your Name</label>
+    <input type="text" name="name" required>
+
+    <label>Your Email</label>
+    <input type="email" name="email" required>
+
+    <label>Your Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+</form>
+<div id="thankYouPopup" style="
+    display:none;
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
+    z-index:9999;
+">
+    <h3>Thank you!</h3>
+    <p>Your message has been sent. We’ll reply as soon as we can if a response is needed.</p>
+    <p>Redirecting you to our sign‑up page…</p>
+</div>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function() {
+    document.getElementById("thankYouPopup").style.display = "block";
+});
+</script>
+form {
+    max-width: 500px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input, form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+form button:hover {
+    background: #ffd700;
+    color: black;
+    box-shadow: 0 0 12px #ffd700;
+}
