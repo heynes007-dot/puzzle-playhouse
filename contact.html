@@ -41,14 +41,9 @@
 
 <body>
 
-    <!-- Your form goes here -->
-
 <form id="contactForm" action="https://formsubmit.co/el/lebapi" method="POST">
 
-    <!-- Disable CAPTCHA -->
     <input type="hidden" name="_captcha" value="false">
-
-    <!-- Redirect after submit -->
     <input type="hidden" name="_next" value="https://heynes007-dot.github.io/puzzle-playhouse/sign_up.html">
 
     <label>Your Name</label>
@@ -62,6 +57,7 @@
 
     <button type="submit" class="btn">Send Message</button>
 </form>
+
 <div id="thankYouPopup" style="
     display:none;
     position:fixed;
@@ -79,40 +75,12 @@
     <p>Your message has been sent. We’ll reply as soon as we can if a response is needed.</p>
     <p>Redirecting you to our sign‑up page…</p>
 </div>
+
 <script>
 document.getElementById("contactForm").addEventListener("submit", function() {
     document.getElementById("thankYouPopup").style.display = "block";
 });
 </script>
-form {
-    max-width: 500px;
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
 
-form input, form textarea {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-form button {
-    padding: 12px;
-    background: black;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.25s ease;
-}
-
-form button:hover {
-    background: #ffd700;
-    color: black;
-    box-shadow: 0 0 12px #ffd700;
-}
 </body>
 </html>
