@@ -79,8 +79,15 @@
 </div>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit", function() {
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // stop instant navigation
+
     document.getElementById("thankYouPopup").style.display = "block";
+
+    // Wait 1 second so the popup is visible
+    setTimeout(() => {
+        e.target.submit(); // now submit for real
+    }, 1000);
 });
 </script>
 
