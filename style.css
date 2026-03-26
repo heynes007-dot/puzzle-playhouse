@@ -232,7 +232,7 @@ button:hover {
 .footer {
     text-align: center;
     margin-top: 60px;
-    padding: 40px 0;
+    padding: 45px 0;
 }
 
 /* Wrapper ensures perfect centering */
@@ -265,9 +265,9 @@ button:hover {
 }
 
 .footer-links a {
-    color: silver;
+    color: red;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     opacity: 0.8;
 }
 
