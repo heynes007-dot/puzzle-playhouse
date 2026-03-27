@@ -41,16 +41,19 @@
 
 <body>
 
-<!-- hidden iframe so the page doesn't navigate away -->
+<!-- Hidden iframe so the page doesn't navigate away -->
 <iframe name="hidden_iframe" style="display:none;"></iframe>
 
 <form id="contactForm"
-      action="https://formsubmit.co/el/lebapi"
+      action="https://formsubmit.co/puzzleplayhousehq@gmail.com"
       method="POST"
       target="hidden_iframe">
 
+    <!-- Disable captcha -->
     <input type="hidden" name="_captcha" value="false">
-    <!-- no _next, we handle redirect ourselves -->
+
+    <!-- Optional: Email subject -->
+    <input type="hidden" name="_subject" value="New Contact Form Message">
 
     <label>Your Name</label>
     <input type="text" name="name" required>
@@ -84,10 +87,10 @@
 
 <script>
 document.getElementById("contactForm").addEventListener("submit", function () {
-    // show popup
+    // Show popup
     document.getElementById("thankYouPopup").style.display = "block";
 
-    // after 1.5s, go to sign_up.html
+    // Redirect after 1.5s
     setTimeout(function () {
         window.location.href = "https://heynes007-dot.github.io/puzzle-playhouse/sign_up.html";
     }, 1500);
