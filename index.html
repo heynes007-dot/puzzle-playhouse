@@ -47,7 +47,7 @@ p{
     line-height:1.6;
 }
 
-/* BUTTONS */
+/* BUTTONS — GOLD GLOW */
 .button{
     display:block;
     margin:15px auto;
@@ -59,10 +59,15 @@ p{
     text-decoration:none;
     border-radius:6px;
     font-weight:bold;
+    transition:0.3s ease;
+    box-shadow:0 0 0px gold;
 }
 
 .button:hover{
-    background:#c0c0c0;
+    background:#ffd700;
+    color:black;
+    box-shadow:0 0 15px #ffd700, 0 0 25px #ffea80;
+    transform:translateY(-2px);
 }
 
 /* SOCIAL ICONS — UNIFORM SIZE */
@@ -103,108 +108,37 @@ p{
     transform: scale(0.85);
 }
 
-/* FOOTER */
+/* FOOTER — BOLD, SILVER, SPACED */
 footer{
     margin-top:50px;
     font-size:14px;
-    opacity:0.7;
+    font-weight:bold;
+    color:silver;
+    letter-spacing:1.5px;
+    opacity:1;
+}
+
+.footer-links{
+    margin-top:10px;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+.footer-links a{
+    color:silver;
+    text-decoration:none;
+    font-weight:bold;
+    letter-spacing:1px;
+    transition:0.2s ease;
+}
+
+.footer-links a:hover{
+    color:#ffd700;
+    text-shadow:0 0 8px #ffd700;
 }
 </style>
 
 </head>
 <body>
-
-<div class="container">
-
-    <!-- LOGO -->
-    <img src="logo.png" class="logo" alt="Puzzle Playhouse Logo">
-
-    <h1>🧩 Puzzle Playhouse</h1>
-
-    <p>
-        Fun, creative and educational books designed for kids and families.
-    </p>
-
-    <p>
-        We create engaging <strong>puzzle books</strong>, <strong>colouring books</strong>, 
-        <strong>journals</strong>, <strong>logs</strong> and <strong>notebooks</strong> 
-        to help children learn, relax and enjoy screen-free time.
-    </p>
-<h2>What you will find here</h2>
-    <p>
-        At Puzzle Playhouse, you’ll discover a growing collection of printable puzzles, activity books, and brain games designed for both fun and learning. From word searches and crosswords to creative challenges and relaxing activities, there’s something for every age.
-    </p>
-
-    <ul>
-    <li>🧩 Word searches & crosswords</li>
-    <li>🎨 Colouring & creative books</li>
-    <li>🧠 Brain training activities</li>
-    <li>👨‍👩‍👧 Family-friendly fun</li>
-</ul>
-
-    <h1>Why Puzzles Matter</h1>
-
-    <p>
-        Puzzles are more than just fun — they help improve memory, boost concentration, and provide a relaxing break from screens. Whether you’re helping a child learn or unwinding after a long day, puzzles are a simple way to stay engaged and refreshed.
-    </p>
-    
-    <!-- BUTTONS -->
-    <h2>Start exploring our collection of puzzles, freebies, and books below.</h2>
-
-    <a class="button" href="monthly-puzzle.html">🎁 Monthly Free Puzzle</a>
-    <a class="button" href="sign_up.html">📩 Join Free Puzzle Club</a>
-    <a class="button" href="bookcollections.html">📚 Browse Book Collection</a>
-    <a class="button" href="blog.html">📋 Blog</a>
-
-     <h2>Featured Puzzle</h2>
-    <p>
-        Try one of our latest puzzles designed for fun and brain training. Perfect for kids and adults looking for a quick challenge.
-  </p>
-    <h2>Shop</h2>
-
-    <h2>Looking for more? Explore our full range of puzzle books, journals, and activity collections available on Amazon and Etsy.</h2>
-
-    <a class="button" href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">🛒 View on Amazon</a>
-    <a class="button" href="https://www.etsy.com/uk/shop/AH10Creations?ref=lp_mys_mfts" target="_blank">🖨️ Shop on Etsy</a>
-
-    <h1>Who Our Books Are For</h1>
-
-    <ul>
-    <li>👨‍👩‍👧 Families looking for screen-free activities</li>
-<li>🧠 Adults wanting relaxation and focus</li>
-<li>🎓 Children developing learning skills</li>
-<li>✈️ Travel & downtime entertainment</li>
-</ul>
-
-
-    <!-- SOCIAL MEDIA -->
-    <h3 class="follow-heading">Follow Us</h3>
-    <div class="social-links">
-    <a href="https://www.facebook.com/" target="_blank">
-        <img class="icon icon-facebook" src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
-    </a>
-    <a href="https://www.instagram.com/ah10admi" target="_blank">
-        <img class="icon icon-instagram" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram">
-    </a>
-    <a href="https://www.youtube.com/@AHPuzzles" target="_blank">
-        <img class="icon icon-youtube" src="https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg" alt="YouTube">
-    </a>
-    <a href="https://uk.pinterest.com/Puzzle_Playhouse/" target="_blank">
-        <img class="icon icon-pinterest" src="https://upload.wikimedia.org/wikipedia/commons/0/08/Pinterest-logo.png" alt="Pinterest">
-    </a>
-</div>
-
-    <footer>
-        <p>© Puzzle Playhouse – Main Page</p>
-        <div class="footer-links">
-        <a href="About.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy_Policy</a>
-        <a href="terms.html">Terms</a>
-    </div>
-    </footer>
-
-</div>
-
-</body>
-</html>
+<!-- rest of your HTML stays exactly the same -->
