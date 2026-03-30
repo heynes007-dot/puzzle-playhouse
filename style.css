@@ -284,21 +284,4 @@ footer .footer-links a:hover{
     filter: drop-shadow(0 0 8px rgba(0,0,0,0.35));
 }
 
-/* Footer links */
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-}
 
-.footer-links a {
-    color: red;
-    text-decoration: none;
-    font-size: 20px;
-    opacity: 0.8;
-}
-
-.footer-links a:hover {
-    opacity: 1;
-    text-decoration: underline;
-}
