@@ -56,6 +56,7 @@ p{
     line-height:1.6;
 }
 
+/* BUTTONS — GOLD GLOW */
 .button{
     display:inline-block;
     margin:15px;
@@ -66,12 +67,18 @@ p{
     text-decoration:none;
     border-radius:6px;
     font-weight:bold;
+    transition:0.3s ease;
+    box-shadow:0 0 0px gold;
 }
 
 .button:hover{
-    background:#c0c0c0;
+    background:#ffd700;
+    color:black;
+    box-shadow:0 0 15px #ffd700, 0 0 25px #ffea80;
+    transform:translateY(-2px);
 }
 
+/* CONTENT BOX */
 .puzzle-box{
     border:1px solid silver;
     padding:25px;
@@ -106,7 +113,6 @@ footer{
 .footer-links a:hover{
     color:#ffd700;
     text-shadow:0 0 8px #ffd700;
-}
 }
 
 /* FOLLOW US HEADING */
@@ -151,7 +157,7 @@ footer{
     opacity: 0.85;
 }
 
-/* Fine‑tuning for visual balance */
+/* Fine‑tuning */
 .icon-youtube {
     transform: scale(1.25);
 }
