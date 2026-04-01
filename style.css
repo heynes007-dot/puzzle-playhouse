@@ -12,19 +12,21 @@ body {
 /* --------------------------------------------------
    Book cards
 -------------------------------------------------- */
-.book-card .image-frame {
+.image-frame {
     width: 100%;
-    height: 240px;
-    overflow: hidden;
+    height: 240px;      /* fixed frame height */
+    overflow: hidden;   /* hides overflow so cropping works */
     border-radius: 8px;
+    background: #fff;
 }
 
-.book-card .image-frame img {
+.image-frame img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover;   /* forces identical appearance */
     object-position: center;
     display: block;
+    padding: 0;          /* IMPORTANT: remove padding */
 }
 /* --------------------------------------------------
    HERO SECTION
