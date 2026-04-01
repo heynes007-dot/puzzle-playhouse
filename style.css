@@ -27,6 +27,7 @@ body {
     object-fit: cover;
     object-position: center;
     display: block;
+   background: white;   /* fixes transparent padding illusion */
 }
 
 /* Card container */
