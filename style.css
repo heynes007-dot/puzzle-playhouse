@@ -13,13 +13,14 @@ body {
 /* --------------------------------------------------
    BOOK CARDS — FIXED IMAGE SIZE
 -------------------------------------------------- */
-.image-frame {
+.image-frame img {
     width: 100%;
-    height: 340px;
-    overflow: hidden;
-    border-radius: 12px;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
     background: #fff;
-    position: relative;
+    padding: 10px;
+}
 
     /* subtle card feel */
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
