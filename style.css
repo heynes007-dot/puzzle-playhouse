@@ -15,38 +15,37 @@ body {
 -------------------------------------------------- */
 .image-frame {
     width: 100%;
-    height: 240px;
+    height: 340px;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 12px;
     background: #fff;
+    position: relative;
+
+    /* subtle card feel */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* book image */
 .image-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
-   background: white;   /* fixes transparent padding illusion */
+
+    /* smooth zoom */
+    transition: transform 0.4s ease;
 }
 
-/* Card container */
-.card {
-    position: relative;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/* hover effect */
+.image-frame:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
+
+.image-frame:hover img {
+    transform: scale(1.05);
 }
 
 /* --------------------------------------------------
