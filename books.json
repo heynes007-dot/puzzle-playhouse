@@ -46,5 +46,13 @@
     "image": "images/Word_Scramble.jpg",
     "link": "https://www.amazon.co.uk/dp/B0FMP13BGY",
     "newRelease": false
+  },
+  {
+    "title": "Block Craft",
+    "emoji": "🧱",
+    "description": "Word Searches and Crosswords, Fun for Creative Kids.",
+    "image": "images/BlockCraft.png",
+    "link": "https://www.amazon.co.uk/dp/B0GD7XPBRH",
+    "newRelease": false
   }
 ]
