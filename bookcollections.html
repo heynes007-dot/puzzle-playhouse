@@ -3,38 +3,39 @@
 <head>
     <title>Puzzle Playhouse Books</title>
 
+    <!-- Load your global stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
+
+    <!-- Page‑specific styles ONLY -->
     <style>
-  .badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: #ffd700;
-    color: black;
-    padding: 6px 10px;
-    font-size: 12px;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0 0 6px rgba(0,0,0,0.2);
-    z-index: 10;
-}
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ffd700;
+            color: black;
+            padding: 6px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 5px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
 
-.card {
-    position: relative;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-</style>
-    
+        /* Card layout (kept here because it is unique to this page) */
+        .card {
+            position: relative;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
 <body>
@@ -69,10 +70,11 @@
     <div class="footer-links">
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy_Policy</a>
+        <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms</a>
     </div>
 </footer>
+
 <script>
 fetch('books.json')
   .then(response => response.json())
@@ -83,23 +85,22 @@ fetch('books.json')
       const card = document.createElement('div');
       card.className = 'card';
 
-     card.innerHTML = `
-    ${book.newRelease ? '<div class="badge">NEW RELEASE</div>' : ''}
+      card.innerHTML = `
+        ${book.newRelease ? '<div class="badge">NEW RELEASE</div>' : ''}
 
-    <div class="image-frame">
-        <img src="${book.image}" alt="${book.title}">
-    </div>
+        <div class="image-frame">
+            <img src="${book.image}" alt="${book.title}">
+        </div>
 
-    <h3>${book.emoji} ${book.title}</h3>
-    <p>${book.description}</p>
-    <a href="${book.link}" class="btn" target="_blank">View Book</a>
-`;
+        <h3>${book.emoji} ${book.title}</h3>
+        <p>${book.description}</p>
+        <a href="${book.link}" class="btn" target="_blank">View Book</a>
+      `;
 
       grid.appendChild(card);
     });
   });
 </script>
-    
+
 </body>
 </html>
-
