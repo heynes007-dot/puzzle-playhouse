@@ -96,60 +96,55 @@
     color: #555;
   }
 
-  .button {
+  }
+    /* BUTTON — black with silver text, gold glow on hover */
+.button {
     display: inline-block;
     padding: 12px 20px;
     border-radius: 999px;
     border: none;
-    background: #0077ff;
-    color: #fff;
+    background: #000;          /* black */
+    color: #cfcfcf;            /* silver text */
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  }
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    transition: 
+        background 0.25s ease,
+        color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
 
-  .button:hover {
-    background: #005fcc;
+.button:hover {
+    background: #000; /* stays black */
+    color: #fff;      /* brightens slightly */
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-  }
+    box-shadow: 0 0 12px rgba(255, 215, 0, 0.8); /* gold halo */
+}
 
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-    margin: 20px 0 30px;
-  }
-
-  .icon {
-    height: 28px;
-    width: auto;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #777;
-    margin-top: 20px;
-  }
-
-  .footer-links {
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-  }
-
-  .footer-links a {
+/* FOOTER LINKS — gold on hover */
+.footer-links a {
     color: #555;
     text-decoration: none;
-  }
+    transition: color 0.25s ease;
+}
 
-  .footer-links a:hover {
-    text-decoration: underline;
-  }
+.footer-links a:hover {
+    color: #ffd700; /* gold */
+}
+
+/* LOGO HOVER EFFECT — gold halo */
+.header-logo,
+.footer-logo {
+    transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.header-logo:hover,
+.footer-logo:hover {
+    filter: drop-shadow(0 0 6px #ffd700);
+    transform: scale(1.03);
+}
 </style>
 </head>
 
@@ -210,13 +205,16 @@
 </div>
     <!-- FOOTER -->
     <footer>
+        
   <p>© Puzzle Playhouse – Email Sign‑Up</p>
   <div class="footer-links">
     <a href="About.html">About</a>
     <a href="contact.html">Contact</a>
     <a href="Privacy_Policy.html">Privacy Policy</a>
     <a href="terms.html">Terms</a>
+      
   </div>
+        
 </footer>
 
 </div>
