@@ -1,13 +1,5 @@
 [
   {
-    "title": "Sleep Tracker Journal",
-    "emoji": "😴",
-    "description": "Track and improve your sleep with this 120-day guided journal.",
-    "image": "/puzzle-playhouse/images/sleep-book.jpg",
-    "link": "https://www.amazon.co.uk/dp/B0G3H93W9H",
-    "newRelease": true
-  },
-  {
     "title": "Football Word Search Book",
     "emoji": "⚽",
     "description": "Word searches for football fans.",
@@ -32,14 +24,6 @@
     "newRelease": false
   },
   {
-    "title": "Food Critic",
-    "emoji": "🍔",
-    "description": "The Food Critic’s Notebook.",
-    "image": "/puzzle-playhouse/images/Food_Critic_book.png",
-    "link": "https://www.amazon.co.uk/dp/B0G1HHWZTS",
-    "newRelease": false
-  },
-  {
     "title": "Word Scramble",
     "emoji": "🔠",
     "description": "Fun and Educational Word Jumble Game.",
@@ -53,6 +37,6 @@
     "description": "Word Searches and Crosswords, Fun for Creative Kids.",
     "image": "/puzzle-playhouse/images/BlockCraft.png",
     "link": "https://www.amazon.co.uk/dp/B0GD7XPBRH",
-    "newRelease": false
+    "newRelease": true
   }
 ]
