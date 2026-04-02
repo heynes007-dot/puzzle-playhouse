@@ -35,23 +35,30 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER */
+/* HEADER — centre everything and enlarge the text */
 .header {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;   /* centres the logo + text */
+    gap: 14px;                 /* space between logo and text */
     margin-bottom: 30px;
 }
 
 .home-link {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
     color: inherit;
-    font-weight: 600;
 }
 
+.home-link span {
+    font-size: 1.6rem;         /* larger text */
+    font-weight: 700;          /* bold for premium feel */
+    letter-spacing: 0.5px;
+}
+
+/* Header logo hover glow */
 .header-logo {
     height: 70px;
     width: auto;
