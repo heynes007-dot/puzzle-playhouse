@@ -3,56 +3,16 @@
     "title": "Sleep Tracker Journal",
     "emoji": "😴",
     "description": "Track and improve your sleep with this 120-day guided journal.",
-    "image": "images/sleep-book.jpg",
+    "image": "/puzzle-playhouse/images/sleep-book.jpg",
     "link": "https://www.amazon.co.uk/dp/B0G3H93W9H",
     "newRelease": true
-  },
-  {
-    "title": "Football Word Search Book",
-    "emoji": "⚽",
-    "description": "Word searches for football fans.",
-    "image": "images/football-book.jpg",
-    "link": "https://www.amazon.co.uk/dp/B0DSCJZ8F7",
-    "newRelease": false
-  },
-  {
-    "title": "Dino Word Search",
-    "emoji": "🦖",
-    "description": "Word searches for the prehistoric fans.",
-    "image": "images/Dino_word_search.jpg",
-    "link": "https://www.amazon.co.uk/dp/B0DSTY85TP",
-    "newRelease": false
-  },
-  {
-    "title": "Ice Hockey Crosswords",
-    "emoji": "🏒",
-    "description": "Ice Hockey crosswords fun for all ages.",
-    "image": "images/Ice_Hocky_X.jpg",
-    "link": "https://www.amazon.co.uk/dp/B0FG6TKKVZ",
-    "newRelease": false
   },
   {
     "title": "Food Critic",
     "emoji": "🍔",
     "description": "The Food Critic’s Notebook.",
-    "image": "images/Food_Critic_book.png",
+    "image": "/puzzle-playhouse/images/Food_Critic_book.png",
     "link": "https://www.amazon.co.uk/dp/B0G1HHWZTS",
-    "newRelease": false
-  },
-  {
-    "title": "Word Scramble",
-    "emoji": "🔠",
-    "description": "Fun and Educational Word Jumble Game.",
-    "image": "images/Word_Scramble.jpg",
-    "link": "https://www.amazon.co.uk/dp/B0FMP13BGY",
-    "newRelease": false
-  },
-  {
-    "title": "Block Craft",
-    "emoji": "🧱",
-    "description": "Word Searches and Crosswords, Fun for Creative Kids.",
-    "image": "images/BlockCraft.png",
-    "link": "https://www.amazon.co.uk/dp/B0GD7XPBRH",
     "newRelease": false
   }
 ]
