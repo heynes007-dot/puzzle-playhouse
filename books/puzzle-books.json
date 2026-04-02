@@ -38,5 +38,13 @@
     "image": "/puzzle-playhouse/images/BlockCraft.png",
     "link": "https://www.amazon.co.uk/dp/B0GD7XPBRH",
     "newRelease": true
+  },
+  {
+    "title": "Football Crossword",
+    "emoji": "🏟️",
+    "description": "Crosswords for Football Fans.",
+    "image": "/puzzle-playhouse/images/Football_Crossword.png",
+    "link": "https://www.amazon.co.uk/dp/B0FG2BK59H",
+    "newRelease": true
   }
 ]
