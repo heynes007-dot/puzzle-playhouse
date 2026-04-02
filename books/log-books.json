@@ -1,108 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Log Books</title>
-<meta name="description" content="Browse our collection of log books including blood pressure, Sleep Trackings. Fun, engaging, and educational.">
-<meta name="keywords" content="puzzle book collection, kids activity books, word search books, crossword books, puzzle playhouse books">
-
-    <!-- Load your global stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Page‑specific styles ONLY -->
-    <style>
-        .badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #ffd700;
-            color: black;
-            padding: 6px 10px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 0 6px rgba(0,0,0,0.2);
-            z-index: 10;
-        }
-
-        /* Card layout (kept here because it is unique to this page) */
-        .card {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            min-height: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <h1>📚 Puzzle Playhouse Books</h1>
-    <p class="intro">
-        Explore our collection of puzzle and activity books designed for fun, focus, and relaxation.
-    </p>
-
-    <!-- BOOK GRID -->
-    <div class="grid" id="bookGrid"></div>
-
-    <!-- CTA -->
-    <div class="cta">
-        <h2>🎁 Get Free Puzzles</h2>
-        <p>Join our community and receive exclusive puzzles and updates.</p>
-        <a href="sign_up.html">Sign Up</a>
-    </div>
-
-</div>
-
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-logo-wrapper">
-        <a href="index.html">
-            <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
-        </a>
-    </div>
-
-    <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-    </div>
-</footer>
-
-<script>
-fetch('log-books.json')
-  .then(response => response.json())
-  .then(data => {
-    const grid = document.getElementById('bookGrid');
-
-    data.forEach(book => {
-      const card = document.createElement('div');
-      card.className = 'card';
-
-      card.innerHTML = `
-        ${book.newRelease ? '<div class="badge">NEW RELEASE</div>' : ''}
-
-        <div class="image-frame">
-            <img src="${book.image}" alt="${book.title}">
-        </div>
-
-        <h3>${book.emoji} ${book.title}</h3>
-        <p>${book.description}</p>
-        <a href="${book.link}" class="btn" target="_blank">View Book</a>
-      `;
-
-      grid.appendChild(card);
-    });
-  });
-</script>
-
-</body>
-</html>
+[
+  {
+    "title": "Sleep Tracker Journal",
+    "emoji": "😴",
+    "description": "Track and improve your sleep with this 120-day guided journal.",
+    "image": "images/sleep-book.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0G3H93W9H",
+    "newRelease": true
+  },
+  {
+    "title": "Football Word Search Book",
+    "emoji": "⚽",
+    "description": "Word searches for football fans.",
+    "image": "images/football-book.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0DSCJZ8F7",
+    "newRelease": false
+  },
+  {
+    "title": "Dino Word Search",
+    "emoji": "🦖",
+    "description": "Word searches for the prehistoric fans.",
+    "image": "images/Dino_word_search.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0DSTY85TP",
+    "newRelease": false
+  },
+  {
+    "title": "Ice Hockey Crosswords",
+    "emoji": "🏒",
+    "description": "Ice Hockey crosswords fun for all ages.",
+    "image": "images/Ice_Hocky_X.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0FG6TKKVZ",
+    "newRelease": false
+  },
+  {
+    "title": "Food Critic",
+    "emoji": "🍔",
+    "description": "The Food Critic’s Notebook.",
+    "image": "images/Food_Critic_book.png",
+    "link": "https://www.amazon.co.uk/dp/B0G1HHWZTS",
+    "newRelease": false
+  },
+  {
+    "title": "Word Scramble",
+    "emoji": "🔠",
+    "description": "Fun and Educational Word Jumble Game.",
+    "image": "images/Word_Scramble.jpg",
+    "link": "https://www.amazon.co.uk/dp/B0FMP13BGY",
+    "newRelease": false
+  },
+  {
+    "title": "Block Craft",
+    "emoji": "🧱",
+    "description": "Word Searches and Crosswords, Fun for Creative Kids.",
+    "image": "images/BlockCraft.png",
+    "link": "https://www.amazon.co.uk/dp/B0GD7XPBRH",
+    "newRelease": false
+  }
+]
