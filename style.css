@@ -9,6 +9,11 @@ body {
     margin: 0;
     padding: 0;
 }
+/* small text */
+.small-text {
+    font-size: 0.9rem; /* slightly smaller */
+    line-height: 1.5;
+}
 /* Ensure CTA buttons stack cleanly */
 .cta a {
     display: inline-block;
