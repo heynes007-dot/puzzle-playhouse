@@ -243,4 +243,17 @@ input[type="email"] {
 }
 
 .footer-logo:hover {
+
+   .footer-disclaimer {
+    text-align: center;
+    margin-top: 15px;
+    padding: 10px 0;
+}
+
+.footer-disclaimer p {
+    font-size: 0.85rem;        /* readable but subtle */
+    color: #777;               /* soft grey */
+    margin: 0;
+    line-height: 1.4;
+}
    
