@@ -256,4 +256,20 @@ input[type="email"] {
     margin: 0;
     line-height: 1.4;
 }
-   
+   .footer-links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffd700; /* gold */
+    text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
+}
