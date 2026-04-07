@@ -9,7 +9,43 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Ensure CTA buttons stack cleanly */
+.cta a {
+    display: inline-block;
+}
 
+/* Main Sign Up button spacing */
+.primary-btn {
+    margin-bottom: 20px;
+}
+
+/* Mini button container */
+.mini-btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 5px;
+    align-items: center;
+}
+
+/* Mini button styling */
+.mini-btn {
+    background: #f2f2f2;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #333;
+    text-decoration: none;
+    transition: 0.25s ease;
+    border: 1px solid #ddd;
+}
+
+.mini-btn:hover {
+    background: #ff6600;
+    color: white;
+    border-color: #ff6600;
+    transform: translateY(-2px);
+}
 /* --------------------------------------------------
    BOOK CARDS — FIXED IMAGE SIZE
 -------------------------------------------------- */
