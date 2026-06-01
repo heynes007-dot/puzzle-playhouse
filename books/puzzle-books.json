@@ -8,6 +8,14 @@
     "newRelease": false
   },
   {
+    "title": "Kids Word Search Book Ages 4–6",
+    "emoji": "👧",
+    "description": "WEasy Educational Puzzles to Build Vocabulary, Focus & Confidence",
+    "image": "/puzzle-playhouse/images/Kids_Puzzle_Book.jpg",
+    "link": "https://amzn.to/4uHZQPU",
+    "newRelease": true
+  },
+  {
     "title": "Dino Word Search",
     "emoji": "🦖",
     "description": "Word searches for the prehistoric fans.",
@@ -37,7 +45,7 @@
     "description": "Word Searches and Crosswords, Fun for Creative Kids.",
     "image": "/puzzle-playhouse/images/BlockCraft.png",
     "link": "https://amzn.to/4sSvmKa",
-    "newRelease": true
+    "newRelease": false
   },
   {
     "title": "Football Crossword",
