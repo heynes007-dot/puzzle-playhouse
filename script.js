@@ -7,7 +7,7 @@ document.querySelector(this.getAttribute("href"))
 });
 
 // Set your next puzzle release date here
-const releaseDate = new Date(2026, 6, 1, 19, 0, 0).getTime();
+const releaseDate = new Date(2026, 7, 1, 19, 0, 0).getTime();
 
 
 const countdownElement = document.getElementById("countdown");
@@ -17,7 +17,7 @@ setInterval(function () {
     const distance = releaseDate - now;
 
     if (distance < 0) {
-        countdownElement.innerHTML = "This month's puzzle is now available!";
+        countdownElement.innerHTML = "This month's new puzzle is now available!";
         return;
     }
 
