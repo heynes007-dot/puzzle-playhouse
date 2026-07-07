@@ -111,34 +111,25 @@ h1, h2 {
    BOOK CARDS — FIXED IMAGE SIZE
 -------------------------------------------------- */
 .image-frame {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 12px;
-    background: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: 240px; /* slightly taller for book covers */
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .image-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    display: block;
-    transition: transform 0.4s ease;
-}
-
-.image-frame:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
-
-.image-frame:hover img {
-    transform: scale(1.05);
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* keeps full cover visible */
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
 }
 
 /* --------------------------------------------------
