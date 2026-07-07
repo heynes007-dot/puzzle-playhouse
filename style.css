@@ -9,22 +9,40 @@ body {
     margin: 0;
     padding: 0;
 }
-/* small text */
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
 .small-text {
-    font-size: 0.9rem; /* slightly smaller */
+    font-size: 0.9rem;
     line-height: 1.5;
 }
-/* Ensure CTA buttons stack cleanly */
+
+/* --------------------------------------------------
+   HEADINGS & INTRO
+-------------------------------------------------- */
+h1, h2 {
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* --------------------------------------------------
+   CTA BUTTONS
+-------------------------------------------------- */
 .cta a {
     display: inline-block;
 }
 
-/* Main Sign Up button spacing */
 .primary-btn {
     margin-bottom: 20px;
 }
 
-/* Mini button container */
 .mini-btn-group {
     display: flex;
     flex-direction: column;
@@ -33,7 +51,6 @@ body {
     align-items: center;
 }
 
-/* Mini button styling */
 .mini-btn {
     background: #f2f2f2;
     padding: 8px 16px;
@@ -52,6 +69,9 @@ body {
     transform: translateY(-2px);
 }
 
+/* --------------------------------------------------
+   HOME LINK
+-------------------------------------------------- */
 .home-link {
     display: inline-flex;
     align-items: center;
@@ -64,15 +84,16 @@ body {
 }
 
 .home-link:hover {
-    color: #ffd700; /* gold */
+    color: #ffd700;
     text-shadow: 0 0 10px #ffd700, 0 0 18px #ffea80;
 }
+
 /* --------------------------------------------------
    BOOK CARDS — FIXED IMAGE SIZE
 -------------------------------------------------- */
 .image-frame {
     width: 100%;
-    height: 220px; /* adjust this to your preferred size */
+    height: 220px;
     overflow: hidden;
     border-radius: 12px;
     background: #fff;
@@ -84,31 +105,14 @@ body {
 }
 
 .image-frame img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    padding: 10px;
-    transition: transform 0.4s ease;
-}
-
-    /* subtle card feel */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* book image */
-.image-frame img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
     display: block;
-
-    /* smooth zoom */
     transition: transform 0.4s ease;
 }
 
-/* hover effect */
 .image-frame:hover {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.15);
@@ -129,7 +133,7 @@ body {
 }
 
 /* --------------------------------------------------
-   BUTTONS
+   GENERIC BUTTONS
 -------------------------------------------------- */
 .btn {
     display: inline-block;
@@ -149,7 +153,7 @@ body {
 }
 
 /* --------------------------------------------------
-   CTA
+   CTA SECTION
 -------------------------------------------------- */
 .cta {
     text-align: center;
@@ -176,28 +180,11 @@ body {
 }
 
 /* --------------------------------------------------
-   HEADINGS & INTRO
--------------------------------------------------- */
-h1, h2 {
-    text-align: center;
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-/* --------------------------------------------------
    SECTIONS
 -------------------------------------------------- */
 .section {
     padding: 60px 20px;
     border-top: 1px solid #333;
-}
-
-p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 /* --------------------------------------------------
@@ -239,10 +226,10 @@ input[type="email"] {
     box-shadow: 0 0 15px #ffd700, 0 0 25px #ffea80;
     transform: translateY(-2px);
 }
-/* ============================
-   Glow Link (Affiliate List Links)
-============================ */
 
+/* --------------------------------------------------
+   GLOW LINK (AFFILIATE LINKS)
+-------------------------------------------------- */
 .glow-link {
     color: silver;
     font-weight: bold;
@@ -270,6 +257,7 @@ input[type="email"] {
 .glow-link:hover::after {
     width: 100%;
 }
+
 /* --------------------------------------------------
    FOOTER
 -------------------------------------------------- */
@@ -298,7 +286,6 @@ input[type="email"] {
     filter: drop-shadow(0 0 6px rgba(0,0,0,0.35));
 }
 
-/* Disclaimer */
 .footer-disclaimer {
     text-align: center;
     margin-top: 15px;
@@ -312,7 +299,6 @@ input[type="email"] {
     line-height: 1.4;
 }
 
-/* Footer links */
 .footer-links {
     text-align: center;
     margin-top: 10px;
@@ -327,134 +313,100 @@ input[type="email"] {
 }
 
 .footer-links a:hover {
-    color: #ffd700; /* gold */
+    color: #ffd700;
     text-shadow: 0 0 8px rgba(255, 215, 0, 0.7);
 }
-/* Floating Social Bar */
+
+/* --------------------------------------------------
+   FLOATING SOCIAL BAR
+-------------------------------------------------- */
 .social-bar {
-  position: fixed;
-  right: 20px;
-  bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  z-index: 999;
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 999;
 }
 
-/* Buttons */
 .social-btn {
-  background-color: #000;
-  color: #ffcc00;
-  border: 2px solid #ffcc00;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 22px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px #ffcc00;
+    background-color: #000;
+    color: #ffcc00;
+    border: 2px solid #ffcc00;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 22px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px #ffcc00;
 }
 
 .social-btn:hover {
-  background-color: #ffcc00;
-  color: #000;
-  box-shadow:
-    0 0 10px #ffcc00,
-    0 0 20px #ffcc00,
-    0 0 30px #ffcc00;
+    background-color: #ffcc00;
+    color: #000;
+    box-shadow:
+        0 0 10px #ffcc00,
+        0 0 20px #ffcc00,
+        0 0 30px #ffcc00;
 }
 
-/* Like count */
 .count {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 2px;
-}
-/* Floating Social Bar */
-.social-bar {
-  position: fixed;
-  right: 20px;
-  bottom: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  z-index: 999;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2px;
 }
 
-.social-btn {
-  background-color: #000;
-  color: #ffcc00;
-  border: 2px solid #ffcc00;
-  border-radius: 50%;
-  width: 55px;
-  height: 55px;
-  font-size: 22px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px #ffcc00;
-}
-
-.social-btn:hover {
-  background-color: #ffcc00;
-  color: #000;
-  box-shadow:
-    0 0 10px #ffcc00,
-    0 0 20px #ffcc00,
-    0 0 30px #ffcc00;
-}
-
-/* Share Menu */
+/* --------------------------------------------------
+   SHARE MENU
+-------------------------------------------------- */
 .share-menu {
-  position: fixed;
-  right: -260px; /* hidden off-screen */
-  bottom: 100px;
-  width: 240px;
-  background: #000;
-  border: 2px solid #ffcc00;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #ffcc00;
-  transition: 0.4s ease;
-  z-index: 998;
+    position: fixed;
+    right: -260px;
+    bottom: 100px;
+    width: 240px;
+    background: #000;
+    border: 2px solid #ffcc00;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #ffcc00;
+    transition: 0.4s ease;
+    z-index: 998;
 }
 
 .share-menu.open {
-  right: 20px; /* slides in */
+    right: 20px;
 }
 
 .share-menu h3 {
-  margin: 0 0 10px 0;
-  color: #ffcc00;
-  text-align: center;
+    margin: 0 0 10px 0;
+    color: #ffcc00;
+    text-align: center;
 }
 
 .share-option {
-  display: block;
-  background: #111;
-  color: #ffcc00;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s ease;
-  cursor: pointer;
+    display: block;
+    background: #111;
+    color: #ffcc00;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .share-option:hover {
-  background: #ffcc00;
-  color: #000;
-  box-shadow:
-    0 0 10px #ffcc00,
-    0 0 20px #ffcc00;
+    background: #ffcc00;
+    color: #000;
+    box-shadow:
+        0 0 10px #ffcc00,
+        0 0 20px #ffcc00;
 }
