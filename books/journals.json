@@ -3,7 +3,7 @@
     "title": "Wine Journal for Beginners",
     "emoji": "🍷",
     "description": "A Simple Tasting Notebook to Discover Your Perfect Wines.",
-    "image": "/puzzle-playhouse/images/wine-book.jpg",
+    "image": "/puzzle-playhouse/images/wine-book.png",
     "link": "https://amzn.to/3RjqUql",
     "newRelease": true
   },
@@ -12,9 +12,9 @@
     "title": "Debt Freedom Tracker",
     "emoji": "💸",
     "description": "Track Your Debt, Build Better Habits, Create Financial Freedom.",
-    "image": "/puzzle-playhouse/images/DebtTracker.jpg",
+    "image": "/puzzle-playhouse/images/DebtTracker.png",
     "link": "https://amzn.to/4gUN9NG",
-    "newRelease": false
+    "newRelease": true
   },
   {
     "title": "Coffee Journal",
@@ -30,6 +30,6 @@
     "description": "0 Year Keepsake Journal and Activity book for Kids .",
     "image": "/puzzle-playhouse/images/my_future_self.png",
     "link": "https://amzn.to/4cuXpJN",
-    "newRelease": true
+    "newRelease": false
   }
 ]
