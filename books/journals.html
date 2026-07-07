@@ -140,5 +140,12 @@ fetch('journals.json')
     <span class="icon">🔗</span>
   </button>
 </div>
+   <script>
+document.querySelector('.like-btn').addEventListener('click', function() {
+  const countEl = this.querySelector('.count');
+  let count = parseInt(countEl.textContent);
+  countEl.textContent = count + 1;
+});
+</script>
 </body>
 </html>
