@@ -140,12 +140,13 @@ fetch('journals.json')
     <span class="icon">🔗</span>
   </button>
 </div>
-   <script>
-document.querySelector('.like-btn').addEventListener('click', function() {
-  const countEl = this.querySelector('.count');
-  let count = parseInt(countEl.textContent);
-  countEl.textContent = count + 1;
-});
-</script>
+  <!-- Slide-out Share Menu -->
+<div class="share-menu" id="shareMenu">
+  <h3>Share this page</h3>
+  <a class="share-option" id="shareFacebook">📘 Facebook</a>
+  <a class="share-option" id="shareWhatsApp">💬 WhatsApp</a>
+  <a class="share-option" id="shareEmail">✉️ Email</a>
+  <a class="share-option" id="shareCopy">🔗 Copy Link</a>
+</div>
 </body>
 </html>
