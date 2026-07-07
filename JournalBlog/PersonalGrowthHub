@@ -1,1 +1,187 @@
+!DOCTYPE html>
+<html>
+<head>
+   <title>Personal Growth Hub | Journaling, Habits & Mindfulness Blog | Puzzle Playhouse</title>
 
+<meta name="description" content="Explore journaling tips, habit building guides, sleep tracking benefits, motivation strategies and more. Your hub for personal growth and mindful living.">
+<meta name="keywords" content="journaling tips, habit building, sleep tracking, mindfulness blog, personal growth blog, puzzle playhouse">
+
+<link rel="stylesheet" href="/puzzle-playhouse/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 Personal Growth Hub</h1>
+    <p class="intro">
+        Your home for journaling tips, habit building strategies, sleep tracking insights and mindful living guides.
+    </p>
+
+    <p class="small-text">This page contains affiliate links. If you purchase through these links, we may earn a small commission at no extra cost to you.</p>
+
+    <!-- BLOG GRID -->
+    <div class="grid">
+
+        <!-- Blog 1 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/journal-benefits.jpg" alt="Benefits of Journaling">
+            </div>
+            <h3>📝 10 Benefits of Keeping a Daily Journal</h3>
+            <p>Discover how daily journaling improves clarity, reduces stress and boosts creativity.</p>
+            <a href="/puzzle-playhouse/blogs/journal-benefits.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/sleep-tracking.jpg" alt="Sleep Tracking">
+            </div>
+            <h3>😴 Why Tracking Your Sleep Actually Works</h3>
+            <p>Learn how sleep logs reveal patterns that help you rest better and feel energised.</p>
+            <a href="/puzzle-playhouse/blogs/sleep-tracking.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/habit-building.jpg" alt="Habit Building">
+            </div>
+            <h3>📅 How to Build Better Habits in 30 Days</h3>
+            <p>A simple, science‑backed method to build habits that actually stick.</p>
+            <a href="/puzzle-playhouse/blogs/habit-building.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 4 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/psychology-writing.jpg" alt="Psychology of Writing">
+            </div>
+            <h3>🧠 The Psychology of Writing Things Down</h3>
+            <p>Why writing your thoughts helps you process emotions and make better decisions.</p>
+            <a href="/puzzle-playhouse/blogs/psychology-writing.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 5 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/goal-setting.jpg" alt="Goal Setting">
+            </div>
+            <h3>🎯 Why Goal Setting Often Fails (and How to Fix It)</h3>
+            <p>Understand the common mistakes and learn how to set goals that work.</p>
+            <a href="/puzzle-playhouse/blogs/goal-setting.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 6 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/debt-tracker.jpg" alt="Debt Tracker">
+            </div>
+            <h3>💰 How a Debt Tracker Can Reduce Financial Stress</h3>
+            <p>Take control of your finances with simple tracking techniques.</p>
+            <a href="/puzzle-playhouse/blogs/debt-tracker.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 7 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/food-journal.jpg" alt="Food Journal">
+            </div>
+            <h3>🍽️ The Benefits of Keeping a Food Journal</h3>
+            <p>Improve your eating habits and understand your nutrition better.</p>
+            <a href="/puzzle-playhouse/blogs/food-journal.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 8 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/wine-notes.jpg" alt="Wine Tasting Notes">
+            </div>
+            <h3>🍷 Wine Tasting Notes: How to Record What You Really Enjoy</h3>
+            <p>Learn how to capture flavours, aromas and tasting experiences like a pro.</p>
+            <a href="/puzzle-playhouse/blogs/wine-notes.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 9 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/exercise-log.jpg" alt="Exercise Log">
+            </div>
+            <h3>🏋️ How to Stay Motivated With an Exercise Log</h3>
+            <p>Track your workouts and stay consistent with your fitness goals.</p>
+            <a href="/puzzle-playhouse/blogs/exercise-log.html" class="btn">Read More</a>
+        </div>
+
+        <!-- Blog 10 -->
+        <div class="card">
+            <div class="image-frame">
+                <img src="/puzzle-playhouse/images/morning-habits.jpg" alt="Morning Habits">
+            </div>
+            <h3>🌅 Morning Habits That Set You Up for Success</h3>
+            <p>Build a morning routine that boosts productivity and positivity.</p>
+            <a href="/puzzle-playhouse/blogs/morning-habits.html" class="btn">Read More</a>
+        </div>
+
+    </div> <!-- end grid -->
+
+    <!-- CTA -->
+    <div class="cta">
+        <h2>🎁 Get Free Puzzles</h2>
+        <p>Join our community and receive exclusive puzzles and updates.</p>
+
+        <a href="/puzzle-playhouse/sign_up.html" class="btn primary-btn">Sign Up</a>
+
+        <div class="mini-btn-group">
+            <a href="/puzzle-playhouse/blog.html" class="mini-btn">Blog</a>
+            <a href="/puzzle-playhouse/index.html" class="mini-btn">Home</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-logo-wrapper">
+        <a href="/puzzle-playhouse/index.html">
+            <img src="/puzzle-playhouse/logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
+        </a>
+    </div>
+
+    <div class="footer-links">
+        <a href="/puzzle-playhouse/About.html">About</a>
+        <a href="/puzzle-playhouse/contact.html">Contact</a>
+        <a href="/puzzle-playhouse/Privacy_Policy.html">Privacy Policy</a>
+        <a href="/puzzle-playhouse/terms.html">Terms</a>
+    </div>
+
+    <div class="footer-disclaimer">
+        <p>As an Amazon Associate, we earn from qualifying purchases.</p>
+    </div>
+</footer>
+
+<!-- Floating Like + Share Bar -->
+<div class="social-bar">
+  <button class="social-btn like-btn">
+    <span class="icon">❤️</span>
+    <span class="count">18</span>
+  </button>
+  <button class="social-btn share-btn">
+    <span class="icon">🔗</span>
+  </button>
+</div>
+
+<!-- Slide-out Share Menu -->
+<div class="share-menu" id="shareMenu">
+  <h3>Share this page</h3>
+  <a class="share-option" id="shareFacebook">📘 Facebook</a>
+  <a class="share-option" id="shareWhatsApp">💬 WhatsApp</a>
+  <a class="share-option" id="shareEmail">✉️ Email</a>
+  <a class="share-option" id="shareCopy">🔗 Copy Link</a>
+</div>
+
+<script src="/puzzle-playhouse/social.js"></script>
+
+</body>
+</html>
