@@ -425,3 +425,15 @@ input[type="email"] {
 .content h3 {
     text-align: center;
 }
+
+.flash-gold {
+    color: #ffd700;
+    font-weight: bold;
+    animation: goldPulse 1.4s infinite ease-in-out;
+}
+
+@keyframes goldPulse {
+    0% { text-shadow: 0 0 4px #ffd700; }
+    50% { text-shadow: 0 0 14px #ffd700; }
+    100% { text-shadow: 0 0 4px #ffd700; }
+}
