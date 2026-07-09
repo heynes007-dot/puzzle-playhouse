@@ -258,35 +258,39 @@
   <a class="share-option" id="shareCopy">🔗 Copy Link</a>
 </div>
     <script>
-// LIKE BUTTON
-document.querySelector('.like-btn').addEventListener('click', function() {
-  const countEl = this.querySelector('.count');
-  let count = parseInt(countEl.textContent);
-  countEl.textContent = count + 1;
-});
+document.addEventListener("DOMContentLoaded", function() {
 
-// SHARE MENU TOGGLE
-const shareMenu = document.getElementById('shareMenu');
-document.querySelector('.share-btn').addEventListener('click', function() {
-  shareMenu.classList.toggle('open');
-});
+  // LIKE BUTTON
+  document.querySelector('.like-btn').addEventListener('click', function() {
+    const countEl = this.querySelector('.count');
+    let count = parseInt(countEl.textContent);
+    countEl.textContent = count + 1;
+  });
 
-// SHARE OPTIONS
-document.getElementById('shareFacebook').addEventListener('click', function() {
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);
-});
+  // SHARE MENU TOGGLE
+  const shareMenu = document.getElementById('shareMenu');
+  document.querySelector('.share-btn').addEventListener('click', function() {
+    shareMenu.classList.toggle('open');
+  });
 
-document.getElementById('shareWhatsApp').addEventListener('click', function() {
-  window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(window.location.href)}`);
-});
+  // SHARE OPTIONS
+  document.getElementById('shareFacebook').addEventListener('click', function() {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);
+  });
 
-document.getElementById('shareEmail').addEventListener('click', function() {
-  window.location.href = `mailto:?subject=Check this out&body=${encodeURIComponent(window.location.href)}`;
-});
+  document.getElementById('shareWhatsApp').addEventListener('click', function() {
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(window.location.href)}`);
+  });
 
-document.getElementById('shareCopy').addEventListener('click', function() {
-  navigator.clipboard.writeText(window.location.href);
-  alert("Link copied to clipboard!");
+  document.getElementById('shareEmail').addEventListener('click', function() {
+    window.location.href = `mailto:?subject=Check this out&body=${encodeURIComponent(window.location.href)}`;
+  });
+
+  document.getElementById('shareCopy').addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied to clipboard!");
+  });
+
 });
 </script>
 </body>
