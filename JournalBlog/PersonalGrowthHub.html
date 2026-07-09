@@ -161,17 +161,6 @@
     </div>
 </footer>
 
-<!-- Floating Like + Share Bar -->
-<div class="social-bar">
-  <button class="social-btn like-btn">
-    <span class="icon">❤️</span>
-    <span class="count">18</span>
-  </button>
-  <button class="social-btn share-btn">
-    <span class="icon">🔗</span>
-  </button>
-</div>
-
 <!-- Slide-out Share Menu -->
 <div class="share-menu" id="shareMenu">
   <h3>Share this page</h3>
@@ -180,8 +169,41 @@
   <a class="share-option" id="shareEmail">✉️ Email</a>
   <a class="share-option" id="shareCopy">🔗 Copy Link</a>
 </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function() {
 
-<script src="/puzzle-playhouse/social.js"></script>
+  // LIKE BUTTON
+  document.querySelector('.like-btn').addEventListener('click', function() {
+    const countEl = this.querySelector('.count');
+    let count = parseInt(countEl.textContent);
+    countEl.textContent = count + 1;
+  });
 
+  // SHARE MENU TOGGLE
+  const shareMenu = document.getElementById('shareMenu');
+  document.querySelector('.share-btn').addEventListener('click', function() {
+    shareMenu.classList.toggle('open');
+  });
+
+  // SHARE OPTIONS
+  document.getElementById('shareFacebook').addEventListener('click', function() {
+    window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`);
+  });
+
+  document.getElementById('shareWhatsApp').addEventListener('click', function() {
+    window.open(`https://api.whatsapp.com/send?text=${encodeURIComponent(window.location.href)}`);
+  });
+
+  document.getElementById('shareEmail').addEventListener('click', function() {
+    window.location.href = `mailto:?subject=Check this out&body=${encodeURIComponent(window.location.href)}`;
+  });
+
+  document.getElementById('shareCopy').addEventListener('click', function() {
+    navigator.clipboard.writeText(window.location.href);
+    alert("Link copied to clipboard!");
+  });
+
+});
+</script>
 </body>
 </html>
