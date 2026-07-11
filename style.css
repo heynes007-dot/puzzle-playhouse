@@ -461,13 +461,13 @@ Hero Banner
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 20px gold; /* your gold glow */
-}
-hero-banner-bg {
+
+   .hero-banner-bg {
     width: 100%;
-    height: 280px; /* adjust height as needed */
+    height: 280px;
     background-image: url('/puzzle-playhouse/images/10_Benifits_Journal.png');
-    background-size: cover;        /* fills the width */
-    background-position: center;   /* keeps subject centred */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 40px gold; /* your signature glow */
+    box-shadow: inset 0 0 40px gold;
 }
