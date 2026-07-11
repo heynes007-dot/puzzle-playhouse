@@ -445,3 +445,20 @@ input[type="email"] {
         text-shadow: 0 0 4px silver;
     }
 }
+/*----------------------------------------------
+Hero Banner
+------------------------------------------------*/
+.hero-banner {
+    width: 100%;
+    text-align: center;
+    background: #000; /* black background */
+    padding: 20px 0;
+}
+
+.hero-img {
+    max-width: 900px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px gold; /* your gold glow */
+}
