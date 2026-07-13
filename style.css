@@ -1,3 +1,7 @@
+/* Safari visited link override */
+.pp-header a:visited {
+    color: #c0c0c0 !important;
+}
 /* FORCE LINK COLORS TO SILVER */
 a,
 a:visited {
