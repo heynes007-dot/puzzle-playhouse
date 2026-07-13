@@ -504,3 +504,89 @@ input[type="email"] {
   gap: 15px;
   flex-shrink: 0; /* ✅ keeps icons aligned */
 }
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px;
+    background: #000;
+    color: #fff;
+    gap: 40px;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-left h1 {
+    font-size: 2.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-left .highlight {
+    color: #00ff7f; /* neon green */
+}
+
+.hero-left p {
+    font-size: 1.2rem;
+    margin: 20px 0 30px;
+    color: #ccc;
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn.green { background: #00c853; }
+.btn.orange { background: #ff9100; }
+.btn.purple { background: #9c27b0; }
+
+/* ICONS */
+.hero-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px; /* keeps them tidy in two rows */
+}
+
+.icon-item img {
+    width: 40px;     /* FIX: icon size */
+    height: 40px;    /* FIX: icon size */
+    object-fit: contain;
+}
+
+/* RIGHT SIDE IMAGE */
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 450px; /* controls size */
+    border-radius: 12px;
+}
