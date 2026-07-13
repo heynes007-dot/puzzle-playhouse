@@ -445,100 +445,83 @@ input[type="email"] {
         text-shadow: 0 0 4px silver;
     }
 }
-/*----------------------------------------------
-Hero Banner
-------------------------------------------------*/
-.hero-banner {
-    width: 100%;
-    text-align: center;
-    background: #000; /* black background */
-    padding: 20px 0;
-}
+/* ============================
+   PUZZLE PLAYHOUSE HEADER
+   ============================ */
 
-.hero-img {
-    max-width: 900px;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px gold; /* your gold glow */
-
-   .hero-banner-bg {
-    width: 100%;
-    height: 280px;
-    background-image: url('/puzzle-playhouse/images/10_Benifits_Journal.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: inset 0 0 40px gold;
-}
-   .pp-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 12px 40px;
-  background: #111;
-  color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+.pp-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #111;
+    color: #fff;
+    border-bottom: 3px solid #ffd700;
 }
 
 .pp-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.pp-logo img {
+    height: 55px;
 }
 
 .pp-title {
-  font-size: 1.4rem;
-  letter-spacing: 0.08em;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
 }
 
+/* NAVIGATION */
 .pp-nav {
-  display: flex;
-  gap: 24px;
+    display: flex;
+    gap: 28px;
 }
 
-.nav-link {
-  position: relative;
-  text-decoration: none;
-  color: #e0e0e0;
-  font-size: 1rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
+.pp-nav .nav-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-/* Active page (like your green Home) */
-.nav-link.active {
-  color: #4caf50;
+/* Active page (green) */
+.pp-nav .nav-link.active {
+    color: #4caf50;
 }
 
-/* Gold glow on hover */
-.nav-link:hover {
-  color: #ffd700;
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8),
-               0 0 12px rgba(255, 215, 0, 0.6);
+/* Gold glow hover */
+.pp-nav .nav-link:hover {
+    color: #ffd700;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
+                 0 0 12px rgba(255, 215, 0, 0.7);
 }
 
-/* Icons (search + trolley) */
+/* ICONS (search + trolley) */
 .pp-icons {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
 .icon-btn {
-  background: none;
-  border: none;
-  color: #e0e0e0;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: color 0.2s ease, text-shadow 0.2s ease, transform 0.2s ease;
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* Gold glow on icon hover */
+/* Gold glow hover for icons */
 .icon-btn:hover {
-  color: #ffd700;
-  text-shadow: 0 0 6px rgba(255, 215, 0, 0.8),
-               0 0 12px rgba(255, 215, 0, 0.6);
-  transform: scale(1.05);
+    color: #ffd700;
+    text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
+                 0 0 12px rgba(255, 215, 0, 0.7);
+    transform: scale(1.1);
 }
