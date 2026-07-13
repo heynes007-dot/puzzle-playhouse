@@ -572,12 +572,12 @@ input[type="email"] {
     width: 250px; /* keeps them tidy in two rows */
 }
 
-.icon-item img {
-    width: 40px;     /* FIX: icon size */
-    height: 40px;    /* FIX: icon size */
+.hero .hero-icons .icon-item img {
+    width: 40px !important;
+    height: 40px !important;
     object-fit: contain;
+    flex-shrink: 0;
 }
-
 /* RIGHT SIDE IMAGE */
 .hero-right {
     flex: 1;
