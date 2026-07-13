@@ -518,3 +518,42 @@ input[type="email"] {
                0 0 12px rgba(255, 215, 0, 0.7);
   transform: scale(1.1);
 }
+.pp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* ✅ prevents wrapping */
+  overflow: hidden;
+  background-color: #000;
+  color: #c0c0c0;
+  padding: 15px 40px;
+  font-family: Arial, sans-serif;
+}
+
+.pp-logo img {
+  height: 50px;
+  flex-shrink: 0; /* ✅ keeps logo from shrinking */
+}
+
+.pp-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-left: 10px;
+  white-space: nowrap; /* ✅ keeps title on one line */
+}
+
+.pp-nav {
+  display: flex;
+  gap: 25px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.pp-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-shrink: 0; /* ✅ keeps icons aligned */
+}
