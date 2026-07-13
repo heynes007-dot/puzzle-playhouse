@@ -448,80 +448,73 @@ input[type="email"] {
 /* ============================
    PUZZLE PLAYHOUSE HEADER
    ============================ */
-
+* HEADER FIX */
 .pp-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 40px;
-    background: #111;
-    color: #fff;
-    border-bottom: 3px solid #ffd700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #000;
+  color: #c0c0c0;
+  padding: 15px 40px;
+  font-family: Arial, sans-serif;
 }
 
 .pp-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .pp-logo img {
-    height: 55px;
+  height: 50px;
 }
 
 .pp-title {
-    font-size: 1.6rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #c0c0c0;
 }
 
-/* NAVIGATION */
 .pp-nav {
-    display: flex;
-    gap: 28px;
+  display: flex;
+  gap: 25px;
 }
 
 .pp-nav .nav-link {
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    transition: color 0.25s ease, text-shadow 0.25s ease;
+  color: #c0c0c0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  transition: color 0.25s ease, text-shadow 0.25s ease;
 }
 
-/* Active page (green) */
-.pp-nav .nav-link.active {
-    color: #4caf50;
-}
-
-/* Gold glow hover */
+/* Hover glow */
 .pp-nav .nav-link:hover {
-    color: #ffd700;
-    text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
-                 0 0 12px rgba(255, 215, 0, 0.7);
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
+               0 0 12px rgba(255, 215, 0, 0.7);
 }
 
-/* ICONS (search + trolley) */
+/* Icons */
 .pp-icons {
-    display: flex;
-    align-items: center;
-    gap: 18px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .icon-btn {
-    background: none;
-    border: none;
-    color: #e0e0e0;
-    font-size: 1.4rem;
-    cursor: pointer;
-    transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
+  background: none;
+  border: none;
+  color: #c0c0c0;
+  font-size: 1.4rem;
+  cursor: pointer;
+  transition: color 0.25s ease, text-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* Gold glow hover for icons */
 .icon-btn:hover {
-    color: #ffd700;
-    text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
-                 0 0 12px rgba(255, 215, 0, 0.7);
-    transform: scale(1.1);
+  color: #ffd700;
+  text-shadow: 0 0 6px rgba(255, 215, 0, 0.9),
+               0 0 12px rgba(255, 215, 0, 0.7);
+  transform: scale(1.1);
 }
