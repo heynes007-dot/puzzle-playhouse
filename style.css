@@ -589,4 +589,33 @@ input[type="email"] {
     width: 100%;
     max-width: 450px; /* controls size */
     border-radius: 12px;
+}/* --- HERO IMAGE FIX --- */
+.hero-image {
+    width: 100%;
+    max-width: 520px;        /* wider image */
+    border-radius: 20px;     /* softer corners */
+    object-fit: cover;       /* fills nicely without stretching */
+}
+
+/* --- ICONS FIX --- */
+.hero-icons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;       /* keeps them on one line */
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;                 /* evenly spaced */
+    min-width: 180px;        /* prevents wrapping */
+}
+
+.icon-item img {
+    width: 50px;             /* slightly larger */
+    height: 50px;
+    object-fit: contain;
 }
