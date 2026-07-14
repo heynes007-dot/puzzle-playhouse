@@ -590,16 +590,16 @@ input[type="email"] {
     justify-content: center;
 }
 
+/* HERO IMAGE – Narrower, Longer, Faded Edges */
 .hero-image {
-    width: 100%;
-    max-width: 450px; /* controls size */
-    border-radius: 12px;
-}/* --- HERO IMAGE FIX --- */
-.hero-image {
-    width: 100%;
-    max-width: 520px;        /* wider image */
-    border-radius: 20px;     /* softer corners */
-    object-fit: cover;       /* fills nicely without stretching */
+    width: 85%;               /* narrower width */
+    max-width: 480px;         /* limits size on large screens */
+    height: auto;             /* keeps proportions */
+    border-radius: 25px;      /* rounded corners */
+    object-fit: cover;        /* fills nicely */
+    filter: brightness(0.95); /* slight darkening for contrast */
+    mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
 }
 
 /* --- ICONS FIX --- */
