@@ -95,3 +95,19 @@ nav.primary-nav {
   transform: translateX(-50%) scaleX(1);
   opacity: 1;
 }
+.btn {
+  background: transparent;
+  color: rgba(255,215,0,0.98);
+  border: 1px solid rgba(255,215,0,0.12);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .18s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg,#ffd36b,#c79b00);
+  color: #0b0b0b;
+  border: none;
+}
