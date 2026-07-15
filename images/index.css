@@ -1,3 +1,0 @@
-/* homepage-only: hero, icon row, featured */
-.hero{display:flex;gap:36px;padding:56px 20px}
-.icon-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
