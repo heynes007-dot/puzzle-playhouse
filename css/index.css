@@ -158,3 +158,68 @@
     justify-content: center;
   }
 }
+  /* --- Equal-width, controlled-height hero buttons --- */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.hero-buttons .btn {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  padding: 0 18px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  color: #000 !important;
+  line-height: 1;
+  min-width: 0;
+}
+
+/* Ensure no fixed widths interfere */
+.hero-buttons .btn[style], .hero-buttons .btn {
+  width: auto;
+}
+
+/* Mobile: stack buttons */
+@media (max-width: 520px) {
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; height: 48px; padding: 0 16px; }
+}
+
+/* --- Icons row: keep horizontal and larger --- */
+.hero-icons {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap;
+  gap: 28px;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.icon-item {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 14px;
+  flex: 0 0 auto;
+  font-size: 16px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.95);
+}
+
+.icon-item img {
+  width: 64px;
+  height: 64px;
+  display: block;
+  object-fit: contain;
+}
+
+/* Small screens: allow wrapping */
+@media (max-width: 420px) {
+  .hero-icons { flex-wrap: wrap; justify-content: center; gap: 16px; }
+  .icon-item img { width: 48px; height: 48px; }
+  .icon-item { font-size: 15px; gap: 10px; }
+}
