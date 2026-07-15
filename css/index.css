@@ -1,225 +1,143 @@
-/* Hero banner layout */
+/* ===== HERO BANNER — single replacement block ===== */
+
 .hero-banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  gap: 36px;
   max-width: 1200px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
+/* Left content */
 .hero-content {
-  flex: 1;
+  flex: 1 1 0;
   color: #fff;
 }
 
+/* Headline and paragraph */
 .hero-content h1 {
   font-size: 42px;
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 20px;
+  line-height: 1.08;
+  margin: 0 0 18px;
 }
-
-.hero-content .highlight {
-  color: #9be22d;
-}
-
 .hero-content p {
   font-size: 18px;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: 28px;
-  max-width: 520px;
+  color: rgba(255,255,255,0.88);
+  margin: 0 0 22px;
+  max-width: 560px;
 }
 
-/* Buttons */
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  margin-bottom: 30px;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-weight: 700;
-  text-decoration: none;
-  color: #000; /* all button text black */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform .18s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-.btn.green { background: #7ac943; }
-.btn.orange { background: #fbb03b; }
-.btn.purple { background: #a864a8; }
-
-
-/* Icons row */
-.hero-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 26px;
-}
-
-.icon-item {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 700; /* bold text */
-  color: rgba(255,255,255,0.9);
-}
-/* Make hero CTA buttons equal width and responsive */
+/* ===== Buttons: equal width, controlled height, black text ===== */
 .hero-buttons {
   display: flex;
   gap: 14px;
   align-items: center;
 }
 
-/* Equal flexible widths — buttons expand evenly */
+/* Equal flexible widths, fixed visual height, centered label */
 .hero-buttons .btn {
   flex: 1 1 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 18px;
-  min-width: 0;            /* prevents overflow on small screens */
-  box-sizing: border-box;
-  white-space: nowrap;     /* prevents label wrapping */
-  color: #000;             /* ensure black text */
-}
-
-/* Mobile: stack buttons vertically */
-@media (max-width: 520px) {
-  .hero-buttons {
-    flex-direction: column;
-  }
-  .hero-buttons .btn {
-    width: 100%;
-  }
-}
-.icon-item img {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-
-  }
-
-.icon-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  font-size: 16px;
-  font-weight: 800; /* bold text next to icons */
-  color: rgba(255,255,255,0.95);
-}
-
-/* Responsive: scale icons down on small screens */
-@media (max-width: 520px) {
-  .icon-item img { width: 48px; height: 48px; }
-  .icon-item { font-size: 15px; gap: 10px; }
-
-/* Optional: subtle glow on hover */
-.icon-item:hover img {
-  filter: drop-shadow(0 0 6px rgba(255,215,0,0.3));
-}
-
-/* Right image */
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 520px;
-  border-radius: 14px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.5);
-}
-
-/* Responsive */
-@media (max-width: 900px) {
-  .hero-banner {
-    flex-direction: column-reverse;
-    text-align: center;
-  }
-  .hero-content p {
-    margin: 0 auto 28px;
-  }
-  .hero-icons {
-    justify-content: center;
-  }
-}
-  /* --- Equal-width, controlled-height hero buttons --- */
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  align-items: center;
-}
-
-.hero-buttons .btn {
-  flex: 1 1 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 44px;
-  padding: 0 18px;
+  height: 44px;            /* controlled height */
+  padding: 0 18px;         /* horizontal padding only */
   box-sizing: border-box;
   white-space: nowrap;
-  color: #000 !important;
   line-height: 1;
-  min-width: 0;
-}
-
-/* Ensure no fixed widths interfere */
-.hero-buttons .btn[style], .hero-buttons .btn {
-  width: auto;
-}
-
-/* Mobile: stack buttons */
-@media (max-width: 520px) {
-  .hero-buttons { flex-direction: column; }
-  .hero-buttons .btn { width: 100%; height: 48px; padding: 0 16px; }
-}
-
-/* --- Icons row: keep horizontal and larger --- */
-.hero-icons {
-  display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap;
-  gap: 28px;
-  align-items: center;
-  margin-top: 22px;
-}
-
-.icon-item {
-  display: inline-flex !important;
-  align-items: center;
-  gap: 14px;
-  flex: 0 0 auto;
-  font-size: 16px;
+  color: #000 !important;  /* force black text */
+  text-decoration: none;
+  border-radius: 10px;
   font-weight: 800;
-  color: rgba(255,255,255,0.95);
+  transition: transform .16s ease;
 }
 
+/* Button colors (adjust backgrounds as needed) */
+.hero-buttons .btn.green { background: #7ac943; }
+.hero-buttons .btn.orange { background: #fbb03b; }
+.hero-buttons .btn.purple { background: #a864a8; color: #000; }
+
+/* Hover */
+.hero-buttons .btn:hover { transform: translateY(-3px); }
+
+/* ===== Hero image column constrained so left column has room ===== */
+.hero-image {
+  flex: 0 0 420px;        /* fixed column width for image */
+  max-width: 420px;
+  display: flex;
+  justify-content: center;
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+
+/* ===== Icons: icon + label stay inline; label may wrap to two lines ===== */
+.hero-icons {
+  display: flex;
+  flex-wrap: wrap;        /* allow items to wrap to next row if needed */
+  gap: 22px;
+  align-items: center;
+  margin-top: 18px;
+  max-width: 560px;
+}
+
+/* Keep icon and label on the same inline unit */
+.icon-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex: 0 1 auto;         /* allow item to shrink/grow but keep icon+text together */
+  min-width: 0;           /* allow text to wrap inside */
+}
+
+/* Larger icon image */
 .icon-item img {
   width: 64px;
   height: 64px;
+  flex: 0 0 auto;
   display: block;
   object-fit: contain;
 }
 
-/* Small screens: allow wrapping */
-@media (max-width: 420px) {
-  .hero-icons { flex-wrap: wrap; justify-content: center; gap: 16px; }
-  .icon-item img { width: 48px; height: 48px; }
-  .icon-item { font-size: 15px; gap: 10px; }
+/* Label: allow wrapping, limit width so it wraps into 1–2 lines */
+.icon-item span {
+  display: block;
+  max-width: 160px;       /* controls where the label breaks to a second line */
+  white-space: normal;
+  font-weight: 800;
+  font-size: 15px;
+  color: rgba(255,255,255,0.95);
+  line-height: 1.15;
+}
+
+/* ===== Responsive adjustments ===== */
+@media (max-width: 900px) {
+  .hero-banner {
+    gap: 24px;
+  }
+  .hero-image {
+    flex: 0 0 360px;
+    max-width: 360px;
+  }
+  .icon-item img { width: 56px; height: 56px; }
+  .icon-item span { max-width: 140px; font-size: 14px; }
+}
+
+@media (max-width: 700px) {
+  .hero-banner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-image { flex: 0 0 auto; max-width: 420px; margin-bottom: 18px; }
+  .hero-content { width: 100%; }
+  .hero-icons { justify-content: center; gap: 16px; }
+  .icon-item { justify-content: center; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn { width: 100%; height: 48px; }
 }
