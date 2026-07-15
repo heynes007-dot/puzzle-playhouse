@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puzzle Playhouse | Kids Puzzle Books, Activities & Freebies</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Puzzle Playhouse</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script defer src="js/main.js"></script>
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header class="pp-header">
-  <div class="pp-logo">
-    <img src="logo.png" alt="Puzzle Playhouse Logo">
-    <span class="pp-title">PUZZLE PLAYHOUSE</span>
-  </div>
-
-  <nav class="pp-nav">
-    <a href="index.html" class="nav-link active">Home</a>
-    <a href="bookcollections.html" class="nav-link">Books</a>
-    <a href="monthly-puzzle.html" class="nav-link">Free Puzzle</a>
-    <a href="sign_up.html" class="nav-link">Puzzle Club</a>
-    <a href="blog.html" class="nav-link">Blog</a>
-    <a href="About.html" class="nav-link">About Us</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+<header class="navbar">
+  <div class="logo"><img src="images/logo.png" alt="Puzzle Playhouse"></div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#books">Books</a>
+    <a href="#free">Free Puzzle</a>
+    <a href="#club">Puzzle Club</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
   </nav>
-
-  <div class="pp-icons">
-    <button class="icon-btn" aria-label="Search">🔍</button>
-    <a href="https://amzn.to/4wCENyN" class="icon-btn" aria-label="Amazon Author Page" target="_blank">🛒</a>
-  </div>
 </header>
 
-<!-- HERO SECTION -->
 <section class="hero">
-  <div class="hero-left">
-    <h1>SCREEN‑FREE <span class="highlight">FUN</span> THAT HELPS KIDS LEARN</h1>
-    <p>Explore puzzle books, printable activities, journals and brain games designed to entertain, educate and inspire.</p>
-
-    <div class="hero-buttons">
-      <a href="bookcollections.html" class="btn green">📗 Browse Books</a>
-      <a href="monthly-puzzle.html" class="btn orange">🧩 Free Puzzle</a>
-      <a href="sign_up.html" class="btn purple">💜 Join Puzzle Club</a>
-    </div>
-
-    <div class="hero-icons">
-      <div class="icon-item"><img src="images/icon-fun.png"><span>Fun for All Ages</span></div>
-      <div class="icon-item"><img src="images/icon-brain.png"><span>Boosts Learning</span></div>
-      <div class="icon-item"><img src="images/icon-screenfree.png"><span>Screen‑Free Entertainment</span></div>
-      <div class="icon-item"><img src="images/icon-heart.png"><span>Made with Care & Creativity</span></div>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <img src="images/kids-banner.png" class="hero-image" alt="Kids enjoying puzzle books">
-  </div>
+<div class="hero-content">
+<h1>Screen-Free <span>Fun</span> That Helps Kids Learn</h1>
+<p>Explore puzzle books, journals, colouring books and brain games for all ages.</p>
+<div class="hero-buttons">
+<a class="btn green">Browse Books</a>
+<a class="btn gold">Free Puzzle</a>
+<a class="btn purple">Join Puzzle Club</a>
+</div>
+<div class="features">
+<div>🧩 Fun for All Ages</div>
+<div>🧠 Boost Learning</div>
+<div>📵 Screen-Free</div>
+<div>❤️ Creativity</div>
+</div>
+</div>
+<div class="hero-image">
+<img src="images/hero.webp" alt="">
+</div>
 </section>
 
-<!-- FEATURED BOOKS -->
-<section class="section">
-  <h2>Featured Books</h2>
-
-  <div class="grid">
-    <div class="card">
-      <div class="image-frame"><img src="images/book-football.png"></div>
-      <p>Football Word Search</p>
-    </div>
-
-    <div class="card">
-      <div class="image-frame"><img src="images/book-vowels.png"></div>
-      <p>Missing Vowels</p>
-    </div>
-
-    <div class="card">
-      <div class="image-frame"><img src="images/book-maze.png"></div>
-      <p>Mazes for Kids</p>
-    </div>
-
-    <div class="card">
-      <div class="image-frame"><img src="images/book-wouldyourather.png"></div>
-      <p>Would You Rather?</p>
-    </div>
-
-    <div class="card">
-      <div class="image-frame"><img src="images/book-coffee.png"></div>
-      <p>Coffee Journal</p>
-    </div>
-
-    <div class="card">
-      <div class="image-frame"><img src="images/book-sleep.png"></div>
-      <p>Sleep Tracker</p>
-    </div>
-  </div>
+<section id="categories">
+<h2>Shop by Interest</h2>
+<div class="card-grid">
+<div class="card">Football</div>
+<div class="card">Word Searches</div>
+<div class="card">Colouring</div>
+<div class="card">Brain Games</div>
+<div class="card">Journals</div>
+<div class="card">Seasonal</div>
+<div class="card">Kids Activities</div>
+<div class="card">Lifestyle</div>
+</div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="footer-logo-wrapper">
-    <img src="logo.png" class="footer-logo">
-  </div>
+<section id="books">
+<h2>Featured Books</h2>
+<div class="book-grid">
+<div class="book"><img src="images/books/book1.jpg"><h3>Football Word Search</h3></div>
+<div class="book"><img src="images/books/book2.jpg"><h3>Missing Vowels</h3></div>
+<div class="book"><img src="images/books/book3.jpg"><h3>Maze Adventures</h3></div>
+<div class="book"><img src="images/books/book4.jpg"><h3>Would You Rather?</h3></div>
+<div class="book"><img src="images/books/book5.jpg"><h3>Coffee Journal</h3></div>
+<div class="book"><img src="images/books/book6.jpg"><h3>Sleep Tracker</h3></div>
+</div>
+</section>
 
-  <div class="footer-links">
-    <a href="About.html">About</a>
-    <a href="contact.html">Contact</a>
-    <a href="Privacy_Policy.html">Privacy Policy</a>
-    <a href="terms.html">Terms</a>
-    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
-  </div>
+<section class="why">
+<h2>Why Choose Puzzle Playhouse?</h2>
+<div class="card-grid">
+<div class="card"><h3>Learning Through Play</h3><p>Activities that strengthen minds.</p></div>
+<div class="card"><h3>Quality Content</h3><p>Designed with care.</p></div>
+<div class="card"><h3>Family Friendly</h3><p>Perfect for screen-free time.</p></div>
+<div class="card"><h3>Worldwide</h3><p>Available on Amazon & Etsy.</p></div>
+</div>
+</section>
 
-  <div class="footer-disclaimer">
-    <p>As an Amazon Associate, we earn from qualifying purchases.</p>
-  </div>
+<section class="promo-grid">
+<div class="promo">Monthly Free Puzzle</div>
+<div class="promo">Join Puzzle Club</div>
+<div class="promo">Shop on Amazon & Etsy</div>
+</section>
+
+<section class="testimonials">
+<h2>Loved by Puzzle Fans</h2>
+<div class="card-grid">
+<div class="card">★★★★★<p>"Fantastic books!"</p></div>
+<div class="card">★★★★★<p>"Great for travel."</p></div>
+<div class="card">★★★★★<p>"Kids love them."</p></div>
+</div>
+</section>
+
+<section id="blog">
+<h2>Latest From The Blog</h2>
+<div class="card-grid">
+<div class="card">Blog Post 1</div>
+<div class="card">Blog Post 2</div>
+<div class="card">Blog Post 3</div>
+</div>
+</section>
+
+<section id="club" class="newsletter">
+<h2>Stay in the Loop</h2>
+<form>
+<input type="email" placeholder="Email address">
+<button>Sign Me Up</button>
+</form>
+</section>
+
+<footer id="contact">
+<p>© Puzzle Playhouse</p>
 </footer>
 
 </body>
