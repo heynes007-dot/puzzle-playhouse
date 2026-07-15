@@ -64,8 +64,8 @@
 .hero-icons {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
-  margin-top: 20px;
+  gap: 30px;
+  margin-top: 26px;
 }
 
 .icon-item {
@@ -78,10 +78,25 @@
 }
 
 .icon-item img {
-  width: 40px; /* larger icons */
-  height: 40px;
+  width: 64px;
+  height: 64px;
   object-fit: contain;
+
+  }
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  font-weight: 800; /* bold text next to icons */
+  color: rgba(255,255,255,0.95);
 }
+
+/* Responsive: scale icons down on small screens */
+@media (max-width: 520px) {
+  .icon-item img { width: 48px; height: 48px; }
+  .icon-item { font-size: 15px; gap: 10px; }
 
 /* Optional: subtle glow on hover */
 .icon-item:hover img {
