@@ -147,20 +147,5 @@
     <!-- Hero / content will be added next -->
     <p style="color:rgba(255,255,255,0.6);">Header complete. Ready to build the hero banner below.</p>
   </main>
-
-  <script>
-    // Mobile menu toggle (keeps index2 self-contained)
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.getElementById('mobile-menu');
-    hamburger && hamburger.addEventListener('click', () => {
-      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-      hamburger.setAttribute('aria-expanded', String(!expanded));
-      if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-        mobileMenu.style.display = 'block';
-      } else {
-        mobileMenu.style.display = 'none';
-      }
-    });
-  </script>
 </body>
 </html>
