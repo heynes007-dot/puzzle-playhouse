@@ -43,3 +43,55 @@
   font-weight: 600;
   margin-top: 2px;
 }
+/* ===== Navigation ===== */
+nav.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 18px;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: rgba(246,243,239,0.9);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 6px;
+  position: relative;
+  transition: all .18s ease;
+}
+
+/* Gold underline animation */
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd36b, #c79b00);
+  border-radius: 2px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform .18s ease, opacity .18s ease;
+}
+
+.nav-list a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,215,0,0.12);
+  transform: translateY(-1px);
+}
+
+.nav-list a:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  opacity: 1;
+}
