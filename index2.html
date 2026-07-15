@@ -11,60 +11,10 @@
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
-
-    /* Nav */
-    nav.primary-nav{
-      display:flex;
-      align-items:center;
-      gap:22px;
-    }
-    .nav-list{
-      display:flex;
-      gap:18px;
-      list-style:none;
-      align-items:center;
-    }
-    .nav-list a{
-      color:rgba(246,243,239,0.9);
-      text-decoration:none;
-      font-weight:600;
-      padding:8px 10px;
-      border-radius:6px;
-      transition:all .18s ease;
-      position:relative;
-    }
-    .nav-list a::after{
-      content:"";
-      position:absolute;
-      left:50%;
-      transform:translateX(-50%) scaleX(0);
-      bottom:-6px;
-      width:60%;
-      height:3px;
-      background:linear-gradient(90deg,#ffd36b,#c79b00);
-      border-radius:2px;
-      transition:transform .18s ease;
-      transform-origin:center;
-      opacity:0;
-    }
-    .nav-list a:hover{
-      color:#fff;
-      text-shadow:0 0 10px rgba(255,215,0,0.12);
-      transform:translateY(-1px);
-    }
-    .nav-list a:hover::after{
-      transform:translateX(-50%) scaleX(1);
-      opacity:1;
-    }
- /* --HERO BANNER (paste right after your top nav links) */
-    
-<section class="hero-banner" aria-label="Hero banner">
-  <div class="hero-content">
+ <section class="hero">
+  <div class="hero-left">
     <h1>SCREEN‑FREE <span class="highlight">FUN</span><br>THAT HELPS KIDS LEARN</h1>
-    <p>
-      Explore puzzle books, printable activities, journals and brain games designed to entertain,
-      educate and inspire.
-    </p>
+    <p>Explore puzzle books, printable activities, journals and brain games designed to entertain, educate and inspire.</p>
 
     <div class="hero-buttons">
       <a href="bookcollections.html" class="btn green">Browse Books</a>
@@ -74,33 +24,32 @@
 
     <div class="hero-icons">
       <div class="icon-item">
-        <img src="images/icon-fun.png" alt="Fun for all ages">
+        <img src="images/icon-fun.png" alt="">
         <span>Fun for All Ages</span>
       </div>
       <div class="icon-item">
-        <img src="images/icon-brain.png" alt="Boosts learning">
+        <img src="images/icon-brain.png" alt="">
         <span>Boosts Learning</span>
       </div>
       <div class="icon-item">
-        <img src="images/icon-screenfree.png" alt="Screen-free entertainment">
+        <img src="images/icon-screenfree.png" alt="">
         <span>Screen‑Free Entertainment</span>
       </div>
       <div class="icon-item">
-        <img src="images/icon-heart.png" alt="Made with care and creativity">
+        <img src="images/icon-heart.png" alt="">
         <span>Made with Care & Creativity</span>
       </div>
     </div>
   </div>
 
-  <div class="hero-image" aria-hidden="true">
-    <img src="images/puzzle-books-kids.png" alt="Children enjoying puzzle books">
+  <div class="hero-right">
+    <img src="images/puzzle-books-kids.png" alt="">
   </div>
 </section>
 
-<!-- Section header: green line + title (place this immediately below the hero) -->
 <div class="section-header">
-  <span class="section-line" aria-hidden="true"></span>
-  <h2 class="section-title">Shop by Interest</h2>
+  <span class="section-line"></span>
+  <h2>Shop by Interest</h2>
 </div>
 
 <!-- Placeholder for the grid that follows -->
