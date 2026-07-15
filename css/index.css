@@ -65,14 +65,14 @@
 /* ===== Hero image column constrained so left column has room ===== */
 .hero-image {
   flex: 0 0 420px;        /* fixed column width for image */
-  max-width: 420px;
+  max-width: 360px;
   display: flex;
   justify-content: center;
 }
 .hero-image img {
   width: 100%;
   height: auto;
-  max-width: 420px;
+  max-width: 360px;
   border-radius: 14px;
   box-shadow: 0 18px 40px rgba(0,0,0,0.45);
 }
@@ -98,8 +98,8 @@
 
 /* Larger icon image */
 .icon-item img {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   flex: 0 0 auto;
   display: block;
   object-fit: contain;
@@ -108,7 +108,7 @@
 /* Label: allow wrapping, limit width so it wraps into 1–2 lines */
 .icon-item span {
   display: block;
-  max-width: 160px;       /* controls where the label breaks to a second line */
+  max-width: 150px;       /* controls where the label breaks to a second line */
   white-space: normal;
   font-weight: 800;
   font-size: 15px;
