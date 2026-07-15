@@ -59,64 +59,7 @@
   </div>
 </section>
 
-    /* CTA buttons */
-    .cta{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
-    .btn{
-      background:transparent;
-      color:rgba(255,215,0,0.98);
-      border:1px solid rgba(255,215,0,0.12);
-      padding:8px 14px;
-      border-radius:8px;
-      font-weight:700;
-      cursor:pointer;
-      transition:all .18s ease;
-      box-shadow:0 6px 18px rgba(199,155,0,0.04);
-    }
-    .btn.primary{
-      background:linear-gradient(90deg,#ffd36b,#c79b00);
-      color:#0b0b0b;
-      border:none;
-      box-shadow:0 8px 30px rgba(199,155,0,0.18);
-    }
-    .btn:hover{ transform:translateY(-3px); }
-
-    /* Mobile hamburger */
-    .hamburger{
-      display:none;
-      width:44px;
-      height:44px;
-      border-radius:8px;
-      background:rgba(255,255,255,0.02);
-      border:1px solid rgba(255,255,255,0.02);
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
-    }
-    .hamburger span{
-      display:block;
-      width:20px;
-      height:2px;
-      background:rgba(255,215,0,0.95);
-      box-shadow:0 0 8px rgba(255,215,0,0.12);
-      border-radius:2px;
-      position:relative;
-    }
-    .hamburger span::before, .hamburger span::after{
-      content:"";
-      position:absolute;
-      left:0;
-      width:20px;
-      height:2px;
-      background:rgba(255,215,0,0.95);
-      border-radius:2px;
-    }
-    .hamburger span::before{ top:-6px; }
-    .hamburger span::after{ top:6px; }
-
+   
     /* Responsive */
     @media (max-width:880px){
       .nav-list{ display:none; }
