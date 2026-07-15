@@ -1,1 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- META: leave until last -->
+  <title>Homepage Preview</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Minimal reset + fonts -->
+  <style>
+    /* Basic reset */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:#0b0b0b;
+      color:#f6f3ef;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
 
+    /* Header layout */
+    .site-header{
+      background:#070707;
+      border-bottom:1px solid rgba(255,215,0,0.06);
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter: blur(6px);
+    }
+    .container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:18px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    /* Logo */
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .logo-mark{
+      width:48px;
+      height:48px;
+      background:linear-gradient(135deg,#ffd36b,#c79b00);
+      border-radius:8px;
+      box-shadow:0 6px 18px rgba(199,155,0,0.12), 0 0 18px rgba(255,215,0,0.06) inset;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:#0b0b0b;
+      font-size:18px;
+      letter-spacing:0.6px;
+    }
+    .logo-text{
+      display:flex;
+      flex-direction:column;
+      line-height:1;
+    }
+    .logo-title{
+      font-weight:700;
+      color:#fff;
+      font-size:16px;
+      text-shadow:0 1px 0 rgba(0,0,0,0.6);
+    }
+    .logo-sub{
+      font-size:11px;
+      color:rgba(255,215,0,0.95);
+      font-weight:600;
+      margin-top:2px;
+    }
+
+    /* Nav */
+    nav.primary-nav{
+      display:flex;
+      align-items:center;
+      gap:22px;
+    }
+    .nav-list{
+      display:flex;
+      gap:18px;
+      list-style:none;
+      align-items:center;
+    }
+    .nav-list a{
+      color:rgba(246,243,239,0.9);
+      text-decoration:none;
+      font-weight:600;
+      padding:8px 10px;
+      border-radius:6px;
+      transition:all .18s ease;
+      position:relative;
+    }
+    .nav-list a::after{
+      content:"";
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%) scaleX(0);
+      bottom:-6px;
+      width:60%;
+      height:3px;
+      background:linear-gradient(90deg,#ffd36b,#c79b00);
+      border-radius:2px;
+      transition:transform .18s ease;
+      transform-origin:center;
+      opacity:0;
+    }
+    .nav-list a:hover{
+      color:#fff;
+      text-shadow:0 0 10px rgba(255,215,0,0.12);
+      transform:translateY(-1px);
+    }
+    .nav-list a:hover::after{
+      transform:translateX(-50%) scaleX(1);
+      opacity:1;
+    }
+
+    /* CTA buttons */
+    .cta{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .btn{
+      background:transparent;
+      color:rgba(255,215,0,0.98);
+      border:1px solid rgba(255,215,0,0.12);
+      padding:8px 14px;
+      border-radius:8px;
+      font-weight:700;
+      cursor:pointer;
+      transition:all .18s ease;
+      box-shadow:0 6px 18px rgba(199,155,0,0.04);
+    }
+    .btn.primary{
+      background:linear-gradient(90deg,#ffd36b,#c79b00);
+      color:#0b0b0b;
+      border:none;
+      box-shadow:0 8px 30px rgba(199,155,0,0.18);
+    }
+    .btn:hover{ transform:translateY(-3px); }
+
+    /* Mobile hamburger */
+    .hamburger{
+      display:none;
+      width:44px;
+      height:44px;
+      border-radius:8px;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.02);
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    .hamburger span{
+      display:block;
+      width:20px;
+      height:2px;
+      background:rgba(255,215,0,0.95);
+      box-shadow:0 0 8px rgba(255,215,0,0.12);
+      border-radius:2px;
+      position:relative;
+    }
+    .hamburger span::before, .hamburger span::after{
+      content:"";
+      position:absolute;
+      left:0;
+      width:20px;
+      height:2px;
+      background:rgba(255,215,0,0.95);
+      border-radius:2px;
+    }
+    .hamburger span::before{ top:-6px; }
+    .hamburger span::after{ top:6px; }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .nav-list{ display:none; }
+      .cta .btn.secondary{ display:none; }
+      .hamburger{ display:flex; }
+    }
+
+    /* Small utility */
+    .sr-only{ position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden; }
+  </style>
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Home">
+        <div class="logo-mark">PP</div>
+        <div class="logo-text">
+          <div class="logo-title">Puzzle Playhouse</div>
+          <div class="logo-sub">Books & Puzzles</div>
+        </div>
+      </a>
+
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list" role="menubar" aria-hidden="false">
+          <li role="none"><a role="menuitem" href="bookcollections.html">Books</a></li>
+          <li role="none"><a role="menuitem" href="monthly-puzzle.html">Monthly Puzzle</a></li>
+          <li role="none"><a role="menuitem" href="blog.html">Blog</a></li>
+          <li role="none"><a role="menuitem" href="about.html">About</a></li>
+          <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="cta" aria-hidden="false">
+          <a class="btn" href="sign_up.html">Sign up</a>
+          <a class="btn primary" href="bookcollections.html">Shop Now</a>
+        </div>
+
+        <button class="hamburger" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span aria-hidden="true"></span>
+        </button>
+      </nav>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobile-menu" style="display:none;background:#070707;border-top:1px solid rgba(255,215,0,0.03);">
+      <div style="max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;flex-direction:column;gap:8px;">
+        <a href="bookcollections.html" style="color:#fff;padding:10px;border-radius:6px;text-decoration:none;">Books</a>
+        <a href="monthly-puzzle.html" style="color:#fff;padding:10px;border-radius:6px;text-decoration:none;">Monthly Puzzle</a>
+        <a href="blog.html" style="color:#fff;padding:10px;border-radius:6px;text-decoration:none;">Blog</a>
+        <a href="about.html" style="color:#fff;padding:10px;border-radius:6px;text-decoration:none;">About</a>
+        <a href="contact.html" style="color:#fff;padding:10px;border-radius:6px;text-decoration:none;">Contact</a>
+        <div style="display:flex;gap:8px;margin-top:6px;">
+          <a class="btn" href="sign_up.html" style="flex:1;text-align:center;">Sign up</a>
+          <a class="btn primary" href="bookcollections.html" style="flex:1;text-align:center;">Shop</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Placeholder: next sections will go here -->
+  <main id="main-content" role="main" style="padding:48px 20px;max-width:1200px;margin:0 auto;">
+    <!-- Hero / content will be added next -->
+    <p style="color:rgba(255,255,255,0.6);">Header complete. Ready to build the hero banner below.</p>
+  </main>
+
+  <script>
+    // Mobile menu toggle (keeps index2 self-contained)
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger && hamburger.addEventListener('click', () => {
+      const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+      hamburger.setAttribute('aria-expanded', String(!expanded));
+      if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+        mobileMenu.style.display = 'block';
+      } else {
+        mobileMenu.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
