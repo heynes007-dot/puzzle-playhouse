@@ -76,7 +76,35 @@
   font-weight: 700; /* bold text */
   color: rgba(255,255,255,0.9);
 }
+/* Make hero CTA buttons equal width and responsive */
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
 
+/* Equal flexible widths — buttons expand evenly */
+.hero-buttons .btn {
+  flex: 1 1 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  min-width: 0;            /* prevents overflow on small screens */
+  box-sizing: border-box;
+  white-space: nowrap;     /* prevents label wrapping */
+  color: #000;             /* ensure black text */
+}
+
+/* Mobile: stack buttons vertically */
+@media (max-width: 520px) {
+  .hero-buttons {
+    flex-direction: column;
+  }
+  .hero-buttons .btn {
+    width: 100%;
+  }
+}
 .icon-item img {
   width: 64px;
   height: 64px;
