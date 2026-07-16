@@ -199,15 +199,15 @@
   align-items: center;
   justify-content: center; /* centers text and lines */
   gap: 18px;
+  width: 100%;
   max-width: 1200px;
   margin: 40px auto 18px;
   padding: 0 20px;
 }
 
 .section-line {
-  display: block;
+  flex: 1; /* THIS makes the line stretch */
   height: 6px;
-  width: 84px;
   background: linear-gradient(90deg,#7ac943,#5fa21f);
   border-radius: 6px;
   box-shadow: 0 6px 18px rgba(122,201,67,0.12);
