@@ -193,11 +193,11 @@
   box-shadow: 0 4px 30px rgba(0,0,0,0.45);
   filter: brightness(0.95);
 }
-/* ===== Section Header (Green Line + Title) ===== */
-
+/* ===== Shop by selection Section Header (Green Line + Title) ===== */
 .section-header {
   display: flex;
   align-items: center;
+  justify-content: center; /* centers text and lines */
   gap: 18px;
   max-width: 1200px;
   margin: 40px auto 18px;
@@ -208,9 +208,8 @@
   display: block;
   height: 6px;
   width: 84px;
-  background: linear-gradient(90deg, #7ac943, #5fa21f);
+  background: linear-gradient(90deg,#7ac943,#5fa21f);
   border-radius: 6px;
-  flex: 0 0 auto;
   box-shadow: 0 6px 18px rgba(122,201,67,0.12);
 }
 
@@ -221,6 +220,16 @@
   margin: 0;
   letter-spacing: 0.6px;
 }
+
+/* Responsive tweak */
+@media (max-width: 520px) {
+  .section-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .section-line { width: 56px; height: 5px; }
+}
+
 
 /* Mobile layout */
 @media (max-width: 520px) {
