@@ -326,6 +326,20 @@
   margin: 0 auto;
 }
 
+/* Books grid */
+.books-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  margin: 0;
+  flex-wrap: nowrap; /* keeps all books in one row */
+}
+
 /* Arrows */
 .carousel-arrow {
   background: #111;
@@ -341,6 +355,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0; /* prevents arrows from collapsing */
 }
 
 .carousel-arrow:hover {
@@ -349,12 +364,6 @@
   box-shadow: 0 0 15px rgba(122,201,67,0.6);
 }
 
-/* Ensure books-grid scrolls */
-.books-grid {
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 10px 0;
-}
 /* Responsive tweak */
 @media (max-width: 520px) {
   .section-header {
