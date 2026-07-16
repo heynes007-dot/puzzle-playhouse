@@ -187,31 +187,6 @@
 
     </div>
   </section>
-
-  <script>
-document.addEventListener('DOMContentLoaded', () => {
-
-    const grid = document.querySelector('.books-grid');
-    const left = document.querySelector('.left-arrow');
-    const right = document.querySelector('.right-arrow');
-
-    if (!grid || !left || !right) return;
-
-    right.addEventListener('click', () => {
-        grid.scrollBy({
-            left: 300,
-            behavior: 'smooth'
-        });
-    });
-
-    left.addEventListener('click', () => {
-        grid.scrollBy({
-            left: -300,
-            behavior: 'smooth'
-        });
-    });
-
-});
 <!-- Newsletter Banner -->
 <section class="newsletter-banner">
     <div class="newsletter-container">
@@ -238,6 +213,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     </div>
 </section>
+  <script>
+document.addEventListener('DOMContentLoaded', () => {
+
+    const grid = document.querySelector('.books-grid');
+    const left = document.querySelector('.left-arrow');
+    const right = document.querySelector('.right-arrow');
+
+    if (!grid || !left || !right) return;
+
+    right.addEventListener('click', () => {
+        grid.scrollBy({
+            left: 300,
+            behavior: 'smooth'
+        });
+    });
+
+    left.addEventListener('click', () => {
+        grid.scrollBy({
+            left: -300,
+            behavior: 'smooth'
+        });
+    });
+
+});
+
 
   </script>
 </body>
