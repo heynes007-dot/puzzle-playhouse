@@ -40,3 +40,19 @@ body {
    justify-content: flex-start; /* align everything from the left */
   gap: 32px; /* space between logo/text and nav */
 }
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.cta {
+  display: flex;
+  gap: 12px;
+}
