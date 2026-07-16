@@ -233,14 +233,16 @@
     align-items:center;
     justify-content:center;
     gap:18px;
+    width:100%;
 }
 
 .featured-title .section-line{
-    flex:1;
+    flex:1 1 auto;
     height:6px;
     background:linear-gradient(90deg,#7ac943,#5fa21f);
     border-radius:6px;
     box-shadow:0 6px 18px rgba(122,201,67,.12);
+  min-width:60px;
 }
 
 .featured-title .section-title{
