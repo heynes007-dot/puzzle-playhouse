@@ -259,3 +259,51 @@
   background: #9efc6b; /* your green */
   border-radius: 2px;
 }
+/* Interest grid layout */
+.interest-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin: 40px auto;
+  max-width: 1200px;
+}
+
+/* Each icon button */
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: #111;
+  border-radius: 12px;
+  padding: 20px 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Icon image */
+.interest-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: filter 0.25s ease;
+}
+
+/* Label text */
+.interest-item p {
+  margin-top: 10px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+/* Hover glow effect */
+.interest-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(122,201,67,0.4);
+}
+
+.interest-item:hover img {
+  filter: drop-shadow(0 0 10px rgba(122,201,67,0.6));
+}
