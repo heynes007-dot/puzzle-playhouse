@@ -584,3 +584,41 @@
   line-height: 1.4;
   margin-top: 10px;
 }
+/* Footer Safari fixes */
+.pp-footer a {
+  color: #ccc !important;
+  text-decoration: none !important;
+}
+
+.pp-footer a:hover {
+  color: gold !important;
+}
+
+.pp-footer h3,
+.pp-footer h4 {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-col {
+  flex: 1 1 180px;
+  min-width: 180px;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-col ul li {
+  list-style: none;
+  margin: 6px 0;
+}
