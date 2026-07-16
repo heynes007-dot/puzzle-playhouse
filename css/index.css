@@ -155,3 +155,41 @@
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
+.hero-banner {
+  background: #000; /* black hero background */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.icon-item img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+  filter: brightness(1.2) drop-shadow(0 0 6px rgba(255,215,0,0.3));
+}
+.hero-buttons .btn {
+  flex: 1;
+  height: 48px;
+  border-radius: 10px;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.hero-buttons .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255,215,0,0.4);
+}
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.45);
+  filter: brightness(0.95);
+}
