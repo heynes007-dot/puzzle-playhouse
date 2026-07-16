@@ -1,5 +1,7 @@
 /* ===== HERO BANNER — single replacement block ===== */
-
+body {
+  background: red !important;
+}
 .hero-banner {
   display: flex;
   align-items: center;
