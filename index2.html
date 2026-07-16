@@ -136,16 +136,18 @@
 </div>
   
   <script>
-  const grid = document.querySelector('.books-grid');
-  const left = document.querySelector('.left-arrow');
-  const right = document.querySelector('.right-arrow');
+  document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('.books-grid');
+    const left = document.querySelector('.left-arrow');
+    const right = document.querySelector('.right-arrow');
 
-  right.addEventListener('click', () => {
-    grid.scrollBy({ left: 300, behavior: 'smooth' });
-  });
+    right.addEventListener('click', () => {
+      grid.scrollBy({ left: 300, behavior: 'smooth' });
+    });
 
-  left.addEventListener('click', () => {
-    grid.scrollBy({ left: -300, behavior: 'smooth' });
+    left.addEventListener('click', () => {
+      grid.scrollBy({ left: -300, behavior: 'smooth' });
+    });
   });
 </script>
   </html>
