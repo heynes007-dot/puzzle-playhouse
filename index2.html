@@ -150,50 +150,65 @@
     });
   });
 </script>
+ <section class="featured-books">
+    <div class="carousel-wrapper">
 
-<section class="featured-books">
-  <div class="carousel-wrapper">
+      <button class="carousel-arrow left-arrow">❮</button>
 
-    <button class="carousel-arrow left-arrow">❮</button>
+      <div class="books-grid">
 
-    <div class="books-grid">
+        <a href="https://amzn.to/3T7EEVE" class="book-item" target="_blank">
+          <img src="images/football-book.jpg" alt="Football Crossword Book">
+          <p>Football Crossword Book</p>
+        </a>
 
-      <a href="https://amzn.to/3T7EEVE" class="book-item" target="_blank">
-        <img src="images/football-book.jpg" alt="Football Crossword Book">
-        <p>Football Crossword Book</p>
-      </a>
+        <a href="https://amzn.to/4w6ExIu" class="book-item" target="_blank">
+          <img src="images/Word_Scramble.jpg" alt="Word Scramble Puzzle Book for Kids">
+          <p>Word Scramble Puzzle Book</p>
+        </a>
 
-      <a href="https://amzn.to/4w6ExIu" class="book-item" target="_blank">
-        <img src="images/Word_Scramble.jpg" alt="Word Scramble Puzzle Book for Kids">
-        <p>Word Scramble Puzzle Book</p>
-      </a>
+        <a href="https://amzn.to/YOUR-MAZE-LINK" class="book-item" target="_blank">
+          <img src="images/Kids_Puzzle_Book.jpg" alt="Maze Adventures for Kids">
+          <p>Maze Adventures for Kids</p>
+        </a>
 
-      <a href="https://amzn.to/YOUR-MAZE-LINK" class="book-item" target="_blank">
-        <img src="images/Kids_Puzzle_Book.jpg" alt="Maze Adventures for Kids">
-        <p>Maze Adventures for Kids</p>
-      </a>
+        <a href="https://amzn.to/YOUR-WOULD-YOU-RATHER-LINK" class="book-item" target="_blank">
+          <img src="images/epic_comic_draw_your_own.png" alt="Would You Rather? Fun Questions for Kids">
+          <p>Would You Rather? Fun Questions for Kids</p>
+        </a>
 
-      <a href="https://amzn.to/YOUR-WOULD-YOU-RATHER-LINK" class="book-item" target="_blank">
-        <img src="images/epic_comic_draw_your_own.png" alt="Would You Rather? Fun Questions for Kids">
-        <p>Would You Rather? Fun Questions for Kids</p>
-      </a>
+        <a href="https://amzn.to/YOUR-COFFEE-JOURNAL-LINK" class="book-item" target="_blank">
+          <img src="images/coffee_journal.png" alt="Coffee Journal for Coffee Lovers">
+          <p>Coffee Journal for Coffee Lovers</p>
+        </a>
 
-      <a href="https://amzn.to/YOUR-COFFEE-JOURNAL-LINK" class="book-item" target="_blank">
-        <img src="images/coffee_journal.png" alt="Coffee Journal for Coffee Lovers">
-        <p>Coffee Journal for Coffee Lovers</p>
-      </a>
+        <a href="https://amzn.to/YOUR-SLEEP-JOURNAL-LINK" class="book-item" target="_blank">
+          <img src="images/WhyTrackingYourSleep.png" alt="Sleep Well 120-Day Tracker Journal">
+          <p>Sleep Well 120-Day Tracker Journal</p>
+        </a>
 
-      <a href="https://amzn.to/YOUR-SLEEP-JOURNAL-LINK" class="book-item" target="_blank">
-        <img src="images/WhyTrackingYourSleep.png" alt="Sleep Well 120-Day Tracker Journal">
-        <p>Sleep Well 120-Day Tracker Journal</p>
-      </a>
+      </div>
+
+      <button class="carousel-arrow right-arrow">❯</button>
 
     </div>
+  </section>
 
-    <button class="carousel-arrow right-arrow">❯</button>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const grid = document.querySelector('.books-grid');
+      const left = document.querySelector('.left-arrow');
+      const right = document.querySelector('.right-arrow');
 
-  </div>
-</section>
+      right.addEventListener('click', () => {
+        grid.scrollBy({ left: 300, behavior: 'smooth' });
+      });
+
+      left.addEventListener('click', () => {
+        grid.scrollBy({ left: -300, behavior: 'smooth' });
+      });
+    });
+  </script>
 </body>
 </html>
 
