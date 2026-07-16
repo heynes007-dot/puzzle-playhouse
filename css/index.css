@@ -262,19 +262,6 @@
   color: #ffd700; /* gold */
   text-shadow: 0 0 10px rgba(255,215,0,0.6);
 }
-/* Featured Books grid */
-.books-grid {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-  gap: 24px;
-  margin: 40px auto;
-  max-width: 1200px;
-  overflow-x: auto;
-  padding: 10px 0;
-}
-
 /* Each book item */
 .book-item {
   display: flex;
