@@ -259,8 +259,8 @@
 }
 
 .view-all-link:hover {
-  color: #9efc6b;
-  text-shadow: 0 0 10px rgba(158,252,107,0.6);
+  color: #ffd700; /* gold */
+  text-shadow: 0 0 10px rgba(255,215,0,0.6);
 }
 /* Responsive tweak */
 @media (max-width: 520px) {
