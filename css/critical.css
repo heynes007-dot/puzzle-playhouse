@@ -19,7 +19,21 @@
   justify-content: flex-start; /* start everything from the left */
   gap: 32px;                   /* spacing between logo and nav */
 }
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Safari needs this */
+}
 
+.primary-nav {
+  display: flex;
+  align-items: center; /* Safari fix */
+}
+
+.nav-list {
+  display: flex;
+  align-items: center; /* Safari fix */
+}
 /* ===== Reset ===== */
 *, *::before, *::after {
   box-sizing: border-box;
