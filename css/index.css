@@ -496,3 +496,91 @@
 .newsletter-form button:hover {
   background: #5fa21f;
 }
+/* Footer */
+.pp-footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h4 {
+  color: #fff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin: 6px 0;
+}
+
+.footer-col ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: gold;
+}
+
+.footer-logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+.brand h3 {
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.brand p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.social {
+  width: 32px;
+  height: 32px;
+  background-size: cover;
+  display: inline-block;
+  transition: transform 0.3s;
+}
+
+.social:hover {
+  transform: scale(1.1);
+}
+
+/* Replace with your actual icon images */
+.facebook { background-image: url('images/facebook.png'); }
+.instagram { background-image: url('images/instagram.png'); }
+.youtube { background-image: url('images/youtube.png'); }
+.pinterest { background-image: url('images/pinterest.png'); }
+.tiktok { background-image: url('images/tiktok.png'); }
+
+.footer-note {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.4;
+  margin-top: 10px;
+}
