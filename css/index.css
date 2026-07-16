@@ -237,3 +237,16 @@
     font-size: 20px;
   }
 }
+.shop-section {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers horizontally */
+  gap: 12px; /* space between line and text */
+}
+.green-line {
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  background: #9efc6b; /* your green */
+  border-radius: 2px;
+}
