@@ -265,7 +265,7 @@
 /* Featured Books grid */
 .books-grid {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   gap: 24px;
