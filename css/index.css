@@ -622,3 +622,17 @@
   list-style: none;
   margin: 6px 0;
 }
+.social-icons {
+  display: flex;
+  gap: 12px;
+}
+
+.social i {
+  font-size: 28px;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.social i:hover {
+  color: gold;
+}
