@@ -1,6 +1,25 @@
 /* header + basic layout */
-.site-header{background:#070707;position:sticky;top:0;z-index:1000}
-.container{max-width:1200px;margin:0 auto;padding:18px}
+.site-header {
+  background: #070707;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,215,0,0.06);
+  width: 100%;
+}
+
+/* MAIN HEADER CONTAINER — FIXED VERSION */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 18px 20px;
+
+  display: flex;               /* put logo + nav on same row */
+  align-items: center;         /* vertically align everything */
+  justify-content: flex-start; /* start everything from the left */
+  gap: 32px;                   /* spacing between logo and nav */
+}
+
 /* ===== Reset ===== */
 *, *::before, *::after {
   box-sizing: border-box;
