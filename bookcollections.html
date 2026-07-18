@@ -1,19 +1,170 @@
-<!DOCTYPE html>
+DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explore Our Books | Puzzle Playhouse</title>
+    <meta charset="UTF-8">
+    <title>Explore Our Books</title>
+    
+<link rel="stylesheet" href="css/critical.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
-   <!-- CSS -->
-  <link rel="preload" href="css/critical.css" as="style">
-  <link rel="stylesheet" href="css/critical.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Page container */
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            margin-bottom: 10px;
+        }
+
+        p.intro {
+            font-size: 1.15rem;
+            color: #555;
+            margin-bottom: 50px;
+        }
+
+        /* Category grid */
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+
+        /* Category card */
+        .category-card {
+            background: #fff;
+            padding: 28px 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .category-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+        }
+
+        /* Optional category illustration */
+        .category-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 16px;
+            opacity: 0.9;
+        }
+
+        .category-card h2 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .category-card p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 1rem;
+        }
+
+        /* Button styling (matches your blog CTA buttons) */
+        .category-card a {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #0077ff;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.25s ease;
+        }
+
+        .category-card a:hover {
+            background: #005fcc;
+        }
+    </style>
 </head>
-<body>
 
+<body>
+    <header class="header">
+  <div class="logo">
+    <a href="index.html">
+      <img src="images/logo.png" alt="Puzzle Playhouse Logo">
+    </a>
+  </div>
+
+  <nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="bookcollections.html" class="active">Books</a>
+    <a href="monthly-puzzle.html">Monthly Puzzle</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+    <h1>Explore Our Books</h1>
+    <p class="intro">
+        Choose from puzzles, notebooks, journals, and log books designed to entertain, organise, and inspire.
+    </p>
+
+    <div class="categories">
+
+        <div class="category-card">
+            <img src="images/puzzle-books-kids.png" class="category-icon" alt="">
+            <h2>🧩 Puzzle Books</h2>
+            <p>Fun and educational puzzles for kids.</p>
+            <a href="/puzzle-playhouse/books/puzzle-books.html">View Puzzle Books</a>
+        </div>
+
+        <div class="category-card">
+            <img src="images/notebooks.png" class="category-icon" alt="">
+            <h2>📓 Notebooks and ✍️ Drawing Books</h2>
+            <p>Simple and stylish notebooks for everyday use.</p>
+            <a href="/puzzle-playhouse/books/notebooks.html">View Notebooks</a>
+        </div>
+
+        <div class="category-card">
+            <img src="images/journals.png" class="category-icon" alt="">
+            <h2>📔 Journals</h2>
+            <p>Track habits, food, and personal growth.</p>
+            <a href="/puzzle-playhouse/books/journals.html">View Journals</a>
+        </div>
+
+        <div class="category-card">
+            <img src="images/notebooks-minimal.png" class="category-icon" alt="">
+            <h2>📊 Log Books</h2>
+            <p>Track health, sleep, and daily routines.</p>
+            <a href="/puzzle-playhouse/books/log-books.html">View Log Books</a>
+        </div>
+
+    </div>
+<!-- CTA -->
+    <div class="cta">
+    <h2>🎁 Get Free Puzzles</h2>
+    <p>Join our community and receive exclusive puzzles and updates.</p>
+
+    <!-- Main CTA button -->
+    <a href="/puzzle-playhouse/sign_up.html" class="btn primary-btn">Sign Up</a>
+
+    <!-- Secondary links under the button -->
+    <div class="sub-links">
+        <a href="/puzzle-playhouse/blog.html">Blog</a>
+        <a href="/puzzle-playhouse/index.html">Home</a>
+    </div>
+
+
+</div>
+    <p>Learn about the benefits of puzzles.</p>
+            <a href="https://heynes007-dot.github.io/puzzle-playhouse/blog.html">See the benefits</a>
 <!-- Footer -->
 <footer class="pp-footer">
     <div class="footer-grid">
@@ -30,17 +181,26 @@
                 <li><a href="bookcollections.html">Books</a></li>
                 <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="index.html">Home</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h4>Shop</h4>
             <ul>
-                <li><a href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">Amazon Store</a></li>
+                <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
         <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
                 <li><a href="new-releases.html">New Books</a></li>
                 <li><a href="journals.html">Journals</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Help</h4>
+            <ul>
+                <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
             </ul>
         </div>
 
@@ -58,6 +218,5 @@
 
     </div>
 </footer>
-
 </body>
 </html>
