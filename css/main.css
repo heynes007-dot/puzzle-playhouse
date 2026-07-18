@@ -287,6 +287,7 @@ nav.primary-nav {
   background: #ffea6a;
   box-shadow: 0 0 12px gold;
 }
+/* CTA */
 .cta {
   text-align: center;
   margin: 60px auto;
@@ -296,37 +297,41 @@ nav.primary-nav {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 28px;
-  border-radius: 10px;
+  padding: 14px 32px;
+  border-radius: 12px;
   font-weight: 700;
   text-decoration: none;
-  transition: 0.3s ease;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.primary-btn {
-  background: gold;
-  color: black;
-  box-shadow: 0 0 12px gold;
+/* Button colours (same as your index page) */
+.btn.green {
+  background: #7ac943;
 }
 
-.secondary-btn {
-  background: #222;
-  color: gold;
-  border: 1px solid gold;
+.btn.orange {
+  background: #fbb03b;
 }
 
+.btn.purple {
+  background: #a864a8;
+}
+
+/* Hover glow */
 .btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 18px gold;
 }
 
-.cta-text {
-  color: white;
+/* Text below buttons */
+.cta-text p {
+  color: #fff;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
