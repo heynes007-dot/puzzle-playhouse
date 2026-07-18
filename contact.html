@@ -4,105 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Puzzle Playhouse | Get in Touch</title>
-<meta name="description" content="Have a question or feedback? Contact Puzzle Playhouse for support, collaborations, or enquiries about our puzzle books and activities.">
-<meta name="keywords" content="contact puzzle playhouse, puzzle book enquiries, kids activity support, contact page">
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Puzzle Playhouse",
-  "url": "https://heynes007-dot.github.io/puzzle-playhouse/contact.html",
-  "description": "Contact information for Puzzle Playhouse."
-}
-</script>
-    <style>
-        form {
-            max-width: 500px;
-            margin: 40px auto;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
 
-        form input, form textarea {
-            padding: 12px;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
+    <!-- SEO -->
+    <meta name="description" content="Have a question or feedback? Contact Puzzle Playhouse for support, collaborations, or enquiries about our puzzle books and activities.">
+    <meta name="keywords" content="contact puzzle playhouse, puzzle book enquiries, kids activity support, contact page">
 
-        form button {
-            padding: 12px;
-            background: black;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: 0.25s ease;
-        }
+    <!-- Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Puzzle Playhouse",
+      "url": "https://heynes007-dot.github.io/puzzle-playhouse/contact.html",
+      "description": "Contact information for Puzzle Playhouse."
+    }
+    </script>
 
-        form button:hover {
-            background: #ffd700;
-            color: black;
-            box-shadow: 0 0 12px #ffd700;
-        }
-    </style>
+    <!-- Global Styles -->
+    <link rel="stylesheet" href="css/critical.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-<!-- Hidden iframe so the page doesn't navigate away -->
-<iframe name="hidden_iframe" style="display:none;"></iframe>
+<!-- Header -->
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="images/logo.png" alt="Puzzle Playhouse Logo">
+        </a>
+    </div>
 
-<form id="contactForm"
-      action="https://formsubmit.co/puzzleplayhousehq@gmail.com"
-      method="POST"
-      target="hidden_iframe">
+    <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="bookcollections.html">Books</a>
+        <a href="monthly-puzzle.html">Monthly Puzzle</a>
+        <a href="blog.html">Blog</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
 
-    <!-- Disable captcha -->
-    <input type="hidden" name="_captcha" value="false">
+<!-- Page Hero -->
+<section class="page-hero">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you. Send us a message below.</p>
+</section>
 
-    <!-- Optional: Email subject -->
-    <input type="hidden" name="_subject" value="New Contact Form Message">
+<!-- Contact Form -->
+<section class="contact-section">
+    <form id="contactForm"
+          action="https://formsubmit.co/puzzleplayhousehq@gmail.com"
+          method="POST"
+          target="hidden_iframe">
 
-    <label>Your Name</label>
-    <input type="text" name="name" required>
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Contact Form Message">
 
-    <label>Your Email</label>
-    <input type="email" name="email" required>
+        <label>Your Name</label>
+        <input type="text" name="name" required>
 
-    <label>Your Message</label>
-    <textarea name="message" rows="5" required></textarea>
+        <label>Your Email</label>
+        <input type="email" name="email" required>
 
-    <button type="submit" class="btn">Send Message</button>
-</form>
+        <label>Your Message</label>
+        <textarea name="message" rows="5" required></textarea>
 
-<div id="thankYouPopup" style="
-    display:none;
-    position:fixed;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0 0 15px rgba(0,0,0,0.2);
-    text-align:center;
-    z-index:9999;
-">
+        <button type="submit" class="btn">Send Message</button>
+    </form>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+</section>
+
+<!-- Thank You Popup -->
+<div id="thankYouPopup" class="popup">
     <h3>Thank you!</h3>
     <p>Your message has been sent. We’ll reply as soon as we can if a response is needed.</p>
     <p>Redirecting you to our sign‑up page…</p>
 </div>
 
+<!-- Footer -->
+<footer class="pp-footer">
+    <div class="footer-grid">
+
+        <div class="footer-col brand">
+            <img src="images/logo.png" class="footer-logo" alt="Puzzle Playhouse Logo">
+            <h3>Puzzle Playhouse</h3>
+            <p>Creative puzzle books, journals and activities for curious minds.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="bookcollections.html">Books</a></li>
+                <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="https://amazon.co.uk">Amazon</a></li>
+                <li><a href="https://etsy.com">Etsy</a></li>
+                <li><a href="new-releases.html">New Books</a></li>
+                <li><a href="journals.html">Journals</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col follow">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="footer-note">© 2026 Puzzle Playhouse. Amazon Associate Disclosure.</p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Script -->
 <script>
 document.getElementById("contactForm").addEventListener("submit", function () {
-    // Show popup
     document.getElementById("thankYouPopup").style.display = "block";
 
-    // Redirect after 1.5s
     setTimeout(function () {
-        window.location.href = "https://heynes007-dot.github.io/puzzle-playhouse/sign_up.html";
+        window.location.href = "sign_up.html";
     }, 1500);
 });
 </script>
