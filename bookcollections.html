@@ -13,105 +13,61 @@
 
 <body>
 
-<!-- Header -->
-<header class="header">
-  <div class="logo">
-    <a href="index.html">
-      <img src="images/logo.png" alt="Puzzle Playhouse Logo">
-    </a>
-  </div>
-
-  <nav class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="bookcollections.html" class="active">Books</a>
-    <a href="monthly-puzzle.html">Monthly Puzzle</a>
-    <a href="blog.html">Blog</a>
-    <a href="faq.html">FAQ</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
-
-<!-- Page Hero -->
-<section class="page-hero">
-  <h1>Explore Our Books</h1>
-  <p>Choose from puzzles, notebooks, journals, and log books designed to entertain, organise, and inspire.</p>
-</section>
-
-<!-- Book Categories -->
-<section class="book-grid">
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/puzzle-books-kids.png" alt="Puzzle Books" class="category-icon">
-      <h3>🧩 Puzzle Books</h3>
-      <p>Fun and educational puzzles for kids.</p>
-      <a href="books/puzzle-books.html" class="btn">View Puzzle Books</a>
-    </div>
-
-    <div class="card">
-      <img src="images/notebooks.png" alt="Notebooks" class="category-icon">
-      <h3>📓 Notebooks and ✍️ Drawing Books</h3>
-      <p>Simple and stylish notebooks for everyday use.</p>
-      <a href="books/notebooks.html" class="btn">View Notebooks</a>
-    </div>
-
-    <div class="card">
-      <img src="images/journals.png" alt="Journals" class="category-icon">
-      <h3>📔 Journals</h3>
-      <p>Track habits, food, and personal growth.</p>
-      <a href="books/journals.html" class="btn">View Journals</a>
-    </div>
-
-    <div class="card">
-      <img src="images/notebooks-minimal.png" alt="Log Books" class="category-icon">
-      <h3>📊 Log Books</h3>
-      <p>Track health, sleep, and daily routines.</p>
-      <a href="books/log-books.html" class="btn">View Log Books</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-  <h2>🎁 Get Free Puzzles</h2>
-  <p>Join our community and receive exclusive puzzles and updates.</p>
-  <a href="sign_up.html" class="btn primary-btn">Sign Up</a>
-</section>
-
 <!-- Footer -->
 <footer class="pp-footer">
-  <div class="footer-grid">
+    <div class="footer-grid">
 
-    <div class="footer-col brand">
-      <img src="images/logo.png" class="footer-logo" alt="Puzzle Playhouse Logo">
-      <h3>Puzzle Playhouse</h3>
-      <p>Creative puzzle books, journals and activities for curious minds.</p>
-    </div>
+        <div class="footer-col brand">
+            <img src="logo.png" class="footer-logo" alt="Puzzle Playhouse Logo">
+            <h3>Puzzle Playhouse</h3>
+            <p>Creative puzzle books, journals and activities for curious minds.</p>
+        </div>
 
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="bookcollections.html">Books</a></li>
-        <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="bookcollections.html">Books</a></li>
+                <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
 
-    <div class="footer-col">
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+        <div class="footer-col">
+            <h4>Shop</h4>
+            <ul>
+                <li><a href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">Amazon Store</a></li>
         <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
-        <li><a href="new-releases.html">New Books</a></li>
-        <li><a href="journals.html">Journals</a></li>
-      </ul>
-    </div>
+                <li><a href="new-releases.html">New Books</a></li>
+                <li><a href="journals.html">Journals</a></li>
+            </ul>
+        </div>
 
-    <div class="footer-col follow">
-      <h4>Follow Us</h4>
-      <div class="social-icons">
-        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-       
+        <div class="footer-col follow">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+               <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
+  <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
+  <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <p class="footer-note">© 2026 Puzzle Playhouse. Amazon Associate Disclosure.</p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Script -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function () {
+    document.getElementById("thankYouPopup").style.display = "block";
+
+    setTimeout(function () {
+        window.location.href = "sign_up.html";
+    }, 1500);
+});
+</script>
+
+</body>
+</html>
