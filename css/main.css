@@ -293,6 +293,7 @@ nav.primary-nav {
   margin: 60px auto;
 }
 
+/* BUTTON ROW */
 .cta-buttons {
   display: flex;
   justify-content: center;
@@ -300,7 +301,8 @@ nav.primary-nav {
   margin-bottom: 30px;
 }
 
-.btn {
+/* CTA BUTTON STYLE */
+.cta-btn {
   display: inline-block;
   padding: 14px 32px;
   border-radius: 12px;
@@ -310,32 +312,24 @@ nav.primary-nav {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Button colours (same as your index page) */
-.btn.green {
-  background: #7ac943;
-}
+/* INDEX PAGE COLOURS */
+.cta-btn.green { background: #7ac943; }
+.cta-btn.orange { background: #fbb03b; }
+.cta-btn.purple { background: #a864a8; }
 
-.btn.orange {
-  background: #fbb03b;
-}
-
-.btn.purple {
-  background: #a864a8;
-}
-
-/* Hover glow */
-.btn:hover {
+.cta-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 0 18px gold;
 }
 
-/* Text below buttons */
-.cta-text p {
+/* TEXT BELOW BUTTONS */
+.cta-text {
   color: #fff;
   font-size: 1.2rem;
   margin-bottom: 10px;
 }
 
+/* SEE THE BENEFITS LINK */
 .cta-link {
   color: gold;
   font-weight: 600;
