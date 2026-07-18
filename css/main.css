@@ -111,3 +111,78 @@ nav.primary-nav {
   color: #0b0b0b;
   border: none;
 }
+* ============================
+   FAQ SECTION
+   ============================ */
+
+.faq-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* FAQ Item */
+.faq-item {
+  background: #111;
+  border: 1px solid #222;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* FAQ Question Button */
+.faq-question {
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 18px 20px;
+  font-size: 18px;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #1a1a1a;
+}
+
+.faq-question i {
+  transition: transform 0.3s;
+}
+
+/* Rotate arrow when active */
+.faq-question.active i {
+  transform: rotate(180deg);
+}
+
+/* FAQ Answer */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: #000;
+  color: #ccc;
+  padding: 0 20px;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+/* When open */
+.faq-answer.open {
+  max-height: 300px;
+  padding: 20px;
+}
+
+/* FAQ Text */
+.faq-answer p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 16px;
+}
