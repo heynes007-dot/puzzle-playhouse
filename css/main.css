@@ -186,3 +186,47 @@ nav.primary-nav {
   line-height: 1.6;
   font-size: 16px;
 }
+/* Contact */
+.contact-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 60px auto;
+}
+
+.contact-section label {
+  font-weight: 600;
+  color: gold;
+  margin-bottom: 6px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #111;
+  color: #fff;
+}
+
+.contact-section textarea {
+  min-height: 120px;
+}
+
+.contact-section button {
+  align-self: flex-start;
+  padding: 12px 24px;
+  background: gold;
+  color: black;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.contact-section button:hover {
+  background: #ffea6a;
+  box-shadow: 0 0 12px gold;
+}
