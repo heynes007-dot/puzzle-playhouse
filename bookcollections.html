@@ -181,26 +181,17 @@ DOCTYPE html>
                 <li><a href="bookcollections.html">Books</a></li>
                 <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
                 <li><a href="blog.html">Blog</a></li>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </div>
 
         <div class="footer-col">
             <h4>Shop</h4>
             <ul>
-                <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+                <li><a href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">Amazon Store</a></li>
         <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
                 <li><a href="new-releases.html">New Books</a></li>
                 <li><a href="journals.html">Journals</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>Help</h4>
-            <ul>
-                <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy</a></li>
             </ul>
         </div>
 
@@ -218,5 +209,17 @@ DOCTYPE html>
 
     </div>
 </footer>
+
+<!-- Script -->
+<script>
+document.getElementById("contactForm").addEventListener("submit", function () {
+    document.getElementById("thankYouPopup").style.display = "block";
+
+    setTimeout(function () {
+        window.location.href = "sign_up.html";
+    }, 1500);
+});
+</script>
+
 </body>
 </html>
