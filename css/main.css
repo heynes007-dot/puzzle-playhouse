@@ -287,3 +287,56 @@ nav.primary-nav {
   background: #ffea6a;
   box-shadow: 0 0 12px gold;
 }
+.cta {
+  text-align: center;
+  margin: 60px auto;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: gold;
+  color: black;
+  box-shadow: 0 0 12px gold;
+}
+
+.secondary-btn {
+  background: #222;
+  color: gold;
+  border: 1px solid gold;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 18px gold;
+}
+
+.cta-text {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.cta-link {
+  color: gold;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.cta-link:hover {
+  text-decoration: underline;
+}
