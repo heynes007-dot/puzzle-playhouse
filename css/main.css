@@ -344,5 +344,16 @@ nav.primary-nav {
 .cta-link:hover {
   text-decoration: underline;
 }
+.terms-container {
+  text-align: right;
+}
 
-/* BUTTON ROW */
+.terms-container h2 {
+  text-align: center;
+}
+
+.terms-container p,
+.terms-container ul,
+.terms-container li {
+  text-align: right;
+}
