@@ -5,30 +5,28 @@
 <title>Join Puzzle Playhouse | Free Puzzles & Updates</title>
 <meta name="description" content="Sign up to get free printable puzzles, new releases, and exclusive Puzzle Playhouse content straight to your inbox.">
 <meta name="keywords" content="free puzzles signup, kids activity newsletter, printable puzzles free, puzzle playhouse signup">
- <!-- CSS -->
-  <link rel="preload" href="css/critical.css" as="style">
-  <link rel="stylesheet" href="css/critical.css">
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
+<link rel="preload" href="css/critical.css" as="style">
+<link rel="stylesheet" href="css/critical.css">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 
 <!-- MAILERLITE UNIVERSAL SCRIPT -->
 <script>
-    (function(w,d,e,u,f,l,n){
-        w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments)};
-        l=d.createElement(e);l.async=1;l.src=u;
-        n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
-    })(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+(function(w,d,e,u,f,l,n){
+    w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments)};
+    l=d.createElement(e);l.async=1;l.src=u;
+    n=d.getElementsByTagName(e)[0];n.parentNode.insertBefore(l,n);
+})(window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
 
-    ml('account', '2200264'); /* Your real account ID */
+ml('account', '2200264');
 </script>
-<!-- END MAILERLITE UNIVERSAL -->
 
-<link rel="stylesheet" href="style.css">
-
-
+<style>
 /* GENERAL PAGE STYLING */
- <style>
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     background: #f5f7fb;
@@ -42,23 +40,24 @@ body {
     padding: 0 20px;
 }
 
+/* HERO SECTION */
 .hero {
-  display: flex;
-  flex-direction: column; /* stack elements vertically */
-  align-items: center;    /* centre horizontally */
-  text-align: center;     /* centre text */
-  margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 8px;
+    font-size: 2rem;
+    margin-bottom: 8px;
 }
 
 .hero .tagline {
-  font-size: 1.05rem;
-  color: #555;
-  margin-bottom: 20px;
+    font-size: 1.05rem;
+    color: #555;
+    margin-bottom: 20px;
 }
 
 /* SIGNUP SECTION */
@@ -82,35 +81,34 @@ body {
     color: #555;
 }
 
-/* BUTTON — black, silver text, gold halo on hover */
+/* BUTTON */
 .button {
     display: inline-block;
     padding: 12px 20px;
     border-radius: 999px;
     border: none;
     background: #000;
-    color: #cfcfcf; /* silver */
+    color: #cfcfcf;
     font-weight: 600;
     font-size: 1rem;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    transition:
-        background 0.25s ease,
-        color 0.25s ease,
-        box-shadow 0.25s ease,
-        transform 0.25s ease;
+    transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .button:hover {
     background: #000;
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 0 14px rgba(255, 215, 0, 0.9); /* gold halo */
+    box-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
 }
-
 </style>
+</head>
+
+<body>
+
 <!-- HEADER -->
- <header class="site-header" role="banner">
+<header class="site-header" role="banner">
   <div class="container">
     <a href="index.html" class="logo" aria-label="Home">
       <div class="logo-mark">PP</div>
@@ -136,13 +134,10 @@ body {
     </nav>
   </div>
 </header>
-</head>
 
-<body>
-<!-- force rebuild -->
 <div class="container">
 
-    <!-- HERO / TITLE -->
+    <!-- HERO -->
     <section class="hero">
         <h1>Join Our Email List</h1>
         <p class="tagline">Sign up for a fun bonus for kids and families 🧩.</p>
@@ -157,85 +152,71 @@ body {
             📩 Click Here to Join the Puzzle Club
         </button>
 
-        <!-- FALLBACK MESSAGE -->
         <div id="fallback-message" style="display:none; margin-top:20px; color:#d9d9d9;">
             Our signup form is temporarily unavailable. Please check back soon — we’d love to have you join us.
         </div>
-
-        <script>
-            window.addEventListener("error", () => {
-                document.getElementById("fallback-message").style.display = "block";
-            });
-        </script>
     </section>
 
-   
     <!-- FOOTER -->
-   <!-- FOOTER -->
-  <footer class="pp-footer">
-  <div class="footer-grid">
+    <footer class="pp-footer">
+      <div class="footer-grid">
 
-    <!-- Brand -->
-    <div class="footer-col brand">
-      <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
-      <h3>Puzzle Playhouse</h3>
-      <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
-    </div>
+        <div class="footer-col brand">
+          <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
+          <h3>Puzzle Playhouse</h3>
+          <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
+        </div>
 
-    <!-- Quick Links -->
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="bookcollections.html">Books</a></li>
-        <li><a href="free-puzzle.html">Free Puzzle</a></li>
-        <li><a href="puzzle-club.html">Puzzle Club</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="about.html">About Us</a></li>
-      </ul>
-    </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="bookcollections.html">Books</a></li>
+            <li><a href="free-puzzle.html">Free Puzzle</a></li>
+            <li><a href="puzzle-club.html">Puzzle Club</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
 
-    <!-- Shop -->
-    <div class="footer-col">
-      <h4>Shop</h4>
-      <ul>
-        <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
-        <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
-        <li><a href="new-releases.html">New Releases</a></li>
-        <li><a href="best-sellers.html">Best Sellers</a></li>
-        <li><a href="gift-ideas.html">Gift Ideas</a></li>
-      </ul>
-    </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+            <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
+            <li><a href="new-releases.html">New Releases</a></li>
+            <li><a href="best-sellers.html">Best Sellers</a></li>
+            <li><a href="gift-ideas.html">Gift Ideas</a></li>
+          </ul>
+        </div>
 
-    <!-- Help -->
-    <div class="footer-col">
-      <h4>Help</h4>
-      <ul>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="shipping.html">Shipping Info</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="terms.html">Terms & Conditions</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
+        <div class="footer-col">
+          <h4>Help</h4>
+          <ul>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="shipping.html">Shipping Info</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
 
-    <!-- Follow Us -->
-    <div class="footer-col follow">
-      <h4>Follow Us</h4>
-     <div class="social-icons">
-  <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
-  <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
-  <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
-</div>
-      <p class="footer-note">
-        © 2026 Puzzle Playhouse. All rights reserved.<br>
-        As an Amazon Associate, we earn from qualifying purchases.
-      </p>
-    </div>
+        <div class="footer-col follow">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
+            <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <p class="footer-note">
+            © 2026 Puzzle Playhouse. All rights reserved.<br>
+            As an Amazon Associate, we earn from qualifying purchases.
+          </p>
+        </div>
 
-  </div>
-</footer>
+      </div>
+    </footer>
 
 </div>
 
