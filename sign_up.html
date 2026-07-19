@@ -102,6 +102,17 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
 }
+    /* Fix layout so hero and signup stack vertically */
+.container {
+  display: block !important; /* stop flex or grid from forcing side-by-side */
+}
+
+.hero,
+.section {
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+}
 </style>
 </head>
 
