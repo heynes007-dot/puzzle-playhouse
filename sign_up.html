@@ -40,41 +40,34 @@ body {
     margin: 40px auto 60px;
     padding: 0 20px;
 }
+<!-- HEADER -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="logo" aria-label="Home">
+        <div class="logo-mark">PP</div>
+        <div class="logo-text">
+          <div class="logo-title">Puzzle Playhouse</div>
+          <div class="logo-sub">Books & Puzzles</div>
+        </div>
+      </a>
 
-/* HEADER — centre everything and enlarge the text */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: center;   /* centres the logo + text */
-    gap: 14px;                 /* space between logo and text */
-    margin-bottom: 30px;
-}
+      <nav class="primary-nav" role="navigation" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="bookcollections.html">Books</a></li>
+          <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="About.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
 
-.home-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-    color: inherit;
-}
+        <div class="cta">
+          <a class="btn" href="sign_up.html">Sign up</a>
+          <a class="btn primary" href="bookcollections.html">Shop Now</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-.home-link span {
-    font-size: 1.6rem;         /* larger text */
-    font-weight: 700;          /* bold for premium feel */
-    letter-spacing: 0.5px;
-}
-
-/* Header logo hover glow */
-.header-logo {
-    height: 70px;
-    width: auto;
-    transition: filter 0.25s ease, transform 0.25s ease;
-}
-
-.header-logo:hover {
-    filter: drop-shadow(0 0 8px #ffd700);
-    transform: scale(1.05);
-}
 
 /* HERO SECTION */
 .hero {
