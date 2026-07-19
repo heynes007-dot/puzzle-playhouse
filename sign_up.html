@@ -26,15 +26,8 @@ ml('account', '2200264');
 </script>
 
 <style>
-/* GENERAL PAGE STYLING */
-body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    background: #f5f7fb;
-    margin: 0;
-    color: #222;
-}
-
-.container {
+/* PAGE-SPECIFIC STYLING ONLY — does NOT override global layout */
+.page-wrapper {
     max-width: 900px;
     margin: 40px auto 60px;
     padding: 0 20px;
@@ -42,9 +35,6 @@ body {
 
 /* HERO SECTION */
 .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -102,25 +92,14 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 0 14px rgba(255, 215, 0, 0.9);
 }
-    /* Fix layout so hero and signup stack vertically */
-.container {
-  display: block !important; /* stop flex or grid from forcing side-by-side */
-}
-
-.hero,
-.section {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
-}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- HEADER (matches your other pages) -->
 <header class="site-header" role="banner">
- <div class="header-inner">
+  <div class="header-inner">
     <a href="index.html" class="logo" aria-label="Home">
       <div class="logo-mark">PP</div>
       <div class="logo-text">
@@ -145,7 +124,8 @@ body {
   </div>
 </header>
 
-<div class="container">
+<!-- PAGE CONTENT -->
+<div class="page-wrapper">
 
     <!-- HERO -->
     <section class="hero">
@@ -167,68 +147,68 @@ body {
         </div>
     </section>
 
-
 </div>
 
-    <!-- FOOTER -->
-    <footer class="pp-footer">
-      <div class="footer-grid">
+<!-- FOOTER -->
+<footer class="pp-footer">
+  <div class="footer-grid">
 
-        <div class="footer-col brand">
-          <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
-          <h3>Puzzle Playhouse</h3>
-          <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
-        </div>
+    <div class="footer-col brand">
+      <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
+      <h3>Puzzle Playhouse</h3>
+      <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
+    </div>
 
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="bookcollections.html">Books</a></li>
-            <li><a href="free-puzzle.html">Free Puzzle</a></li>
-            <li><a href="puzzle-club.html">Puzzle Club</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About Us</a></li>
-          </ul>
-        </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="bookcollections.html">Books</a></li>
+        <li><a href="free-puzzle.html">Free Puzzle</a></li>
+        <li><a href="puzzle-club.html">Puzzle Club</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
 
-        <div class="footer-col">
-          <h4>Shop</h4>
-          <ul>
-            <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
-            <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
-            <li><a href="new-releases.html">New Releases</a></li>
-            <li><a href="best-sellers.html">Best Sellers</a></li>
-            <li><a href="gift-ideas.html">Gift Ideas</a></li>
-          </ul>
-        </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+        <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
+        <li><a href="new-releases.html">New Releases</a></li>
+        <li><a href="best-sellers.html">Best Sellers</a></li>
+        <li><a href="gift-ideas.html">Gift Ideas</a></li>
+      </ul>
+    </div>
 
-        <div class="footer-col">
-          <h4>Help</h4>
-          <ul>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="shipping.html">Shipping Info</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-          </ul>
-        </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Shipping Info</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
 
-        <div class="footer-col follow">
-          <h4>Follow Us</h4>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
-            <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
-            <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
-          </div>
-          <p class="footer-note">
-            © 2026 Puzzle Playhouse. All rights reserved.<br>
-            As an Amazon Associate, we earn from qualifying purchases.
-          </p>
-        </div>
-
+    <div class="footer-col follow">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
+        <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
       </div>
-    </footer>
+      <p class="footer-note">
+        © 2026 Puzzle Playhouse. All rights reserved.<br>
+        As an Amazon Associate, we earn from qualifying purchases.
+      </p>
+    </div>
+
+  </div>
+</footer>
+
 </body>
 </html>
