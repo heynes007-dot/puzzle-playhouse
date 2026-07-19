@@ -7,6 +7,12 @@
     
     <!-- Load your global stylesheet -->
    <link rel="stylesheet" href="/puzzle-playhouse/style.css">
+    <!-- CSS -->
+  <link rel="preload" href="css/critical.css" as="style">
+  <link rel="stylesheet" href="css/critical.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Page‑specific styles ONLY -->
     <style>
@@ -70,25 +76,71 @@
 
 </div>
 
-<!-- Footer -->
-<footer class="footer">
-    <div class="footer-logo-wrapper">
-        <a href="index.html">
-            <img src="/puzzle-playhouse/logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
-        </a>
+<!-- FOOTER -->
+  <footer class="pp-footer">
+  <div class="footer-grid">
+
+    <!-- Brand -->
+    <div class="footer-col brand">
+      <img src="logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
+      <h3>Puzzle Playhouse</h3>
+      <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
     </div>
 
-    <div class="footer-links">
-        <a href="/puzzle-playhouse/About.html">About</a>
-        <a href="/puzzle-playhouse/contact.html">Contact</a>
-        <a href="/puzzle-playhouse/Privacy_Policy.html">Privacy Policy</a>
-        <a href="/puzzle-playhouse/terms.html">Terms</a>
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="bookcollections.html">Books</a></li>
+        <li><a href="free-puzzle.html">Free Puzzle</a></li>
+        <li><a href="puzzle-club.html">Puzzle Club</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
     </div>
-   <div class="footer-disclaimer">
-   <p class="small-text">As an Amazon Associate, we earn from qualifying purchases.</p>
+
+    <!-- Shop -->
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+        <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
+        <li><a href="new-releases.html">New Releases</a></li>
+        <li><a href="best-sellers.html">Best Sellers</a></li>
+        <li><a href="gift-ideas.html">Gift Ideas</a></li>
+      </ul>
+    </div>
+
+    <!-- Help -->
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Shipping Info</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div class="footer-col follow">
+      <h4>Follow Us</h4>
+     <div class="social-icons">
+  <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
+  <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
+  <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
 </div>
-</footer>
+      <p class="footer-note">
+        © 2026 Puzzle Playhouse. All rights reserved.<br>
+        As an Amazon Associate, we earn from qualifying purchases.
+      </p>
+    </div>
 
+  </div>
+</footer>
 <script>
 fetch('log-books.json')
   .then(response => response.json())
