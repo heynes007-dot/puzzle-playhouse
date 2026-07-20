@@ -357,23 +357,30 @@ nav.primary-nav {
 .terms-container li {
   text-align: right;
 }
-.book-promo {
+/* Shared promo container size */
+.book-promo,
+.mv-book-promo {
   margin: 60px auto;
-  max-width: 450px; /* smaller container */
+  max-width: 450px; /* identical width */
   text-align: center;
 }
 
-.promo-box {
+/* Shared promo box styling */
+.promo-box,
+.mv-promo-box {
   background: #111;
   border: 2px solid #ffd700;
   padding: 25px;
   border-radius: 10px;
 }
 
-.promo-img {
-  width: 140px; /* smaller image */
+
+/* Shared image styling */
+.promo-img,
+.mv-promo-img {
+  width: 140px; /* identical size */
   display: block;
-  margin: 0 auto 20px auto; /* centered */
+  margin: 0 auto 20px auto;
   border-radius: 8px;
 }
 
