@@ -401,3 +401,49 @@ nav.primary-nav {
 .promo-btn:hover {
   background: #ffea6e;
 }
+.missing-vowel-wrapper {
+  max-width: 700px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.mv-box {
+  background: #111;
+  border: 2px solid #ffd700;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.mv-word {
+  font-size: 2rem;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.mv-box input {
+  padding: 12px;
+  width: 80%;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+.mv-box button {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: #ffd700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.mv-box button:hover {
+  background: #ffea6e;
+}
+
+.mv-message {
+  margin-top: 20px;
+  font-size: 1.3rem;
+}
