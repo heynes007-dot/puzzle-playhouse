@@ -12,31 +12,23 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-  body {
-    background: black;
-    color: silver;
-    font-family: Arial, Helvetica, sans-serif;
+/* Game-specific styling */
+.game-wrapper {
+    max-width: 700px;
+    margin: 60px auto;
     text-align: center;
-    padding: 40px;
-  }
-
-  .game-box {
-    max-width: 500px;
-    margin: auto;
     padding: 30px;
-    border: 2px solid silver;
-    border-radius: 10px;
   }
 
   .scramble {
-    font-size: 2rem;
-    letter-spacing: 5px;
+    font-size: 2.5rem;
+    letter-spacing: 6px;
     margin-bottom: 20px;
     color: #ffd700;
   }
 
   input {
-    padding: 10px;
+    padding: 12px;
     width: 80%;
     font-size: 1.2rem;
     margin-bottom: 20px;
@@ -45,7 +37,7 @@
   }
 
   button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1.2rem;
     background: #ffd700;
     border: none;
@@ -65,11 +57,39 @@
 </head>
 
 <body>
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="/puzzle-playhouse/index.html" class="logo" aria-label="Home">
+      <div class="logo-mark">PP</div>
+      <div class="logo-text">
+        <div class="logo-title">Puzzle Playhouse</div>
+        <div class="logo-sub">Books & Puzzles</div>
+      </div>
+    </a>
 
-<h1>Word Scramble Game</h1>
-<p>Unscramble the word below:</p>
+    <nav class="primary-nav" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="/puzzle-playhouse/JournalBlog/PersonalGrowthHub.html">Personal Growth</a></li>
+        <li><a href="/puzzle-playhouse/blog.html">Blog</a></li>
+        <li><a href="/puzzle-playhouse/About.html">About</a></li>
+        <li><a href="/puzzle-playhouse/contact.html">Contact</a></li>
+        <li><a href="/puzzle-playhouse/index.html">Home</a></li>
+      </ul>
 
-<div class="game-box">
+      <div class="cta">
+        <a class="btn" href="/puzzle-playhouse/sign_up.html">Sign up</a>
+        <a class="btn primary" href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true">Shop Now</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- GAME SECTION -->
+<div class="game-wrapper">
+  <h1>Word Scramble Game</h1>
+  <p>Unscramble the word below:</p>
+
   <div class="scramble" id="scrambledWord">Loading...</div>
 
   <input type="text" id="userGuess" placeholder="Type your answer...">
@@ -79,6 +99,7 @@
   <div class="message" id="message"></div>
 </div>
 
+<!-- GAME SCRIPT -->
 <script>
   const words = [
     "puzzle", "playhouse", "challenge", "creative", "logic",
