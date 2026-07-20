@@ -1,164 +1,182 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-   <title>Seasonal Books | Christmas | Halloween | Puzzle Playhouse</title>
-<meta name="description" content="Discover high-quality log books and trackers for fitness, sleep, blood pressure and daily habits. Simple, effective and designed to help you stay organised. Shop Puzzle Playhouse collections today.">
-<meta name="keywords" content="log books UK, fitness log book, sleep tracker journal, blood pressure log book, habit tracker notebook, health tracker books, puzzle playhouse log books">
-    
-    <!-- Load your global stylesheet -->
-   <link rel="stylesheet" href="/puzzle-playhouse/style.css">
-    <!-- CSS -->
-  <link rel="preload" href="css/critical.css" as="style">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO TITLE -->
+  <title>Puzzle Playhouse | Seasonal Books, Holiday Puzzles & Activity Books</title>
+
+  <!-- SEO META TAGS -->
+  <meta name="description" content="Explore seasonal puzzle books and activity books for Christmas, Halloween, Valentine's Day and more. Fun, creative and educational books for kids and families.">
+  <meta name="keywords" content="seasonal books, holiday puzzle books, Christmas activity books, Halloween puzzle books, Valentines Day books, kids puzzles, activity books, Puzzle Playhouse">
+  <meta name="author" content="Puzzle Playhouse">
+
+  <!-- SOCIAL META -->
+  <meta property="og:title" content="Puzzle Playhouse Seasonal Books">
+  <meta property="og:description" content="Discover Christmas, Halloween, and Valentine's Day puzzle books and activities for kids and families.">
+  <meta property="og:image" content="images/seasonal-books-cover.png">
+  <meta property="og:type" content="website">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="css/critical.css">
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Page‑specific styles ONLY -->
-    <style>
-        .badge {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: #ffd700;
-            color: black;
-            padding: 6px 10px;
-            font-size: 12px;
-            font-weight: bold;
-            border-radius: 5px;
-            box-shadow: 0 0 6px rgba(0,0,0,0.2);
-            z-index: 10;
-        }
-
-        /* Card layout (kept here because it is unique to this page) */
-        .card {
-            position: relative;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            text-align: center;
-            min-height: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
 </head>
 
 <body>
- <!-- HEADER -->
-  <header class="site-header" role="banner">
-    <div class="container">
-      <a href="index.html" class="logo" aria-label="Home">
-        <div class="logo-mark">PP</div>
-        <div class="logo-text">
-          <div class="logo-title">Puzzle Playhouse</div>
-          <div class="logo-sub">Books & Puzzles</div>
-        </div>
-      </a>
 
-      <nav class="primary-nav" role="navigation" aria-label="Primary">
-        <ul class="nav-list">
-          <li><a href="/puzzle-playhouse/bookcollections.html">Books</a></li>
-          <li><a href="/puzzle-playhouse/monthly-puzzle.html">Monthly Puzzle</a></li>
-          <li><a href="/puzzle-playhouse/blog.html">Blog</a></li>
-          <li><a href="/puzzle-playhouse/About.html">About</a></li>
-          <li><a href="/puzzle-playhouse/contact.html">Contact</a></li>
-        </ul>
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="logo" aria-label="Home">
+      <div class="logo-mark">PP</div>
+      <div class="logo-text">
+        <div class="logo-title">Puzzle Playhouse</div>
+        <div class="logo-sub">Books & Puzzles</div>
+      </div>
+    </a>
 
-        <div class="cta">
-          <a class="btn" href="sign_up.html">Sign up</a>
-          <a class="btn primary" href="bookcollections.html">Shop Now</a>
-        </div>
-      </nav>
-    </div>
-  </header>
+    <nav class="primary-nav" role="navigation" aria-label="Primary">
+      <ul class="nav-list">
+        <li><a href="JournalBlog/PersonalGrowthHub.html">Personal Growth</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+      </ul>
 
-<div class="container">
+      <div class="cta">
+        <a class="btn" href="sign_up.html">Sign up</a>
+        <a class="btn primary" href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true">Shop Now</a>
+      </div>
+    </nav>
+  </div>
+</header>
 
-    <h1>📚 Seasonal Books</h1>
+<!-- MAIN SECTION -->
+<section class="books-layout">
+
+  <div class="books-text">
+    <h1>Explore Our Books</h1>
     <p class="intro">
-        Explore our collection of seasonal books designed for fun, focus, and relaxation.
+      Discover puzzle books, journals, notebooks, log books — and now seasonal holiday books for Christmas, Halloween, and Valentine’s Day.
     </p>
-<p class="small-text">This page contains affiliate links. If you purchase through these links, we may earn a small commission at no extra cost to you.</p>
+  </div>
 
-    <!-- BOOK GRID -->
-    <div class="grid" id="bookGrid"></div>
+  <div class="categories">
 
-    <!-- CTA -->
-    <div class="cta">
-    <h2>🎁 Get Free Puzzles</h2>
-    <p>Join our community and receive exclusive puzzles and updates.</p>
-
-    <!-- Main CTA -->
-    <a href="/puzzle-playhouse/sign_up.html" class="btn primary-btn">Sign Up</a>
-
-    <!-- Mini buttons -->
-    <div class="mini-btn-group">
-        <a href="/puzzle-playhouse/Blog.html" class="mini-btn">Blog</a>
-        <a href="/puzzle-playhouse/index.html" class="mini-btn">Home</a>
+    <!-- PUZZLE BOOKS -->
+    <div class="category-card">
+      <img src="images/puzzle-books-kids.png" class="category-icon" alt="Puzzle Books">
+      <h2>🧩 Puzzle Books</h2>
+      <p>Fun and educational puzzles for kids.</p>
+      <a href="/puzzle-playhouse/books/puzzle-books.html">View Puzzle Books</a>
     </div>
 
+    <!-- NOTEBOOKS -->
+    <div class="category-card">
+      <img src="images/notebooks.png" class="category-icon" alt="Notebooks">
+      <h2>📓 Notebooks & Drawing Books</h2>
+      <p>Simple and stylish notebooks for everyday use.</p>
+      <a href="/puzzle-playhouse/books/notebooks.html">View Notebooks</a>
+    </div>
 
-</div>
+    <!-- JOURNALS -->
+    <div class="category-card">
+      <img src="images/journals.png" class="category-icon" alt="Journals">
+      <h2>📔 Journals</h2>
+      <p>Track habits, food, and personal growth.</p>
+      <a href="/puzzle-playhouse/books/journals.html">View Journals</a>
+    </div>
+
+    <!-- LOG BOOKS -->
+    <div class="category-card">
+      <img src="images/notebooks-minimal.png" class="category-icon" alt="Log Books">
+      <h2>📊 Log Books</h2>
+      <p>Track health, sleep, and daily routines.</p>
+      <a href="/puzzle-playhouse/books/log-books.html">View Log Books</a>
+    </div>
+
+    <!-- SEASONAL BOOKS SECTION -->
+    <div class="category-card">
+      <img src="images/christmas-books.png" class="category-icon" alt="Christmas Books">
+      <h2>🎄 Christmas Books</h2>
+      <p>Festive puzzles, colouring and holiday activities.</p>
+      <a href="/puzzle-playhouse/books/christmas.html">View Christmas Books</a>
+    </div>
+
+    <div class="category-card">
+      <img src="images/halloween-books.png" class="category-icon" alt="Halloween Books">
+      <h2>🎃 Halloween Books</h2>
+      <p>Spooky puzzles and fun Halloween activities.</p>
+      <a href="/puzzle-playhouse/books/halloween.html">View Halloween Books</a>
+    </div>
+
+    <div class="category-card">
+      <img src="images/valentines-books.png" class="category-icon" alt="Valentine’s Day Books">
+      <h2>❤️ Valentine’s Day Books</h2>
+      <p>Love‑themed puzzles and creative activities.</p>
+      <a href="/puzzle-playhouse/books/valentines.html">View Valentine’s Books</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="cta-buttons">
+    <a href="/puzzle-playhouse/sign_up.html" class="cta-btn green">Sign Up</a>
+    <a href="/puzzle-playhouse/blog.html" class="cta-btn orange">Blog</a>
+    <a href="/puzzle-playhouse/index.html" class="cta-btn purple">Home</a>
+  </div>
+
+  <p class="cta-text">Learn about the benefits of puzzles.</p>
+  <a href="https://heynes007-dot.github.io/puzzle-playhouse/blog.html" class="cta-link">See the benefits</a>
+</section>
 
 <!-- FOOTER -->
-  <footer class="pp-footer">
+<footer class="pp-footer">
   <div class="footer-grid">
 
-    <!-- Brand -->
     <div class="footer-col brand">
-      <img src="/puzzle-playhouse/logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
+      <img src="logo.png" class="footer-logo" alt="Puzzle Playhouse Logo">
       <h3>Puzzle Playhouse</h3>
-      <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
+      <p>Creative puzzle books, journals and activities for curious minds.</p>
     </div>
 
-    <!-- Quick Links -->
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        <li><a href="/puzzle-playhouse/bookcollections.html">Books</a></li>
-        <li><a href="/puzzle-playhouse/monthly-puzzle.html">Free Puzzle</a></li>
-        <li><a href="/puzzle-playhouse/puzzle-club.html">Puzzle Club</a></li>
-        <li><a href="/puzzle-playhouse/blog.html">Blog</a></li>
-        <li><a href="/puzzle-playhouse/about.html">About Us</a></li>
+        <li><a href="JournalBlog/PersonalGrowthHub.html">Personal Health Hub</a></li>
+        <li><a href="monthly-puzzle.html">Monthly Puzzle</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="index.html">Home</a></li>
       </ul>
     </div>
 
-    <!-- Shop -->
     <div class="footer-col">
       <h4>Shop</h4>
       <ul>
-        <li><a href="https://amzn.to/4wCENyN" target="_blank">Amazon Store</a></li>
+        <li><a href="https://www.amazon.co.uk/stores/Andrew-Heynes/author/B0FD8NRPZJ?ref=ap_rdr&shoppingPortalEnabled=true" target="_blank">Amazon Store</a></li>
         <li><a href="https://www.etsy.com/uk/shop/AH10Creations" target="_blank">Etsy Shop</a></li>
-        <li><a href="new-releases.html">New Releases</a></li>
-        <li><a href="best-sellers.html">Best Sellers</a></li>
-        <li><a href="gift-ideas.html">Gift Ideas</a></li>
+        <li><a href="new-releases.html">New Books</a></li>
+        <li><a href="books/journals.html">Journals</a></li>
       </ul>
     </div>
 
-    <!-- Help -->
-    <div class="footer-col">
-      <h4>Help</h4>
-      <ul>
-        <li><a href="/puzzle-playhouse/faq.html">FAQ</a></li>
-        <li><a href="/puzzle-playhouse/contact.html">Contact</a></li>
-        <li><a href="/puzzle-playhouse/terms.html">Terms & Conditions</a></li>
-        <li><a href="/puzzle-playhouse/Privacy_Policy.html">Privacy Policy</a></li>
-      </ul>
-    </div>
-
-    <!-- Follow Us -->
     <div class="footer-col follow">
       <h4>Follow Us</h4>
-     <div class="social-icons">
-  <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
-  <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
-  <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
-  <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
-</div>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ah10admi" class="social"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@AHPuzzles" class="social"><i class="fab fa-youtube"></i></a>
+        <a href="https://uk.pinterest.com/Puzzle_Playhouse/" class="social"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#" class="social"><i class="fab fa-tiktok"></i></a>
+      </div>
       <p class="footer-note">
         © 2026 Puzzle Playhouse. All rights reserved.<br>
         As an Amazon Associate, we earn from qualifying purchases.
@@ -167,32 +185,6 @@
 
   </div>
 </footer>
-<script>
-fetch('seasonal.json')
-  .then(response => response.json())
-  .then(data => {
-    const grid = document.getElementById('bookGrid');
-
-    data.forEach(book => {
-      const card = document.createElement('div');
-      card.className = 'card';
-
-      card.innerHTML = `
-        ${book.newRelease ? '<div class="badge">NEW RELEASE</div>' : ''}
-
-        <div class="image-frame">
-            <img src="${book.image}" alt="${book.title}">
-        </div>
-
-        <h3>${book.emoji} ${book.title}</h3>
-        <p>${book.description}</p>
-        <a href="${book.link}" class="btn" target="_blank">View Book</a>
-      `;
-
-      grid.appendChild(card);
-    });
-  });
-</script>
 
 </body>
 </html>
