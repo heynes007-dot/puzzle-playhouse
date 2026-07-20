@@ -357,3 +357,47 @@ nav.primary-nav {
 .terms-container li {
   text-align: right;
 }
+.book-promo {
+  margin: 60px auto;
+  max-width: 450px; /* smaller container */
+  text-align: center;
+}
+
+.promo-box {
+  background: #111;
+  border: 2px solid #ffd700;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.promo-img {
+  width: 140px; /* smaller image */
+  display: block;
+  margin: 0 auto 20px auto; /* centered */
+  border-radius: 8px;
+}
+
+.promo-text h2 {
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.promo-text p {
+  color: silver;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.promo-btn {
+  display: inline-block;
+  background: #ffd700;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.promo-btn:hover {
+  background: #ffea6e;
+}
