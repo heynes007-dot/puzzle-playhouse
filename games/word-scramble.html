@@ -239,8 +239,8 @@
   let mvCurrentWord = "";
 
   function removeVowels(word) {
-    return word.replace(/[aeiou]/gi, "");
-  }
+  return word.replace(/[aeiou]/gi, "_");
+}
 
   function newMV() {
     mvCurrentWord = mvWords[Math.floor(Math.random() * mvWords.length)];
