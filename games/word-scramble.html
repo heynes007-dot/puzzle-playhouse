@@ -226,9 +226,43 @@
       document.getElementById("message").textContent = "Try again!";
     }
   }
-
-  newPuzzle();
+ newPuzzle();
 </script>
+ 
+  <script>
+  const mvWords = [
+    "puzzle", "playhouse", "creative", "challenge", "logic",
+    "christmas", "halloween", "valentine", "winter", "summer",
+    "journal", "notebook", "activity", "brain", "scramble"
+  ];
+
+  let mvCurrentWord = "";
+
+  function removeVowels(word) {
+    return word.replace(/[aeiou]/gi, "");
+  }
+
+  function newMV() {
+    mvCurrentWord = mvWords[Math.floor(Math.random() * mvWords.length)];
+    document.getElementById("mvWord").textContent = removeVowels(mvCurrentWord);
+    document.getElementById("mvMessage").textContent = "";
+    document.getElementById("mvGuess").value = "";
+  }
+
+  function checkMV() {
+    const guess = document.getElementById("mvGuess").value.toLowerCase();
+
+    if (guess === mvCurrentWord) {
+      document.getElementById("mvMessage").textContent = "Correct! New puzzle coming...";
+      setTimeout(newMV, 1500);
+    } else {
+      document.getElementById("mvMessage").textContent = "Try again!";
+    }
+  }
+
+  newMV();
+</script>
+
 
 </body>
 </html>
