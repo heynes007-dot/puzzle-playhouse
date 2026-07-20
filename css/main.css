@@ -467,3 +467,9 @@ nav.primary-nav {
   font-size: 1.2rem;
   margin-bottom: 25px;
 }
+.game-box,
+.mv-box {
+  background: #111;
+  border: 2px solid #ffd700;
+  padding: 20px;
+  border-radius: 10px;
