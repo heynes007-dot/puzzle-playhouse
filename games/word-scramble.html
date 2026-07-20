@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Word Scramble Game | Puzzle Playhouse</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body {
+    background: black;
+    color: silver;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .game-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid silver;
+    border-radius: 10px;
+  }
+
+  .scramble {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    color: #ffd700;
+  }
+
+  input {
+    padding: 10px;
+    width: 80%;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #ffea6e;
+  }
+
+  .message {
+    margin-top: 20px;
+    font-size: 1.3rem;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Word Scramble Game</h1>
+<p>Unscramble the word below:</p>
+
+<div class="game-box">
+  <div class="scramble" id="scrambledWord">Loading...</div>
+
+  <input type="text" id="userGuess" placeholder="Type your answer...">
+
+  <button onclick="checkAnswer()">Submit</button>
+
+  <div class="message" id="message"></div>
+</div>
+
+<script>
+  const words = [
+    "puzzle", "playhouse", "challenge", "creative", "logic",
+    "christmas", "halloween", "valentine", "winter", "summer",
+    "journal", "notebook", "activity", "brain", "scramble"
+  ];
+
+  let currentWord = "";
+
+  function scrambleWord(word) {
+    return word.split("").sort(() => Math.random() - 0.5).join("");
+  }
+
+  function newPuzzle() {
+    currentWord = words[Math.floor(Math.random() * words.length)];
+    document.getElementById("scrambledWord").textContent = scrambleWord(currentWord);
+    document.getElementById("message").textContent = "";
+    document.getElementById("userGuess").value = "";
+  }
+
+  function checkAnswer() {
+    const guess = document.getElementById("userGuess").value.toLowerCase();
+
+    if (guess === currentWord) {
+      document.getElementById("message").textContent = "Correct! Generating a new puzzle...";
+      setTimeout(newPuzzle, 1500);
+    } else {
+      document.getElementById("message").textContent = "Try again!";
+    }
+  }
+
+  newPuzzle();
+</script>
+
+</body>
+</html>
