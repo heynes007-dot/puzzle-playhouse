@@ -2,7 +2,7 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  padding: 8px 20px;
 
   display: flex;               /* put logo + nav on same row */
   align-items: center;         /* vertically align everything */
@@ -67,16 +67,7 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   gap: 18px;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px 20px;
-  display: flex;
-  align-items: center;
-   justify-content: flex-start; /* align everything from the left */
-  gap: 32px; /* space between logo/text and nav */
-}
+
 .primary-nav {
   display: flex;
   align-items: center;
