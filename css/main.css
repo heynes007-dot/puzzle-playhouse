@@ -258,7 +258,9 @@ nav.primary-nav {
 .image-frame {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: contain;
+  background: #fff;      /* optional but makes it look clean */
+  padding: 10px;         /* optional, adds a nice frame */
   border-radius: 12px;
   display: block;
   margin-bottom: 16px;
