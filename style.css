@@ -176,7 +176,14 @@ h1, h2 {
     transform: translateY(-6px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
-
+.category-card img {
+  width: 100%;
+  height: 220px;        /* consistent book-cover height */
+  object-fit: cover;    /* prevents squashing */
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
 /* --------------------------------------------------
    GENERIC BUTTONS
 -------------------------------------------------- */
