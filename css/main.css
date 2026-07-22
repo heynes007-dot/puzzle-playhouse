@@ -230,6 +230,39 @@ nav.primary-nav {
   background: #ffea6a;
   box-shadow: 0 0 12px gold;
 }
+/* UNIVERSAL BOOK GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+/* UNIVERSAL BOOK CARD */
+.card {
+  background: #111;
+  color: #fff;
+  padding: 28px 22px;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px gold;
+}
+
+/* UNIVERSAL BOOK IMAGE */
+.image-frame {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 16px;
+}
 /* BOOK CATEGORY GRID */
 .categories {
   display: grid !important;
