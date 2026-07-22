@@ -148,7 +148,19 @@ h1, h2 {
   display: block;
   transition: transform 0.4s ease;
 }
+.category-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
 /* --------------------------------------------------
    GRID LAYOUT
 -------------------------------------------------- */
