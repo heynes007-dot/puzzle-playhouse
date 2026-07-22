@@ -125,11 +125,11 @@ h1, h2 {
 }
 
 /* --------------------------------------------------
-   BOOK CARDS — FIXED IMAGE SIZE
+ MAIN BOOK CARDS — FIXED IMAGE SIZE
 -------------------------------------------------- */
 .image-frame {
   width: 100%;
-  height: 240px; /* slightly taller for book covers */
+  height: 240px;
   overflow: hidden;
   border-radius: 12px;
   background: #fff;
@@ -143,32 +143,12 @@ h1, h2 {
 .image-frame img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* keeps full cover visible */
+  object-fit: contain;
   object-position: center;
   display: block;
   transition: transform 0.4s ease;
 }
-.categories .category-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 12px;
-  display: block;
-}
-.category-card {
-  background: #fff;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
-}
 /* SEASONAL BOOK IMAGES — FIX SQUASHING */
 .categories .category-card img {
   width: 100%;
@@ -189,6 +169,82 @@ h1, h2 {
 /* PREVENT IMAGE-FRAME RULES FROM OVERRIDING SEASONAL IMAGES */
 .books-layout .image-frame img {
   object-fit: contain;
+}
+
+/* --------------------------------------------------
+   SEASONAL BOOKS — FULLY ISOLATED LAYOUT
+   (Safe: does NOT affect other pages)
+-------------------------------------------------- */
+
+/* Seasonal grid container */
+.books-layout .categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Seasonal card container */
+.books-layout .category-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Keep cards narrow and book-like */
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* Hover effect */
+.books-layout .category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+/* Seasonal book images — FIX SQUASHING */
+.books-layout .category-card img {
+  width: 100%;
+  height: 220px;              /* consistent book-cover height */
+  object-fit: cover;          /* prevents squashing */
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Seasonal text spacing */
+.books-layout .category-card h2 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+  color: #000;
+}
+
+.books-layout .category-card p {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Seasonal links */
+.books-layout .category-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.25s ease;
+}
+
+.books-layout .category-card a:hover {
+  background: #ffd700;
+  color: black;
+  box-shadow: 0 0 12px #ffd700;
 }
 /* --------------------------------------------------
    GRID LAYOUT
