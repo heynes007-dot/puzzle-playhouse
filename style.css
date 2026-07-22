@@ -161,6 +161,27 @@ h1, h2 {
   transform: translateY(-6px);
   box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
+/* SEASONAL BOOK IMAGES — FIX SQUASHING */
+.categories .category-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover !important;
+  object-position: center;
+  border-radius: 12px;
+  display: block;
+}
+
+/* SEASONAL CARD WIDTH FIX */
+.categories .category-card {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* PREVENT IMAGE-FRAME RULES FROM OVERRIDING SEASONAL IMAGES */
+.books-layout .image-frame img {
+  object-fit: contain;
+}
 /* --------------------------------------------------
    GRID LAYOUT
 -------------------------------------------------- */
