@@ -512,3 +512,14 @@ nav.primary-nav {
   padding: 20px;
   border-radius: 10px;
 }
+.category-card a {
+  color: #ffd700; /* gold */
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.category-card a:hover {
+  color: #ffea8a; /* lighter gold */
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
