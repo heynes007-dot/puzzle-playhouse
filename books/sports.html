@@ -575,9 +575,6 @@
           Challenge yourself with our Sports Puzzle Books.
         </p>
         <div class="sq-actions">
-          <button type="button" class="sq-btn sq-btn-primary" id="sq-browse-books-btn">
-            Browse Sports Books
-          </button>
           <button type="button" class="sq-btn sq-btn-ghost" id="sq-play-again-btn">
             Play Again
           </button>
@@ -853,7 +850,6 @@
       const scorePercentageEl = document.getElementById("sq-score-percentage");
       const scoreMessageEl = document.getElementById("sq-score-message");
       const bestScoreEl = document.getElementById("sq-best-score");
-      const browseBooksBtnEl = document.getElementById("sq-browse-books-btn");
       const playAgainBtnEl = document.getElementById("sq-play-again-btn");
 
       // Utility: shuffle array
@@ -1108,13 +1104,6 @@
 
       playAgainBtnEl.addEventListener("click", function () {
         initQuiz();
-      });
-
-      browseBooksBtnEl.addEventListener("click", function () {
-        const target = document.getElementById("sports-books");
-        if (target && typeof target.scrollIntoView === "function") {
-          target.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
       });
 
       // Keyboard shortcuts: left/right arrows for navigation
