@@ -523,3 +523,9 @@ nav.primary-nav {
   color: #ffea8a; /* lighter gold */
   text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
 }
+.card a,
+.card a:visited {
+  color: #ffd700 !important;
+  font-weight: 700;
+  text-decoration: none;
+}
