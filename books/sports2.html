@@ -467,32 +467,7 @@
     // =========================
     // Sports Quiz Widget Script
     // =========================
-  (function () {
-
-  // =========================
-  // AUDIO UNLOCK FIX
-  // =========================
-  document.addEventListener("click", () => {
-    const cheer = document.getElementById("sq-sound-cheer");
-    const ding = document.getElementById("sq-sound-ding");
-    const buzz = document.getElementById("sq-sound-buzz");
-
-    const unlock = sound => {
-      sound.volume = 0.0001;
-      sound.play().then(() => {
-        sound.pause();
-        sound.currentTime = 0;
-        sound.volume = 1.0;
-        console.log("Unlocked:", sound.id);
-      }).catch(err => {
-        console.log("Unlock failed:", sound.id, err);
-      });
-    };
-
-    unlock(cheer);
-    unlock(ding);
-    unlock(buzz);
-  }, { once: true });
+ 
 
       // Question bank: category, question, correct, incorrect[]
       // NOTE: For brevity, this includes a solid starter bank.
