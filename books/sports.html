@@ -899,13 +899,9 @@ const formulaOneQuestions = [
         const actionsEl = document.createElement("div");
         actionsEl.className = "sq-score-actions";
 
-      
-browseBtn.addEventListener("click", function () {
+  browseBtn.addEventListener("click", function () {
   const target = document.getElementById("sports-books");
-  if (!target) {
-    // If the section doesn’t exist, just do nothing
-    return;
-  }
+  if (!target) return;
 
   const offset = 150;
   const rect = target.getBoundingClientRect();
@@ -915,6 +911,7 @@ browseBtn.addEventListener("click", function () {
     top: y,
     behavior: "smooth"
   });
+});
 
         const playAgainBtn = document.createElement("button");
         playAgainBtn.type = "button";
