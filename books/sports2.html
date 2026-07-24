@@ -467,6 +467,16 @@
     // =========================
     // Sports Quiz Widget Script
     // =========================
+   document.addEventListener("click", () => {
+  const cheer = document.getElementById("sq-sound-cheer");
+  const ding = document.getElementById("sq-sound-ding");
+  const buzz = document.getElementById("sq-sound-buzz");
+
+  // Unlock audio context on first user click
+  cheer.play().then(() => cheer.pause());
+  ding.play().then(() => ding.pause());
+  buzz.play().then(() => buzz.pause());
+}, { once: true });
     (function () {
       const TOTAL_QUESTIONS = 5;
       const BEST_SCORE_KEY = "sportsQuizBestScore_v1";
