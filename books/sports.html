@@ -899,16 +899,19 @@ const formulaOneQuestions = [
         const actionsEl = document.createElement("div");
         actionsEl.className = "sq-score-actions";
 
-        const browseBtn = document.createElement("button");
-        browseBtn.type = "button";
-        browseBtn.className = "sq-btn sq-btn-outline";
-        browseBtn.textContent = "Browse Sports Books";
+      
         browseBtn.addEventListener("click", function () {
-          const target = document.getElementById("sports-books");
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-          }
-        });
+  const target = document.getElementById("sports-books");
+  if (target) {
+    const offset = 150; // adjust this number to scroll more or less
+    const y = target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth"
+    });
+  }
+});
 
         const playAgainBtn = document.createElement("button");
         playAgainBtn.type = "button";
