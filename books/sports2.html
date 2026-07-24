@@ -53,7 +53,776 @@
     </nav>
   </div>
 </header>
-  
+  <section id="sports-quiz" class="sports-quiz-section">
+  <style>
+    .sports-quiz-section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: radial-gradient(circle at top left, #333 0%, #111 45%, #000 100%);
+      color: #f5f5f5;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+    }
+
+    .sq-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .sq-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .sq-subtitle {
+      font-size: 1rem;
+      color: #cccccc;
+      margin-top: 0.25rem;
+    }
+
+    .sq-progress-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .sq-progress-bar-track {
+      flex: 1;
+      height: 8px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+    }
+
+    .sq-progress-bar-fill {
+      width: 0%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #ffd54f, #ff9800, #ff5722);
+      transition: width 0.35s ease;
+    }
+
+    .sq-counter {
+      font-size: 0.9rem;
+      color: #dddddd;
+      white-space: nowrap;
+    }
+
+    .sq-card {
+      margin-top: 0.5rem;
+      padding: 1.25rem;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sq-fade-enter {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .sq-fade-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    .sq-category-tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.06);
+      color: #ffeb3b;
+      margin-bottom: 0.75rem;
+    }
+
+    .sq-question {
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .sq-options {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .sq-option {
+      position: relative;
+    }
+
+    .sq-option-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .sq-option-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 0.8rem;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      cursor: pointer;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .sq-option-label:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+      transform: translateY(-1px);
+    }
+
+    .sq-option-letter {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.08);
+      color: #ffeb3b;
+    }
+
+    .sq-option-text {
+      flex: 1;
+      font-size: 0.95rem;
+    }
+
+    .sq-option-input:checked + .sq-option-label {
+      border-color: #ff9800;
+      background: rgba(255, 152, 0, 0.12);
+      box-shadow: 0 0 0 1px rgba(255, 152, 0, 0.4);
+    }
+
+    .sq-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .sq-nav-buttons {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .sq-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+    }
+
+    .sq-btn-primary {
+      background: linear-gradient(90deg, #ff9800, #ff5722);
+      color: #111;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    .sq-btn-primary:hover:not(:disabled) {
+      box-shadow: 0 10px 22px rgba(0, 0, 0, 0.7);
+      transform: translateY(-1px);
+    }
+
+    .sq-btn-secondary {
+      background: rgba(255, 255, 255, 0.08);
+      color: #f5f5f5;
+    }
+
+    .sq-btn-secondary:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .sq-btn-outline {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #ffeb3b;
+    }
+
+    .sq-btn-outline:hover:not(:disabled) {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .sq-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .sq-status {
+      font-size: 0.85rem;
+      color: #bbbbbb;
+    }
+
+    .sq-status span {
+      color: #ffeb3b;
+    }
+
+    .sq-score-panel {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+
+    .sq-score-main {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .sq-score-percent {
+      font-size: 1.1rem;
+      color: #ffeb3b;
+      margin-bottom: 0.5rem;
+    }
+
+    .sq-score-message {
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sq-score-extra {
+      font-size: 0.9rem;
+      color: #cccccc;
+      margin-bottom: 1rem;
+    }
+
+    .sq-score-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .sq-best-score {
+      font-size: 0.85rem;
+      color: #bbbbbb;
+    }
+
+    .sq-best-score span {
+      color: #ffeb3b;
+      font-weight: 600;
+    }
+
+    .sq-score-celebrate {
+      position: relative;
+    }
+
+    .sq-score-celebrate::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      border: 1px solid rgba(255, 235, 59, 0.4);
+      box-shadow: 0 0 18px rgba(255, 235, 59, 0.4);
+      opacity: 0;
+      pointer-events: none;
+      animation: sqPulse 1.4s ease-out forwards;
+    }
+
+    @keyframes sqPulse {
+      0% {
+        opacity: 0;
+        transform: scale(0.96);
+      }
+      40% {
+        opacity: 1;
+        transform: scale(1.02);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(1.04);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .sports-quiz-section {
+        margin: 1.5rem 1rem;
+        padding: 1.1rem;
+      }
+      .sq-title {
+        font-size: 1.5rem;
+      }
+      .sq-card {
+        padding: 1rem;
+      }
+    }
+  </style>
+
+  <div class="sq-header">
+    <h2 class="sq-title">🏆 Today's Sports Challenge</h2>
+    <p class="sq-subtitle">Can you answer all 5 questions?</p>
+  </div>
+
+  <div class="sq-progress-wrapper" aria-hidden="false">
+    <div class="sq-progress-bar-track" aria-label="Quiz progress">
+      <div id="sq-progress-bar" class="sq-progress-bar-fill"></div>
+    </div>
+    <div id="sq-counter" class="sq-counter">Question 1 of 5</div>
+  </div>
+
+  <div id="sq-card" class="sq-card" aria-live="polite"></div>
+
+  <footer class="sq-footer">
+    <div class="sq-nav-buttons">
+      <button type="button" class="sq-btn sq-btn-secondary" id="sq-prev-btn" aria-label="Previous question">
+        ◀ Previous
+      </button>
+      <button type="button" class="sq-btn sq-btn-primary" id="sq-next-btn" aria-label="Next question">
+        Next ▶
+      </button>
+    </div>
+    <div class="sq-status" id="sq-status">
+      Progress: <span>0 / 5 answered</span>
+    </div>
+  </footer>
+
+  <!-- Audio feedback -->
+  <audio id="sq-sound-buzz" src="/puzzle-playhouse/Sounds/buzz.mp3" preload="auto"></audio>
+  <audio id="sq-sound-cheer" src="/puzzle-playhouse/Sounds/cheer.mp3" preload="auto"></audio>
+
+  <script>
+    (function () {
+      const TOTAL_QUESTIONS = 5;
+      const BEST_SCORE_KEY = "sportsQuizBestScore_v1";
+
+      // --- Question bank (shortened for brevity; you can extend) ---
+      const footballQuestions = [
+        {
+          category: "Football",
+          question: "Which country won the FIFA World Cup in 2018?",
+          correct: "France",
+          incorrect: ["Croatia", "Brazil", "Germany"]
+        },
+        {
+          category: "Football",
+          question: "Which player is known as 'CR7'?",
+          correct: "Cristiano Ronaldo",
+          incorrect: ["Lionel Messi", "Neymar", "Kylian Mbappé"]
+        },
+        {
+          category: "Football",
+          question: "Which club plays home games at Anfield?",
+          correct: "Liverpool",
+          incorrect: ["Everton", "Manchester United", "Chelsea"]
+        },
+        {
+          category: "Football",
+          question: "How many players start on each team in a standard football match?",
+          correct: "11",
+          incorrect: ["10", "9", "12"]
+        },
+        {
+          category: "Football",
+          question: "Which competition is often called the 'Champions League of South America'?",
+          correct: "Copa Libertadores",
+          incorrect: ["Copa América", "Sudamericana", "Brasileirão"]
+        }
+        // ➜ Add more to reach 100+
+      ];
+
+      const formulaOneQuestions = [
+        {
+          category: "Formula 1",
+          question: "Which driver holds the record for most F1 World Championships?",
+          correct: "Lewis Hamilton (tied with Michael Schumacher)",
+          incorrect: ["Ayrton Senna", "Sebastian Vettel", "Niki Lauda"]
+        },
+        {
+          category: "Formula 1",
+          question: "What colour flag signals the end of a race?",
+          correct: "Chequered flag",
+          incorrect: ["Red flag", "Yellow flag", "Blue flag"]
+        },
+        {
+          category: "Formula 1",
+          question: "Which team is based in Maranello, Italy?",
+          correct: "Ferrari",
+          incorrect: ["Mercedes", "Red Bull", "McLaren"]
+        },
+        {
+          category: "Formula 1",
+          question: "What does 'DRS' stand for in F1?",
+          correct: "Drag Reduction System",
+          incorrect: ["Dynamic Racing Setup", "Driver Response System", "Downforce Reduction Switch"]
+        },
+        {
+          category: "Formula 1",
+          question: "Which circuit hosts the Monaco Grand Prix?",
+          correct: "Circuit de Monaco",
+          incorrect: ["Silverstone", "Monza", "Spa-Francorchamps"]
+        }
+        // ➜ Add more to reach 50+
+      ];
+
+      const generalSportsQuestions = [
+        {
+          category: "General Sports",
+          question: "In tennis, what is the term for a score of zero?",
+          correct: "Love",
+          incorrect: ["Nil", "Zero", "Blank"]
+        },
+        {
+          category: "General Sports",
+          question: "How many rings are there on the Olympic flag?",
+          correct: "5",
+          incorrect: ["4", "6", "7"]
+        },
+        {
+          category: "General Sports",
+          question: "Which sport uses a shuttlecock?",
+          correct: "Badminton",
+          incorrect: ["Squash", "Table tennis", "Volleyball"]
+        },
+        {
+          category: "General Sports",
+          question: "In basketball, how many points is a shot from beyond the arc worth?",
+          correct: "3",
+          incorrect: ["2", "1", "4"]
+        },
+        {
+          category: "General Sports",
+          question: "Which sport is associated with the Ryder Cup?",
+          correct: "Golf",
+          incorrect: ["Cricket", "Rugby", "Baseball"]
+        }
+        // ➜ Add more to reach 50+
+      ];
+
+      const allQuestions = footballQuestions.concat(
+        formulaOneQuestions,
+        generalSportsQuestions
+      );
+
+      // --- Utility: shuffle array in-place ---
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      const cardEl = document.getElementById("sq-card");
+      const counterEl = document.getElementById("sq-counter");
+      const progressBarEl = document.getElementById("sq-progress-bar");
+      const statusEl = document.getElementById("sq-status");
+      const prevBtn = document.getElementById("sq-prev-btn");
+      const nextBtn = document.getElementById("sq-next-btn");
+
+      let quizQuestions = [];
+      let currentIndex = 0;
+      let selectedAnswers = {}; // index -> selected answer text
+      let hasScored = false;
+
+      function loadBestScore() {
+        try {
+          const stored = localStorage.getItem(BEST_SCORE_KEY);
+          return stored ? JSON.parse(stored) : null;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function saveBestScore(score) {
+        try {
+          const currentBest = loadBestScore();
+          if (!currentBest || score > currentBest.score) {
+            localStorage.setItem(
+              BEST_SCORE_KEY,
+              JSON.stringify({ score: score, timestamp: Date.now() })
+            );
+          }
+        } catch (e) {
+          // ignore
+        }
+      }
+
+      function createNewQuiz() {
+        hasScored = false;
+        selectedAnswers = {};
+        currentIndex = 0;
+
+        const pool = shuffle(allQuestions.slice());
+        quizQuestions = pool.slice(0, TOTAL_QUESTIONS);
+
+        updateProgress();
+        renderQuestion();
+      }
+
+      function updateProgress() {
+        const answeredCount = Object.keys(selectedAnswers).length;
+        const progressPercent = (answeredCount / TOTAL_QUESTIONS) * 100;
+        progressBarEl.style.width = progressPercent + "%";
+        statusEl.innerHTML =
+          'Progress: <span>' +
+          answeredCount +
+          " / " +
+          TOTAL_QUESTIONS +
+          " answered</span>";
+        counterEl.textContent =
+          "Question " + (currentIndex + 1) + " of " + TOTAL_QUESTIONS;
+
+        prevBtn.disabled = currentIndex === 0 || hasScored;
+        nextBtn.disabled =
+          !selectedAnswers.hasOwnProperty(currentIndex) && !hasScored;
+        nextBtn.textContent =
+          currentIndex === TOTAL_QUESTIONS - 1 && !hasScored
+            ? "Finish ▶"
+            : "Next ▶";
+      }
+
+      function getPerformanceMessage(score) {
+        switch (score) {
+          case 5:
+            return "Legendary!";
+          case 4:
+            return "Excellent!";
+          case 3:
+            return "Great effort!";
+          case 2:
+            return "Keep practising!";
+          default:
+            return "Try again!";
+        }
+      }
+
+      function renderQuestion() {
+        const q = quizQuestions[currentIndex];
+        const answers = shuffle([q.correct].concat(q.incorrect));
+        const selected = selectedAnswers[currentIndex];
+
+        const card = document.createElement("div");
+        card.className = "sq-fade-enter";
+
+        const categoryTag = document.createElement("div");
+        categoryTag.className = "sq-category-tag";
+        categoryTag.textContent = q.category;
+
+        const questionEl = document.createElement("div");
+        questionEl.className = "sq-question";
+        questionEl.textContent = q.question;
+
+        const listEl = document.createElement("ul");
+        listEl.className = "sq-options";
+
+        answers.forEach((answerText, idx) => {
+          const li = document.createElement("li");
+          li.className = "sq-option";
+
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = "sq-option";
+          input.id = "sq-option-" + idx;
+          input.value = answerText;
+          input.className = "sq-option-input";
+          input.setAttribute("aria-label", answerText);
+
+          if (selected === answerText) {
+            input.checked = true;
+          }
+
+          const label = document.createElement("label");
+          label.className = "sq-option-label";
+          label.setAttribute("for", input.id);
+
+          const letterSpan = document.createElement("span");
+          letterSpan.className = "sq-option-letter";
+          letterSpan.textContent = String.fromCharCode(65 + idx);
+
+          const textSpan = document.createElement("span");
+          textSpan.className = "sq-option-text";
+          textSpan.textContent = answerText;
+
+          label.appendChild(letterSpan);
+          label.appendChild(textSpan);
+
+          input.addEventListener("change", function () {
+            const previouslySelected = selectedAnswers[currentIndex];
+            selectedAnswers[currentIndex] = this.value;
+
+            // Wrong-answer sound (Safari-friendly: triggered by user gesture)
+            if (!hasScored) {
+              if (this.value !== q.correct) {
+                document.getElementById("sq-sound-buzz").play().catch(() => {});
+              }
+            }
+
+            updateProgress();
+          });
+
+          li.appendChild(input);
+          li.appendChild(label);
+          listEl.appendChild(li);
+        });
+
+        card.appendChild(categoryTag);
+        card.appendChild(questionEl);
+        card.appendChild(listEl);
+
+        cardEl.innerHTML = "";
+        cardEl.appendChild(card);
+
+        requestAnimationFrame(() => {
+          card.classList.add("sq-fade-enter-active");
+        });
+
+        updateProgress();
+      }
+
+      function renderScore() {
+        hasScored = true;
+
+        let score = 0;
+        quizQuestions.forEach((q, idx) => {
+          if (selectedAnswers[idx] === q.correct) {
+            score++;
+          }
+        });
+
+        saveBestScore(score);
+        const percent = Math.round((score / TOTAL_QUESTIONS) * 100);
+        const message = getPerformanceMessage(score);
+        const best = loadBestScore();
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "sq-score-panel sq-score-celebrate";
+
+        const mainScore = document.createElement("div");
+        mainScore.className = "sq-score-main";
+        mainScore.textContent = score + " / " + TOTAL_QUESTIONS;
+
+        const percentEl = document.createElement("div");
+        percentEl.className = "sq-score-percent";
+        percentEl.textContent = percent + "%";
+
+        const messageEl = document.createElement("div");
+        messageEl.className = "sq-score-message";
+        messageEl.textContent = message;
+
+        const extraEl = document.createElement("div");
+        extraEl.className = "sq-score-extra";
+        extraEl.textContent =
+          "Think you can do even better? Challenge yourself with our Sports Puzzle Books.";
+
+        const actionsEl = document.createElement("div");
+        actionsEl.className = "sq-score-actions";
+
+        const browseBtn = document.createElement("button");
+        browseBtn.type = "button";
+        browseBtn.className = "sq-btn sq-btn-outline";
+        browseBtn.textContent = "Browse Sports Books";
+        browseBtn.addEventListener("click", function () {
+          const target = document.getElementById("sports-books");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
+
+        const playAgainBtn = document.createElement("button");
+        playAgainBtn.type = "button";
+        playAgainBtn.className = "sq-btn sq-btn-primary";
+        playAgainBtn.textContent = "Play Again";
+        playAgainBtn.addEventListener("click", function () {
+          createNewQuiz();
+        });
+
+        actionsEl.appendChild(browseBtn);
+        actionsEl.appendChild(playAgainBtn);
+
+        const bestEl = document.createElement("div");
+        bestEl.className = "sq-best-score";
+        if (best && typeof best.score === "number") {
+          bestEl.innerHTML =
+            "Best score so far: <span>" +
+            best.score +
+            " / " +
+            TOTAL_QUESTIONS +
+            "</span>";
+        } else {
+          bestEl.textContent =
+            "Your best score will be saved on this device.";
+        }
+
+        wrapper.appendChild(mainScore);
+        wrapper.appendChild(percentEl);
+        wrapper.appendChild(messageEl);
+        wrapper.appendChild(extraEl);
+        wrapper.appendChild(actionsEl);
+        wrapper.appendChild(bestEl);
+
+        cardEl.innerHTML = "";
+        cardEl.appendChild(wrapper);
+
+        progressBarEl.style.width = "100%";
+        statusEl.innerHTML =
+          'Quiz complete: <span>' +
+          score +
+          " / " +
+          TOTAL_QUESTIONS +
+          " correct</span>";
+        counterEl.textContent = "Quiz complete";
+
+        prevBtn.disabled = true;
+        nextBtn.disabled = true;
+
+        // Cheer sound on score (Safari-friendly: triggered by button click or finish)
+        document.getElementById("sq-sound-cheer").play().catch(() => {});
+      }
+
+      prevBtn.addEventListener("click", function () {
+        if (hasScored) return;
+        if (currentIndex > 0) {
+          currentIndex--;
+          renderQuestion();
+        }
+      });
+
+      nextBtn.addEventListener("click", function () {
+        if (hasScored) return;
+
+        if (!selectedAnswers.hasOwnProperty(currentIndex)) {
+          return;
+        }
+
+        if (currentIndex < TOTAL_QUESTIONS - 1) {
+          currentIndex++;
+          renderQuestion();
+        } else {
+          renderScore();
+        }
+      });
+
+      // Initialise quiz on page load
+      createNewQuiz();
+    })();
+  </script>
+</section>
 <!-- MAIN SECTION -->
 <section class="books-layout">
 
