@@ -899,12 +899,16 @@ const formulaOneQuestions = [
         const actionsEl = document.createElement("div");
         actionsEl.className = "sq-score-actions";
 
-browseBtn.addEventListener("click", function () {
-  const target = document.getElementById("sports-books");
-  if (target) {
-    target.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-});
+        const browseBtn = document.createElement("button");
+        browseBtn.type = "button";
+        browseBtn.className = "sq-btn sq-btn-outline";
+        browseBtn.textContent = "Browse Sports Books";
+        browseBtn.addEventListener("click", function () {
+          const target = document.getElementById("sports-books");
+          if (target) {
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        });
 
         const playAgainBtn = document.createElement("button");
         playAgainBtn.type = "button";
