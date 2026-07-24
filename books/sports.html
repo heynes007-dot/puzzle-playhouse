@@ -187,7 +187,6 @@
     .sq-category-pill {
       display: inline-flex;
       align-items: center;
-      justify-content: center; /* ← THIS is the line you add */
       gap: 0.35rem;
       padding: 0.2rem 0.7rem;
       border-radius: 999px;
@@ -197,10 +196,16 @@
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #f0f0f0;
-      margin-left: auto;
-      margin-right: auto;
       margin-bottom: 0.7rem;
-      white-space: nowrap;
+    }
+
+    .sq-category-pill span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffd700;
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
     }
 
     .sq-question-text {
@@ -530,6 +535,7 @@
   <div class="sq-card" aria-live="polite">
     <div class="sq-card-inner sq-visible" id="sq-card-inner">
       <div class="sq-category-pill" id="sq-category-pill">
+        <span></span>
         <span id="sq-category-label">Category</span>
       </div>
       <h2 class="sq-question-text" id="sq-question-text"></h2>
@@ -569,6 +575,9 @@
           Challenge yourself with our Sports Puzzle Books.
         </p>
         <div class="sq-actions">
+          <button type="button" class="sq-btn sq-btn-primary" id="sq-browse-books-btn">
+            Browse Sports Books
+          </button>
           <button type="button" class="sq-btn sq-btn-ghost" id="sq-play-again-btn">
             Play Again
           </button>
@@ -844,6 +853,7 @@
       const scorePercentageEl = document.getElementById("sq-score-percentage");
       const scoreMessageEl = document.getElementById("sq-score-message");
       const bestScoreEl = document.getElementById("sq-best-score");
+      const browseBooksBtnEl = document.getElementById("sq-browse-books-btn");
       const playAgainBtnEl = document.getElementById("sq-play-again-btn");
 
       // Utility: shuffle array
@@ -1029,8 +1039,6 @@
 
         scoreMainEl.textContent = "Your score: " + score + "/" + TOTAL_QUESTIONS;
         scorePercentageEl.textContent = "That's " + percentage + "%";
-       
-}
 
         let message = "";
         if (score === 5) {
@@ -1100,6 +1108,13 @@
 
       playAgainBtnEl.addEventListener("click", function () {
         initQuiz();
+      });
+
+      browseBooksBtnEl.addEventListener("click", function () {
+        const target = document.getElementById("sports-books");
+        if (target && typeof target.scrollIntoView === "function") {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
 
       // Keyboard shortcuts: left/right arrows for navigation
