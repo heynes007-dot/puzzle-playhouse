@@ -467,19 +467,29 @@
     // =========================
     // Sports Quiz Widget Script
     // =========================
-   document.addEventListener("click", () => {
+  // Force-unlock audio on first user interaction
+document.addEventListener("click", () => {
   const cheer = document.getElementById("sq-sound-cheer");
   const ding = document.getElementById("sq-sound-ding");
   const buzz = document.getElementById("sq-sound-buzz");
 
-  // Unlock audio context on first user click
-  cheer.play().then(() => cheer.pause());
-  ding.play().then(() => ding.pause());
-  buzz.play().then(() => buzz.pause());
+  // Try to play each sound silently to unlock them
+  const unlock = sound => {
+    sound.volume = 0.0001;   // silent
+    sound.play().then(() => {
+      sound.pause();
+      sound.currentTime = 0;
+      sound.volume = 1.0;    // restore volume
+      console.log("Unlocked:", sound.id);
+    }).catch(err => {
+      console.log("Unlock failed:", sound.id, err);
+    });
+  };
+
+  unlock(cheer);
+  unlock(ding);
+  unlock(buzz);
 }, { once: true });
-    (function () {
-      const TOTAL_QUESTIONS = 5;
-      const BEST_SCORE_KEY = "sportsQuizBestScore_v1";
 
       // Question bank: category, question, correct, incorrect[]
       // NOTE: For brevity, this includes a solid starter bank.
@@ -1027,7 +1037,6 @@
       <p>This exciting crossword puzzle book is packed with 60 word clues that challenge and entertain young and old fans of the beautiful game of Ice Hockey</p>
       <a href="https://amzn.to/4wCvxeJ">🏒  Explore Book</a>
     </div>
-  </div>
   
  <div class="card">
     <img src="/puzzle-playhouse/images/fishing_crossword.jpg" class="image-frame" alt="Fishing Crossword Puzzle Book Cover">
@@ -1036,7 +1045,7 @@
   </p>
 <a href="https://amzn.to/4vRSIjU" target="_blank" rel="noopener">🎣 Explore Book</a>
 </div>
-
+</div>
 <!-- CTA SECTION -->
 <section class="cta-section">
   <div class="cta-buttons">
