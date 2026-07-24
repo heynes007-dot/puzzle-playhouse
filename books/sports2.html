@@ -460,6 +460,8 @@
       </div>
     </footer>
   </div>
+<audio id="sq-sound-ding" src="/puzzle-playhouse/Sounds/ding.mp3" preload="auto"></audio>
+<audio id="sq-sound-buzz" src="/puzzle-playhouse/Sounds/buzz.mp3" preload="auto"></audio>
 <audio id="sq-sound-cheer" src="/puzzle-playhouse/Sounds/cheer.mp3" preload="auto"></audio>
   <script>
     // =========================
@@ -673,46 +675,7 @@
           [array[i], array[j]] = [array[j], array[i]];
         }
         return array;
-      }
-
-      // Web Audio-based sounds (no external files)
-      function playTone(frequency, duration, type = "sine", volume = 0.2) {
-        try {
-          const AudioContext = window.AudioContext || window.webkitAudioContext;
-          const ctx = new AudioContext();
-          const oscillator = ctx.createOscillator();
-          const gainNode = ctx.createGain();
-
-          oscillator.type = type;
-          oscillator.frequency.value = frequency;
-          gainNode.gain.value = volume;
-
-          oscillator.connect(gainNode);
-          gainNode.connect(ctx.destination);
-
-          oscillator.start();
-          setTimeout(() => {
-            oscillator.stop();
-            ctx.close();
-          }, duration);
-        } catch (e) {
-          // Fail silently if audio is not available
-        }
-      }
-
-      function playCorrectSound() {
-        // Short 'ding'
-        playTone(880, 160, "triangle", 0.25);
-      }
-
-      function playWrongSound() {
-        // Short 'buzz' using two quick tones
-        playTone(220, 120, "square", 0.22);
-        setTimeout(() => playTone(180, 120, "square", 0.22), 130);
-      }
-
-     
-
+       }
       const cardEl = document.getElementById("quiz-card");
       const counterEl = document.getElementById("quiz-counter");
       const progressBarEl = document.getElementById("quiz-progress-bar");
@@ -848,10 +811,10 @@
             // Play feedback sound immediately
             if (!hasScored) {
               if (this.value === q.correct) {
-                playCorrectSound();
+                document.getElementById("sq-sound-ding").play();
               } else if (!previouslySelected || previouslySelected === q.correct) {
                 // Only buzz when moving from correct or first selection
-                playWrongSound();
+              document.getElementById("sq-sound-buzz").play();
               }
             }
 
