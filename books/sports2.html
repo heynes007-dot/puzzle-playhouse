@@ -53,7 +53,1091 @@
     </nav>
   </div>
 </header>
+<!-- ⭐⭐⭐ ADD QUIZ WIDGET HERE ⭐⭐⭐ -->
+<section id="sports-quiz-widget">
+  <!-- 🏆 Today's Sports Challenge -->
+  <style>
+    /* ===========================
+       Sports Quiz Widget Styles
+       =========================== */
 
+    #sports-quiz-widget {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #222 0%, #050505 55%, #000 100%);
+      color: #f5f5f5;
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 1.25rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+      position: relative;
+      overflow: hidden;
+    }
+
+    #sports-quiz-widget * {
+      box-sizing: border-box;
+    }
+
+    .sq-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .sq-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .sq-subtitle {
+      font-size: 1rem;
+      color: #c7c7c7;
+      margin-top: 0.35rem;
+    }
+
+    .sq-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(255, 215, 0, 0.08);
+      border: 1px solid rgba(255, 215, 0, 0.35);
+      font-size: 0.8rem;
+      color: #ffd700;
+      margin-top: 0.6rem;
+    }
+
+    .sq-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffd700;
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+    }
+
+    /* Progress bar */
+    .sq-progress-wrapper {
+      margin: 1.5rem 0 1rem;
+    }
+
+    .sq-progress-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #d0d0d0;
+      margin-bottom: 0.4rem;
+    }
+
+    .sq-progress-bar {
+      width: 100%;
+      height: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #222, #111);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .sq-progress-fill {
+      height: 100%;
+      width: 0%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #ffd700, #ffb347);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+      transition: width 0.35s ease-out;
+    }
+
+    /* Question card */
+    .sq-card {
+      background: linear-gradient(145deg, rgba(30, 30, 30, 0.95), rgba(10, 10, 10, 0.95));
+      border-radius: 1rem;
+      padding: 1.25rem 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.04);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sq-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.08), transparent 55%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .sq-card-inner {
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+    }
+
+    .sq-card-inner.sq-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sq-category-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #f0f0f0;
+      margin-bottom: 0.7rem;
+    }
+
+    .sq-category-pill span {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #ffd700;
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+    }
+
+    .sq-question-text {
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin-bottom: 1rem;
+    }
+
+    .sq-options {
+      display: grid;
+      gap: 0.6rem;
+    }
+
+    .sq-option {
+      position: relative;
+    }
+
+    .sq-option-input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .sq-option-label {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.7rem 0.8rem;
+      border-radius: 0.7rem;
+      background: rgba(15, 15, 15, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .sq-option-label:hover {
+      background: rgba(30, 30, 30, 0.95);
+      border-color: rgba(255, 215, 0, 0.4);
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.25);
+      transform: translateY(-1px);
+    }
+
+    .sq-option-label:focus-visible {
+      outline: 2px solid #ffd700;
+      outline-offset: 2px;
+    }
+
+    .sq-option-indicator {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .sq-option-indicator-inner {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: transparent;
+      transition: background 0.2s ease;
+    }
+
+    .sq-option-input:checked + .sq-option-label {
+      border-color: rgba(255, 215, 0, 0.9);
+      background: radial-gradient(circle at top left, rgba(255, 215, 0, 0.18), rgba(15, 15, 15, 0.95));
+      box-shadow: 0 0 16px rgba(255, 215, 0, 0.45);
+    }
+
+    .sq-option-input:checked + .sq-option-label .sq-option-indicator {
+      border-color: #ffd700;
+    }
+
+    .sq-option-input:checked + .sq-option-label .sq-option-indicator-inner {
+      background: #ffd700;
+    }
+
+    /* Navigation buttons */
+    .sq-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.2rem;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .sq-nav-left,
+    .sq-nav-right {
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+    }
+
+    .sq-btn {
+      border: none;
+      border-radius: 999px;
+      padding: 0.55rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease, color 0.2s ease;
+      background: #111;
+      color: #f5f5f5;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .sq-btn:hover {
+      background: #1c1c1c;
+      box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .sq-btn:active {
+      transform: translateY(0);
+      box-shadow: 0 0 6px rgba(255, 215, 0, 0.2);
+    }
+
+    .sq-btn-primary {
+      background: linear-gradient(135deg, #ffd700, #ffb347);
+      color: #111;
+      border-color: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 16px rgba(255, 215, 0, 0.6);
+    }
+
+    .sq-btn-primary:hover {
+      background: linear-gradient(135deg, #ffe45c, #ffc46b);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+    }
+
+    .sq-btn-primary:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .sq-btn-secondary {
+      background: rgba(15, 15, 15, 0.95);
+    }
+
+    .sq-btn-secondary:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      box-shadow: none;
+      transform: none;
+    }
+
+    .sq-btn-ghost {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.18);
+      color: #f5f5f5;
+    }
+
+    .sq-btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    /* Score view */
+    .sq-score-view {
+      text-align: center;
+      padding: 1.2rem 0.5rem 0.4rem;
+    }
+
+    .sq-score-main {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .sq-score-percentage {
+      font-size: 1rem;
+      color: #ffd700;
+      margin-bottom: 0.4rem;
+    }
+
+    .sq-score-message {
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .sq-score-extra {
+      font-size: 0.95rem;
+      color: #d0d0d0;
+      margin-bottom: 1.1rem;
+    }
+
+    .sq-score-celebration {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .sq-confetti {
+      width: 8px;
+      height: 16px;
+      border-radius: 2px;
+      background: #ffd700;
+      animation: sq-confetti-fall 1.2s ease-out infinite;
+    }
+
+    .sq-confetti:nth-child(2) {
+      background: #ffb347;
+      animation-delay: 0.15s;
+    }
+
+    .sq-confetti:nth-child(3) {
+      background: #ffffff;
+      animation-delay: 0.3s;
+    }
+
+    .sq-confetti:nth-child(4) {
+      background: #ffd700;
+      animation-delay: 0.45s;
+    }
+
+    .sq-confetti:nth-child(5) {
+      background: #ffb347;
+      animation-delay: 0.6s;
+    }
+
+    @keyframes sq-confetti-fall {
+      0% {
+        transform: translateY(-6px) rotate(0deg);
+        opacity: 0;
+      }
+      40% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(10px) rotate(18deg);
+        opacity: 0;
+      }
+    }
+
+    .sq-best-score {
+      font-size: 0.9rem;
+      color: #bfbfbf;
+      margin-top: 0.4rem;
+    }
+
+    .sq-actions {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-top: 0.8rem;
+    }
+
+    .sq-actions .sq-btn {
+      min-width: 160px;
+    }
+
+    /* Accessibility helpers */
+    .sq-visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Responsive */
+    @media (min-width: 640px) {
+      #sports-quiz-widget {
+        padding: 2.2rem 2rem;
+      }
+
+      .sq-title {
+        font-size: 2rem;
+      }
+
+      .sq-card {
+        padding: 1.4rem 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sq-nav {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .sq-nav-left,
+      .sq-nav-right {
+        justify-content: space-between;
+      }
+    }
+  </style>
+
+  <div class="sq-header" aria-live="polite">
+    <div class="sq-title">
+      <span role="img" aria-label="Trophy">🏆</span>
+      <span>Today's Sports Challenge</span>
+    </div>
+    <p class="sq-subtitle">Can you answer all 5 questions?</p>
+    <div class="sq-badge" aria-hidden="true">
+      <span class="sq-badge-dot"></span>
+      <span>Fresh quiz every page load</span>
+    </div>
+  </div>
+
+  <div class="sq-progress-wrapper">
+    <div class="sq-progress-label">
+      <span id="sq-question-counter">Question 1 of 5</span>
+      <span id="sq-progress-percentage">0% complete</span>
+    </div>
+    <div class="sq-progress-bar" aria-hidden="true">
+      <div class="sq-progress-fill" id="sq-progress-fill"></div>
+    </div>
+  </div>
+
+  <div class="sq-card" aria-live="polite">
+    <div class="sq-card-inner sq-visible" id="sq-card-inner">
+      <div class="sq-category-pill" id="sq-category-pill">
+        <span></span>
+        <span id="sq-category-label">Category</span>
+      </div>
+      <h2 class="sq-question-text" id="sq-question-text"></h2>
+
+      <form class="sq-options" id="sq-options" aria-labelledby="sq-question-text">
+        <!-- Options injected by JavaScript -->
+      </form>
+
+      <div class="sq-nav">
+        <div class="sq-nav-left">
+          <button type="button" class="sq-btn sq-btn-secondary" id="sq-prev-btn">
+            ← Previous
+          </button>
+        </div>
+        <div class="sq-nav-right">
+          <button type="button" class="sq-btn sq-btn-primary" id="sq-next-btn" disabled>
+            Next →
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="sq-card-inner" id="sq-score-view" hidden>
+      <div class="sq-score-view">
+        <div class="sq-score-celebration" aria-hidden="true">
+          <div class="sq-confetti"></div>
+          <div class="sq-confetti"></div>
+          <div class="sq-confetti"></div>
+          <div class="sq-confetti"></div>
+          <div class="sq-confetti"></div>
+        </div>
+        <p class="sq-score-main" id="sq-score-main"></p>
+        <p class="sq-score-percentage" id="sq-score-percentage"></p>
+        <p class="sq-score-message" id="sq-score-message"></p>
+        <p class="sq-score-extra">
+          Think you can do even better?<br />
+          Challenge yourself with our Sports Puzzle Books.
+        </p>
+        <div class="sq-actions">
+          <button type="button" class="sq-btn sq-btn-primary" id="sq-browse-books-btn">
+            Browse Sports Books
+          </button>
+          <button type="button" class="sq-btn sq-btn-ghost" id="sq-play-again-btn">
+            Play Again
+          </button>
+        </div>
+        <p class="sq-best-score" id="sq-best-score"></p>
+      </div>
+    </div>
+  </div>
+
+  <p class="sq-visually-hidden" id="sq-aria-status" aria-live="polite"></p>
+
+  <script>
+    // ===========================
+    // Sports Quiz Widget Script
+    // ===========================
+
+    (function () {
+      const TOTAL_QUESTIONS = 5;
+      const BEST_SCORE_KEY = "sportsQuizBestScore";
+
+      // Question bank: category, question, options[4], correctIndex
+      const footballQuestions = [
+        { category: "Football", question: "Which country won the FIFA World Cup in 2018?", options: ["Brazil", "Germany", "France", "Argentina"], correctIndex: 2 },
+        { category: "Football", question: "Which player is known as 'CR7'?", options: ["Lionel Messi", "Cristiano Ronaldo", "Neymar Jr", "Kylian Mbappé"], correctIndex: 1 },
+        { category: "Football", question: "Which club plays its home games at Old Trafford?", options: ["Liverpool", "Chelsea", "Manchester United", "Arsenal"], correctIndex: 2 },
+        { category: "Football", question: "How many players are on the field for one team in a standard football match?", options: ["9", "10", "11", "12"], correctIndex: 2 },
+        { category: "Football", question: "Which country hosted the 2014 FIFA World Cup?", options: ["Brazil", "South Africa", "Germany", "Russia"], correctIndex: 0 },
+        { category: "Football", question: "Which English club is nicknamed 'The Reds'?", options: ["Everton", "Liverpool", "Leeds United", "Newcastle United"], correctIndex: 1 },
+        { category: "Football", question: "Who is often called 'The King of Football'?", options: ["Pelé", "Maradona", "Zidane", "Ronaldinho"], correctIndex: 0 },
+        { category: "Football", question: "Which competition is known as the top club tournament in Europe?", options: ["Europa League", "Champions League", "Conference League", "Super Cup"], correctIndex: 1 },
+        { category: "Football", question: "Which position usually wears the number 1 shirt?", options: ["Striker", "Goalkeeper", "Midfielder", "Defender"], correctIndex: 1 },
+        { category: "Football", question: "Which country has won the most FIFA World Cups?", options: ["Germany", "Italy", "Brazil", "Argentina"], correctIndex: 2 },
+        { category: "Football", question: "Which club is based at Anfield?", options: ["Liverpool", "Everton", "Manchester City", "Tottenham Hotspur"], correctIndex: 0 },
+        { category: "Football", question: "What is the maximum number of substitutions allowed in most modern professional matches?", options: ["3", "4", "5", "6"], correctIndex: 2 },
+        { category: "Football", question: "Which player has won the most Ballon d'Or awards?", options: ["Cristiano Ronaldo", "Lionel Messi", "Johan Cruyff", "Michel Platini"], correctIndex: 1 },
+        { category: "Football", question: "Which country won Euro 2016?", options: ["France", "Portugal", "Spain", "Germany"], correctIndex: 1 },
+        { category: "Football", question: "Which club is known as 'The Gunners'?", options: ["Arsenal", "Chelsea", "West Ham", "Leicester City"], correctIndex: 0 },
+        { category: "Football", question: "Which Italian club plays at the San Siro?", options: ["Juventus", "Roma", "AC Milan", "Napoli"], correctIndex: 2 },
+        { category: "Football", question: "Which colour card indicates a sending off?", options: ["Blue", "Yellow", "Red", "Green"], correctIndex: 2 },
+        { category: "Football", question: "What is the term for three goals scored by one player in a match?", options: ["Brace", "Hat-trick", "Quadruple", "Treble"], correctIndex: 1 },
+        { category: "Football", question: "Which country hosted the 2022 FIFA World Cup?", options: ["Qatar", "USA", "Japan", "Australia"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Blues' in the Premier League?", options: ["Chelsea", "Arsenal", "Manchester United", "Leicester City"], correctIndex: 0 },
+        { category: "Football", question: "Which player scored the 'Hand of God' goal?", options: ["Pelé", "Diego Maradona", "George Best", "Zico"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the Women's World Cup in 2019?", options: ["USA", "Netherlands", "Germany", "Japan"], correctIndex: 0 },
+        { category: "Football", question: "Which club is famous for the 'You’ll Never Walk Alone' anthem?", options: ["Liverpool", "Celtic", "Borussia Dortmund", "Ajax"], correctIndex: 0 },
+        { category: "Football", question: "Which position is primarily responsible for scoring goals?", options: ["Goalkeeper", "Centre-back", "Striker", "Full-back"], correctIndex: 2 },
+        { category: "Football", question: "Which country won the first ever World Cup in 1930?", options: ["Brazil", "Uruguay", "Argentina", "Italy"], correctIndex: 1 },
+        { category: "Football", question: "Which club has a famous rivalry called 'El Clásico'?", options: ["Real Madrid & Barcelona", "AC Milan & Inter", "Liverpool & Everton", "Arsenal & Tottenham"], correctIndex: 0 },
+        { category: "Football", question: "Which English stadium is known as 'The Theatre of Dreams'?", options: ["Wembley", "Old Trafford", "Anfield", "Stamford Bridge"], correctIndex: 1 },
+        { category: "Football", question: "Which player is nicknamed 'The Egyptian King'?", options: ["Mohamed Salah", "Sadio Mané", "Riyad Mahrez", "Hakim Ziyech"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 2010 FIFA World Cup?", options: ["Spain", "Netherlands", "Germany", "Brazil"], correctIndex: 0 },
+        { category: "Football", question: "Which club did Lionel Messi join after leaving Barcelona in 2021?", options: ["Manchester City", "PSG", "Juventus", "Bayern Munich"], correctIndex: 1 },
+        { category: "Football", question: "Which competition decides the champion of English football?", options: ["FA Cup", "Premier League", "League Cup", "Community Shield"], correctIndex: 1 },
+        { category: "Football", question: "Which country is famous for the 'Samba' style of football?", options: ["Spain", "Brazil", "Argentina", "Portugal"], correctIndex: 1 },
+        { category: "Football", question: "Which club has a bird called 'The Liver Bird' in its crest?", options: ["Everton", "Liverpool", "Newcastle", "Norwich"], correctIndex: 1 },
+        { category: "Football", question: "Which player is known for the 'Panenka' penalty?", options: ["Antonín Panenka", "Zinedine Zidane", "Andrea Pirlo", "Francesco Totti"], correctIndex: 0 },
+        { category: "Football", question: "Which country won Euro 2020 (played in 2021)?", options: ["Italy", "England", "Spain", "Portugal"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Citizens'?", options: ["Manchester United", "Manchester City", "Leicester City", "Norwich City"], correctIndex: 1 },
+        { category: "Football", question: "Which player scored the winning goal in the 2014 World Cup final?", options: ["Lionel Messi", "Mario Götze", "Thomas Müller", "Neymar"], correctIndex: 1 },
+        { category: "Football", question: "Which country is home to Serie A?", options: ["Spain", "Italy", "Germany", "France"], correctIndex: 1 },
+        { category: "Football", question: "Which club is known as 'Los Blancos'?", options: ["Barcelona", "Real Madrid", "Valencia", "Sevilla"], correctIndex: 1 },
+        { category: "Football", question: "Which player is famous for the 'Scorpion kick' save?", options: ["Manuel Neuer", "René Higuita", "Oliver Kahn", "Gianluigi Buffon"], correctIndex: 1 },
+        { category: "Football", question: "Which country hosted the 2006 FIFA World Cup?", options: ["Germany", "France", "Japan", "South Korea"], correctIndex: 0 },
+        { category: "Football", question: "Which club has a famous rivalry called the 'North London Derby'?", options: ["Chelsea & Arsenal", "Arsenal & Tottenham", "Tottenham & West Ham", "Arsenal & West Ham"], correctIndex: 1 },
+        { category: "Football", question: "Which player is known as 'El Fenómeno'?", options: ["Ronaldo Nazário", "Ronaldinho", "Romário", "Rivaldo"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 1998 FIFA World Cup?", options: ["Brazil", "France", "Germany", "Argentina"], correctIndex: 1 },
+        { category: "Football", question: "Which club plays at the Allianz Arena?", options: ["Bayern Munich", "Borussia Dortmund", "RB Leipzig", "Hamburg"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Cruyff turn'?", options: ["Johan Cruyff", "Marco van Basten", "Ruud Gullit", "Dennis Bergkamp"], correctIndex: 0 },
+        { category: "Football", question: "Which country is home to La Liga?", options: ["Italy", "Spain", "Portugal", "France"], correctIndex: 1 },
+        { category: "Football", question: "Which club is nicknamed 'The Red Devils'?", options: ["Liverpool", "Manchester United", "Bayern Munich", "Benfica"], correctIndex: 1 },
+        { category: "Football", question: "Which player scored the 'Goal of the Century' in 1986?", options: ["Pelé", "Diego Maradona", "Gary Lineker", "Michel Platini"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the 2002 FIFA World Cup?", options: ["Brazil", "Germany", "Argentina", "France"], correctIndex: 0 },
+        { category: "Football", question: "Which club is known as 'The Hammers'?", options: ["West Ham United", "Wolverhampton Wanderers", "Sheffield United", "Burnley"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Zidane turn'?", options: ["Zinedine Zidane", "Andrea Pirlo", "Xavi", "Iniesta"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 1994 FIFA World Cup?", options: ["USA", "Brazil", "Italy", "France"], correctIndex: 0 },
+        { category: "Football", question: "Which club has a famous rivalry called 'Der Klassiker'?", options: ["Bayern & Dortmund", "Real & Barça", "Milan & Inter", "Liverpool & Everton"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'The Special One'?", options: ["Pep Guardiola", "José Mourinho", "Jürgen Klopp", "Carlo Ancelotti"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the 2014 UEFA Champions League with Real Madrid?", options: ["Spain", "Germany", "Italy", "England"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Foxes'?", options: ["Leicester City", "Wolves", "Brighton", "Crystal Palace"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Knuckleball' free-kick?", options: ["Cristiano Ronaldo", "David Beckham", "Roberto Carlos", "Andrea Pirlo"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted Euro 1996?", options: ["England", "Germany", "France", "Spain"], correctIndex: 0 },
+        { category: "Football", question: "Which club is known as 'The Magpies'?", options: ["Newcastle United", "West Brom", "Fulham", "Swansea"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Rabona' technique?", options: ["Ángel Di María", "Erik Lamela", "Cristiano Ronaldo", "Lionel Messi"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the 2000 European Championship?", options: ["France", "Italy", "Spain", "Portugal"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Emirates Stadium?", options: ["Arsenal", "Chelsea", "Tottenham", "West Ham"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'King Eric' at Manchester United?", options: ["Eric Cantona", "Ryan Giggs", "Paul Scholes", "Roy Keane"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2010 World Cup?", options: ["South Africa", "Brazil", "Germany", "France"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Toffees'?", options: ["Everton", "Chelsea", "Leeds", "Burnley"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'La Croqueta' move?", options: ["Andrés Iniesta", "Xavi", "Busquets", "David Silva"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 1982 World Cup?", options: ["Italy", "Brazil", "Germany", "Argentina"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Camp Nou?", options: ["Real Madrid", "Barcelona", "Valencia", "Sevilla"], correctIndex: 1 },
+        { category: "Football", question: "Which player is known as 'El Pibe de Oro'?", options: ["Maradona", "Messi", "Riquelme", "Batistuta"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 1998 World Cup?", options: ["France", "Brazil", "USA", "Germany"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Reds' in Germany?", options: ["Dortmund", "Bayern Munich", "Leipzig", "Hamburg"], correctIndex: 1 },
+        { category: "Football", question: "Which player is famous for the 'Banana' free-kick?", options: ["Roberto Carlos", "Ronaldinho", "Beckham", "Pirlo"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 1990 World Cup?", options: ["Germany", "Argentina", "Italy", "Brazil"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at Stamford Bridge?", options: ["Chelsea", "Fulham", "QPR", "Crystal Palace"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'The Maestro' at Juventus?", options: ["Andrea Pirlo", "Del Piero", "Buffon", "Nedvěd"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2002 World Cup along with Japan?", options: ["South Korea", "China", "Australia", "USA"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Yellow Submarine'?", options: ["Villarreal", "Cadiz", "Levante", "Getafe"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Elastico' move?", options: ["Ronaldinho", "Neymar", "Ronaldo Nazário", "Kaká"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 2016 Olympic men's football gold?", options: ["Brazil", "Germany", "Argentina", "Spain"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at Signal Iduna Park?", options: ["Borussia Dortmund", "Bayern Munich", "Schalke", "Leverkusen"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'The Pharaoh' at Roma?", options: ["Mohamed Salah", "Francesco Totti", "Daniele De Rossi", "Edin Džeko"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted Euro 2012 with Poland?", options: ["Ukraine", "Russia", "Czech Republic", "Croatia"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Bhoys'?", options: ["Celtic", "Rangers", "Aberdeen", "Hearts"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Scissor kick' goal vs Juventus?", options: ["Cristiano Ronaldo", "Zlatan Ibrahimović", "Gareth Bale", "Karim Benzema"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 2019 Copa América?", options: ["Brazil", "Argentina", "Chile", "Uruguay"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Parc des Princes?", options: ["PSG", "Marseille", "Lyon", "Monaco"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'El Niño'?", options: ["Fernando Torres", "David Villa", "Raúl", "Morata"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted Euro 2004?", options: ["Portugal", "Spain", "France", "Germany"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Reds' in Scotland?", options: ["Aberdeen", "Celtic", "Rangers", "Hearts"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'No-look pass' style?", options: ["Ronaldinho", "Firmino", "Coutinho", "Neymar"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 2021 Copa América?", options: ["Argentina", "Brazil", "Chile", "Uruguay"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Estadio Metropolitano?", options: ["Atlético Madrid", "Real Madrid", "Sevilla", "Valencia"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'The Little Magician'?", options: ["Lionel Messi", "Philippe Coutinho", "David Silva", "Bernardo Silva"], correctIndex: 1 },
+        { category: "Football", question: "Which country hosted the 2008 European Championship with Switzerland?", options: ["Austria", "Germany", "Italy", "France"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Saints'?", options: ["Southampton", "Stoke City", "Sunderland", "Sheffield Wednesday"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Rainbow flick'?", options: ["Neymar", "Ronaldinho", "Cristiano Ronaldo", "Mbappé"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the 2015 Women's World Cup?", options: ["USA", "Japan", "Germany", "England"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Johan Cruyff Arena?", options: ["Ajax", "PSV", "Feyenoord", "AZ Alkmaar"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'The Wizard of Dribble'?", options: ["Garrincha", "Pelé", "Zico", "Rivelino"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2007 Copa América?", options: ["Venezuela", "Brazil", "Argentina", "Chile"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Canaries'?", options: ["Norwich City", "Watford", "Leeds", "Brighton"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Chip' penalty in Euro 2000 final?", options: ["Zinedine Zidane", "Francesco Totti", "Thierry Henry", "David Trezeguet"], correctIndex: 1 },
+        { category: "Football", question: "Which country won the 2013 Confederations Cup?", options: ["Brazil", "Spain", "Italy", "Mexico"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Estádio da Luz?", options: ["Benfica", "Porto", "Sporting CP", "Braga"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'El Matador'?", options: ["Edinson Cavani", "Luis Suárez", "Diego Forlán", "Radamel Falcao"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2011 Copa América?", options: ["Argentina", "Brazil", "Chile", "Uruguay"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Blades'?", options: ["Sheffield United", "Sheffield Wednesday", "Leeds", "Derby"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Backheel' goal vs Italy in Euro 2004?", options: ["Zlatan Ibrahimović", "Henrik Larsson", "Freddie Ljungberg", "Anders Svensson"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 1996 African Cup of Nations?", options: ["South Africa", "Nigeria", "Cameroon", "Egypt"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Estadio do Dragão?", options: ["Porto", "Benfica", "Sporting CP", "Braga"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'El Tigre'?", options: ["Radamel Falcao", "Carlos Tevez", "Sergio Agüero", "Diego Costa"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2019 Africa Cup of Nations?", options: ["Egypt", "Cameroon", "Nigeria", "Morocco"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Seagulls'?", options: ["Brighton & Hove Albion", "Swansea City", "Norwich City", "Watford"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Volley' goal vs Bayer Leverkusen in 2002 UCL final?", options: ["Zinedine Zidane", "Raúl", "Ronaldo", "Figo"], correctIndex: 0 },
+        { category: "Football", question: "Which country won the 1994 European Championship?", options: ["No tournament", "Germany", "France", "Italy"], correctIndex: 0 },
+        { category: "Football", question: "Which club plays at the Estadio Monumental?", options: ["River Plate", "Boca Juniors", "San Lorenzo", "Racing Club"], correctIndex: 0 },
+        { category: "Football", question: "Which player is known as 'El Apache'?", options: ["Carlos Tevez", "Sergio Agüero", "Diego Costa", "Luis Suárez"], correctIndex: 0 },
+        { category: "Football", question: "Which country hosted the 2016 Copa América Centenario?", options: ["USA", "Chile", "Brazil", "Argentina"], correctIndex: 0 },
+        { category: "Football", question: "Which club is nicknamed 'The Baggies'?", options: ["West Bromwich Albion", "Burnley", "Hull City", "Reading"], correctIndex: 0 },
+        { category: "Football", question: "Which player is famous for the 'Solo run' goal vs Getafe in 2007?", options: ["Lionel Messi", "Ronaldinho", "Henry", "Eto'o"], correctIndex: 0 }
+      ];
+
+      const f1Questions = [
+        { category: "Formula 1", question: "Who holds the record for the most Formula 1 World Drivers' Championships?", options: ["Michael Schumacher", "Lewis Hamilton", "Ayrton Senna", "Sebastian Vettel"], correctIndex: 1 },
+        { category: "Formula 1", question: "Which team is known as the 'Prancing Horse'?", options: ["Mercedes", "Ferrari", "Red Bull", "McLaren"], correctIndex: 1 },
+        { category: "Formula 1", question: "Which race is often called the 'Jewel in the Crown' of F1?", options: ["Monaco Grand Prix", "Italian Grand Prix", "British Grand Prix", "Singapore Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "What colour flag signals the end of a race?", options: ["Red", "Yellow", "Chequered", "Blue"], correctIndex: 2 },
+        { category: "Formula 1", question: "Which driver is nicknamed 'The Iceman'?", options: ["Kimi Räikkönen", "Lewis Hamilton", "Max Verstappen", "Fernando Alonso"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Ayrton Senna drive for when he won his first title?", options: ["McLaren", "Williams", "Lotus", "Ferrari"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Silverstone circuit?", options: ["Germany", "Italy", "UK", "France"], correctIndex: 2 },
+        { category: "Formula 1", question: "Which driver won the 2021 World Championship?", options: ["Lewis Hamilton", "Max Verstappen", "Valtteri Bottas", "Sergio Pérez"], correctIndex: 1 },
+        { category: "Formula 1", question: "Which team is based in Milton Keynes?", options: ["Red Bull Racing", "Mercedes", "Ferrari", "Alpine"], correctIndex: 0 },
+        { category: "Formula 1", question: "What does DRS stand for?", options: ["Drag Reduction System", "Dynamic Racing Setup", "Driver Response System", "Downforce Regulation System"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known as 'The Professor'?", options: ["Alain Prost", "Nigel Mansell", "Niki Lauda", "Jackie Stewart"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Suzuka circuit?", options: ["Japan", "China", "South Korea", "Singapore"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Michael Schumacher win most of his titles with?", options: ["Ferrari", "Benetton", "Mercedes", "Williams"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Monza?", options: ["Italian Grand Prix", "Spanish Grand Prix", "French Grand Prix", "Belgian Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the phrase 'Leave me alone, I know what I'm doing'?", options: ["Kimi Räikkönen", "Sebastian Vettel", "Lewis Hamilton", "Fernando Alonso"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team uses the Silver Arrow nickname?", options: ["Mercedes", "Ferrari", "McLaren", "Williams"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Interlagos circuit?", options: ["Brazil", "Argentina", "Mexico", "USA"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver won the 2005 and 2006 titles?", options: ["Fernando Alonso", "Kimi Räikkönen", "Michael Schumacher", "Jenson Button"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Spa-Francorchamps?", options: ["Belgian Grand Prix", "Dutch Grand Prix", "French Grand Prix", "German Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is nicknamed 'Honey Badger'?", options: ["Daniel Ricciardo", "Lando Norris", "Sergio Pérez", "Pierre Gasly"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Lewis Hamilton debut with in F1?", options: ["McLaren", "Mercedes", "Williams", "Renault"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Circuit of the Americas?", options: ["USA", "Canada", "Mexico", "Brazil"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the number 44?", options: ["Lewis Hamilton", "Sebastian Vettel", "Valtteri Bottas", "Max Verstappen"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Sebastian Vettel win four consecutive titles with?", options: ["Red Bull Racing", "Ferrari", "Toro Rosso", "Aston Martin"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Marina Bay Street Circuit?", options: ["Singapore Grand Prix", "Monaco Grand Prix", "Bahrain Grand Prix", "Abu Dhabi Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is nicknamed 'Mad Max'?", options: ["Max Verstappen", "Nico Rosberg", "Romain Grosjean", "Kevin Magnussen"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Hungaroring?", options: ["Hungary", "Austria", "Czech Republic", "Poland"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver won the 2009 World Championship?", options: ["Jenson Button", "Rubens Barrichello", "Sebastian Vettel", "Mark Webber"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Nico Rosberg win his title with?", options: ["Mercedes", "Ferrari", "Williams", "McLaren"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Yas Marina Circuit?", options: ["Abu Dhabi Grand Prix", "Bahrain Grand Prix", "Saudi Arabian Grand Prix", "Qatar Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the number 5 in recent years?", options: ["Sebastian Vettel", "Charles Leclerc", "Carlos Sainz", "Sergio Pérez"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Fernando Alonso drive for when he returned in 2021?", options: ["Alpine", "Ferrari", "McLaren", "Renault"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Red Bull Ring?", options: ["Austria", "Germany", "Switzerland", "Italy"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver won the 2010 World Championship?", options: ["Sebastian Vettel", "Fernando Alonso", "Lewis Hamilton", "Mark Webber"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Mika Häkkinen win his titles with?", options: ["McLaren", "Ferrari", "Williams", "Benetton"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Circuit Gilles Villeneuve?", options: ["Canadian Grand Prix", "French Grand Prix", "Belgian Grand Prix", "Dutch Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the number 3?", options: ["Daniel Ricciardo", "Lando Norris", "George Russell", "Esteban Ocon"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Jacques Villeneuve win his title with?", options: ["Williams", "Ferrari", "McLaren", "Benetton"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Bahrain International Circuit?", options: ["Bahrain", "Qatar", "UAE", "Saudi Arabia"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver won the 2016 World Championship?", options: ["Nico Rosberg", "Lewis Hamilton", "Sebastian Vettel", "Daniel Ricciardo"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Nigel Mansell win his title with?", options: ["Williams", "Ferrari", "McLaren", "Lotus"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Albert Park Circuit?", options: ["Australian Grand Prix", "Canadian Grand Prix", "British Grand Prix", "Spanish Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the number 14?", options: ["Fernando Alonso", "Carlos Sainz", "Pierre Gasly", "Lance Stroll"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Damon Hill win his title with?", options: ["Williams", "Ferrari", "McLaren", "Benetton"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which country hosts the Imola circuit?", options: ["Italy", "Spain", "Portugal", "France"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver won the 1998 and 1999 titles?", options: ["Mika Häkkinen", "Michael Schumacher", "Damon Hill", "Jacques Villeneuve"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Ralf Schumacher drive for alongside his brother?", options: ["Ferrari & Williams", "Ferrari & Jordan", "Ferrari & McLaren", "Ferrari & Benetton"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which race is held at Circuit de Barcelona-Catalunya?", options: ["Spanish Grand Prix", "Portuguese Grand Prix", "French Grand Prix", "Italian Grand Prix"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which driver is known for the number 77?", options: ["Valtteri Bottas", "Kimi Räikkönen", "George Russell", "Lando Norris"], correctIndex: 0 },
+        { category: "Formula 1", question: "Which team did Jenson Button win his title with?", options: ["Brawn GP", "McLaren", "Honda", "Williams"], correctIndex: 0 }
+      ];
+
+      const generalSportsQuestions = [
+        { category: "General Sports", question: "How many rings are there on the Olympic flag?", options: ["3", "4", "5", "6"], correctIndex: 2 },
+        { category: "General Sports", question: "Which sport is known as 'the king of sports'?", options: ["Cricket", "Football", "Basketball", "Tennis"], correctIndex: 1 },
+        { category: "General Sports", question: "In tennis, what is the term for a score of zero?", options: ["Love", "Nil", "Blank", "Zero"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a shuttlecock?", options: ["Squash", "Badminton", "Tennis", "Table tennis"], correctIndex: 1 },
+        { category: "General Sports", question: "Which country is famous for sumo wrestling?", options: ["China", "Japan", "Korea", "Thailand"], correctIndex: 1 },
+        { category: "General Sports", question: "In basketball, how many points is a free throw worth?", options: ["1", "2", "3", "4"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played at Wimbledon?", options: ["Cricket", "Tennis", "Rugby", "Golf"], correctIndex: 1 },
+        { category: "General Sports", question: "Which sport uses a puck?", options: ["Ice hockey", "Baseball", "Rugby", "Cricket"], correctIndex: 0 },
+        { category: "General Sports", question: "Which country is famous for the sport of cricket?", options: ["USA", "India", "Brazil", "Germany"], correctIndex: 1 },
+        { category: "General Sports", question: "In athletics, how long is a marathon?", options: ["21.1 km", "30 km", "42.195 km", "50 km"], correctIndex: 2 },
+        { category: "General Sports", question: "Which sport features a pommel horse?", options: ["Gymnastics", "Equestrian", "Wrestling", "Fencing"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a bat and ball and is popular in the USA?", options: ["Cricket", "Baseball", "Softball", "Rounders"], correctIndex: 1 },
+        { category: "General Sports", question: "Which sport is played on a diamond-shaped field?", options: ["Baseball", "Cricket", "Rugby", "American football"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a lane and pins?", options: ["Bowling", "Curling", "Darts", "Archery"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the Ryder Cup?", options: ["Golf", "Tennis", "Cricket", "Rugby"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a hoop and ball and is played indoors?", options: ["Netball", "Basketball", "Handball", "Volleyball"], correctIndex: 1 },
+        { category: "General Sports", question: "Which sport is known for the Tour de France?", options: ["Cycling", "Running", "Triathlon", "Motorsport"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a racket and a small hollow ball on a table?", options: ["Squash", "Badminton", "Table tennis", "Tennis"], correctIndex: 2 },
+        { category: "General Sports", question: "Which sport is played on ice with stones and brooms?", options: ["Curling", "Ice hockey", "Figure skating", "Speed skating"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a bow and arrows?", options: ["Archery", "Shooting", "Biathlon", "Fencing"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the NBA?", options: ["Basketball", "Baseball", "American football", "Ice hockey"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a net, posts, and a ball and is played on sand?", options: ["Beach volleyball", "Handball", "Netball", "Rugby"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is known for the Grand Slam tournaments?", options: ["Tennis", "Golf", "Cricket", "Rugby"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a ring and gloves?", options: ["Boxing", "Wrestling", "Judo", "Karate"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the Stanley Cup?", options: ["Ice hockey", "Baseball", "Basketball", "American football"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a vault and uneven bars?", options: ["Gymnastics", "Diving", "Pole vault", "High jump"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a shuttlecock and rackets indoors?", options: ["Badminton", "Squash", "Tennis", "Table tennis"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the Ashes series?", options: ["Cricket", "Rugby", "Baseball", "Tennis"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a javelin?", options: ["Athletics", "Archery", "Fencing", "Wrestling"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a frisbee?", options: ["Ultimate", "Handball", "Netball", "Rugby"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a balance beam?", options: ["Gymnastics", "Diving", "Skating", "Surfing"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the Super Bowl?", options: ["American football", "Baseball", "Basketball", "Ice hockey"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a racquet and shuttlecock?", options: ["Badminton", "Squash", "Tennis", "Table tennis"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played on a court with a hoop at each end?", options: ["Basketball", "Netball", "Handball", "Volleyball"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a bat and wicket?", options: ["Cricket", "Baseball", "Softball", "Rounders"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the Masters tournament?", options: ["Golf", "Tennis", "Snooker", "Darts"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a pool and lanes?", options: ["Swimming", "Rowing", "Canoeing", "Water polo"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a racket and ball on a squash court?", options: ["Squash", "Badminton", "Tennis", "Table tennis"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a board and waves?", options: ["Surfing", "Skateboarding", "Snowboarding", "Wakeboarding"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the World Series?", options: ["Baseball", "Basketball", "American football", "Ice hockey"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a mat and involves grappling?", options: ["Wrestling", "Judo", "Karate", "Taekwondo"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a shuttlecock and net?", options: ["Badminton", "Volleyball", "Tennis", "Table tennis"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a cue and balls on a table?", options: ["Snooker", "Pool", "Billiards", "All of these"], correctIndex: 3 },
+        { category: "General Sports", question: "Which sport is associated with the Six Nations Championship?", options: ["Rugby union", "Cricket", "Football", "Hockey"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a discus?", options: ["Athletics", "Gymnastics", "Wrestling", "Boxing"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a net and ball on a volleyball court?", options: ["Volleyball", "Handball", "Netball", "Basketball"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a ring and is judged on routines?", options: ["Gymnastics", "Boxing", "Wrestling", "Karate"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is associated with the World Cup of Rugby?", options: ["Rugby union", "Rugby league", "American football", "Cricket"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a pole to clear a bar?", options: ["Pole vault", "High jump", "Long jump", "Triple jump"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport is played with a small hard ball and clubs?", options: ["Golf", "Cricket", "Baseball", "Hockey"], correctIndex: 0 },
+        { category: "General Sports", question: "Which sport uses a ring and is scored by judges?", options: ["Boxing", "Gymnastics", "Wrestling", "Judo"], correctIndex: 0 }
+      ];
+
+      const allQuestions = footballQuestions.concat(f1Questions, generalSportsQuestions);
+
+      // State
+      let quizQuestions = [];
+      let currentIndex = 0;
+      let userAnswers = [];
+
+      // Elements
+      const questionCounterEl = document.getElementById("sq-question-counter");
+      const progressPercentageEl = document.getElementById("sq-progress-percentage");
+      const progressFillEl = document.getElementById("sq-progress-fill");
+      const cardInnerQuestionEl = document.getElementById("sq-card-inner");
+      const cardInnerScoreEl = document.getElementById("sq-score-view");
+      const categoryLabelEl = document.getElementById("sq-category-label");
+      const questionTextEl = document.getElementById("sq-question-text");
+      const optionsFormEl = document.getElementById("sq-options");
+      const prevBtnEl = document.getElementById("sq-prev-btn");
+      const nextBtnEl = document.getElementById("sq-next-btn");
+      const ariaStatusEl = document.getElementById("sq-aria-status");
+      const scoreMainEl = document.getElementById("sq-score-main");
+      const scorePercentageEl = document.getElementById("sq-score-percentage");
+      const scoreMessageEl = document.getElementById("sq-score-message");
+      const bestScoreEl = document.getElementById("sq-best-score");
+      const browseBooksBtnEl = document.getElementById("sq-browse-books-btn");
+      const playAgainBtnEl = document.getElementById("sq-play-again-btn");
+
+      // Utility: shuffle array
+      function shuffleArray(arr) {
+        const copy = arr.slice();
+        for (let i = copy.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [copy[i], copy[j]] = [copy[j], copy[i]];
+        }
+        return copy;
+      }
+
+      // Utility: pick N unique random questions
+      function pickRandomQuestions(source, count) {
+        const shuffled = shuffleArray(source);
+        return shuffled.slice(0, count);
+      }
+
+      // Utility: fade transition
+      function fadeToQuestionView() {
+        cardInnerScoreEl.hidden = true;
+        cardInnerQuestionEl.hidden = false;
+        cardInnerQuestionEl.classList.remove("sq-visible");
+        requestAnimationFrame(() => {
+          cardInnerQuestionEl.classList.add("sq-visible");
+        });
+      }
+
+      function fadeToScoreView() {
+        cardInnerQuestionEl.classList.remove("sq-visible");
+        setTimeout(() => {
+          cardInnerQuestionEl.hidden = true;
+          cardInnerScoreEl.hidden = false;
+          requestAnimationFrame(() => {
+            cardInnerScoreEl.classList.add("sq-visible");
+          });
+        }, 200);
+      }
+
+      // Load best score from localStorage
+      function getBestScore() {
+        try {
+          const stored = localStorage.getItem(BEST_SCORE_KEY);
+          if (!stored) return null;
+          const value = parseInt(stored, 10);
+          return Number.isNaN(value) ? null : value;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      function setBestScore(score) {
+        try {
+          const currentBest = getBestScore();
+          if (currentBest === null || score > currentBest) {
+            localStorage.setItem(BEST_SCORE_KEY, String(score));
+          }
+        } catch (e) {
+          // ignore
+        }
+      }
+
+      function updateBestScoreDisplay() {
+        const best = getBestScore();
+        if (best === null) {
+          bestScoreEl.textContent = "Best score: Not set yet—keep playing!";
+        } else {
+          const percentage = Math.round((best / TOTAL_QUESTIONS) * 100);
+          bestScoreEl.textContent = "Best score: " + best + "/" + TOTAL_QUESTIONS + " (" + percentage + "%)";
+        }
+      }
+
+      // Render question
+      function renderQuestion(index) {
+        const q = quizQuestions[index];
+        if (!q) return;
+
+        // Update counter and progress
+        const questionNumber = index + 1;
+        questionCounterEl.textContent = "Question " + questionNumber + " of " + TOTAL_QUESTIONS;
+        const progressPercent = Math.round(((index) / TOTAL_QUESTIONS) * 100);
+        progressPercentageEl.textContent = progressPercent + "% complete";
+        progressFillEl.style.width = progressPercent + "%";
+
+        // Category and text
+        categoryLabelEl.textContent = q.category;
+        questionTextEl.textContent = q.question;
+
+        // Clear options
+        optionsFormEl.innerHTML = "";
+
+        // Prepare shuffled options
+        const optionIndices = [0, 1, 2, 3];
+        const shuffledIndices = shuffleArray(optionIndices);
+
+        // Map from shuffled index to original index
+        const storedAnswer = userAnswers[index];
+
+        shuffledIndices.forEach((optIndex, i) => {
+          const optionId = "sq-option-" + index + "-" + i;
+          const input = document.createElement("input");
+          input.type = "radio";
+          input.name = "sq-options-" + index;
+          input.id = optionId;
+          input.className = "sq-option-input";
+          input.value = String(optIndex);
+
+          const label = document.createElement("label");
+          label.className = "sq-option-label";
+          label.setAttribute("for", optionId);
+          label.tabIndex = 0;
+
+          const indicator = document.createElement("span");
+          indicator.className = "sq-option-indicator";
+          const indicatorInner = document.createElement("span");
+          indicatorInner.className = "sq-option-indicator-inner";
+          indicator.appendChild(indicatorInner);
+
+          const textSpan = document.createElement("span");
+          textSpan.textContent = q.options[optIndex];
+
+          label.appendChild(indicator);
+          label.appendChild(textSpan);
+
+          const wrapper = document.createElement("div");
+          wrapper.className = "sq-option";
+          wrapper.appendChild(input);
+          wrapper.appendChild(label);
+
+          optionsFormEl.appendChild(wrapper);
+
+          // Restore previous selection if any
+          if (storedAnswer !== undefined && storedAnswer === optIndex) {
+            input.checked = true;
+          }
+
+          // Handle selection
+          input.addEventListener("change", function () {
+            userAnswers[index] = optIndex;
+            nextBtnEl.disabled = false;
+          });
+
+          // Keyboard support: space/enter on label
+          label.addEventListener("keydown", function (e) {
+            if (e.key === "Enter" || e.key === " ") {
+              e.preventDefault();
+              input.checked = true;
+              userAnswers[index] = optIndex;
+              nextBtnEl.disabled = false;
+            }
+          });
+        });
+
+        // Disable next if no answer
+        if (userAnswers[index] === undefined) {
+          nextBtnEl.disabled = true;
+        } else {
+          nextBtnEl.disabled = false;
+        }
+
+        // Prev button state
+        prevBtnEl.disabled = index === 0;
+
+        // ARIA status
+        ariaStatusEl.textContent = "Question " + questionNumber + " loaded: " + q.question;
+      }
+
+      // Calculate score
+      function calculateScore() {
+        let score = 0;
+        quizQuestions.forEach((q, i) => {
+          if (userAnswers[i] === q.correctIndex) {
+            score++;
+          }
+        });
+        return score;
+      }
+
+      // Show score
+      function showScore() {
+        const score = calculateScore();
+        const percentage = Math.round((score / TOTAL_QUESTIONS) * 100);
+
+        scoreMainEl.textContent = "Your score: " + score + "/" + TOTAL_QUESTIONS;
+        scorePercentageEl.textContent = "That's " + percentage + "%";
+
+        let message = "";
+        if (score === 5) {
+          message = "Legendary!";
+        } else if (score === 4) {
+          message = "Excellent!";
+        } else if (score === 3) {
+          message = "Great effort!";
+        } else if (score === 2) {
+          message = "Keep practising!";
+        } else {
+          message = "Try again!";
+        }
+        scoreMessageEl.textContent = message;
+
+        setBestScore(score);
+        updateBestScoreDisplay();
+
+        // Progress bar full
+        progressFillEl.style.width = "100%";
+        progressPercentageEl.textContent = "100% complete";
+        questionCounterEl.textContent = "Quiz complete";
+
+        ariaStatusEl.textContent = "Quiz complete. Score " + score + " out of " + TOTAL_QUESTIONS + ". " + message;
+
+        fadeToScoreView();
+      }
+
+      // Initialize quiz
+      function initQuiz() {
+        quizQuestions = pickRandomQuestions(allQuestions, TOTAL_QUESTIONS);
+        userAnswers = new Array(TOTAL_QUESTIONS);
+        currentIndex = 0;
+        fadeToQuestionView();
+        renderQuestion(currentIndex);
+        updateBestScoreDisplay();
+      }
+
+      // Event handlers
+      prevBtnEl.addEventListener("click", function () {
+        if (currentIndex > 0) {
+          currentIndex--;
+          cardInnerQuestionEl.classList.remove("sq-visible");
+          setTimeout(() => {
+            renderQuestion(currentIndex);
+            cardInnerQuestionEl.classList.add("sq-visible");
+          }, 150);
+        }
+      });
+
+      nextBtnEl.addEventListener("click", function () {
+        if (userAnswers[currentIndex] === undefined) {
+          nextBtnEl.disabled = true;
+          return;
+        }
+        if (currentIndex < TOTAL_QUESTIONS - 1) {
+          currentIndex++;
+          cardInnerQuestionEl.classList.remove("sq-visible");
+          setTimeout(() => {
+            renderQuestion(currentIndex);
+            cardInnerQuestionEl.classList.add("sq-visible");
+          }, 150);
+        } else {
+          showScore();
+        }
+      });
+
+      playAgainBtnEl.addEventListener("click", function () {
+        initQuiz();
+      });
+
+      browseBooksBtnEl.addEventListener("click", function () {
+        const target = document.getElementById("sports-books");
+        if (target && typeof target.scrollIntoView === "function") {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+
+      // Keyboard shortcuts: left/right arrows for navigation
+      document.addEventListener("keydown", function (e) {
+        if (cardInnerScoreEl.hidden === false) return; // only in question view
+        if (e.key === "ArrowLeft") {
+          if (!prevBtnEl.disabled) prevBtnEl.click();
+        } else if (e.key === "ArrowRight") {
+          if (!nextBtnEl.disabled) nextBtnEl.click();
+        }
+      });
+
+      // Start
+      initQuiz();
+    })();
+  </script>
+</section>
+
+
+
+
+  
 <!-- MAIN SECTION -->
 <section class="books-layout">
 
