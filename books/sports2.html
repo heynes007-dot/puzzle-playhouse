@@ -1048,7 +1048,9 @@
 
         scoreMainEl.textContent = "Your score: " + score + "/" + TOTAL_QUESTIONS;
         scorePercentageEl.textContent = "That's " + percentage + "%";
-
+// ⭐ Play final cheer sound
+  document.getElementById("sq-sound-cheer").play();
+}
         let message = "";
         if (score === 5) {
           message = "Legendary!";
