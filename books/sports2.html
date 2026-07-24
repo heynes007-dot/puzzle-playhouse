@@ -199,7 +199,13 @@
       color: #f0f0f0;
       margin-bottom: 0.7rem;
     }
-
+.sq-category-pill span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #ffd700;
+  box-shadow: 0 0 6px rgba(255, 215, 0, 0.8);
+}
     .sq-question-text {
       font-size: 1.05rem;
       line-height: 1.5;
@@ -527,6 +533,7 @@
   <div class="sq-card" aria-live="polite">
     <div class="sq-card-inner sq-visible" id="sq-card-inner">
       <div class="sq-category-pill" id="sq-category-pill">
+         <span></span>
         <span id="sq-category-label">Category</span>
       </div>
       <h2 class="sq-question-text" id="sq-question-text"></h2>
