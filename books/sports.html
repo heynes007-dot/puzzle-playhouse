@@ -899,18 +899,11 @@ const formulaOneQuestions = [
         const actionsEl = document.createElement("div");
         actionsEl.className = "sq-score-actions";
 
-  browseBtn.addEventListener("click", function () {
+browseBtn.addEventListener("click", function () {
   const target = document.getElementById("sports-books");
-  if (!target) return;
-
-  const offset = 150;
-  const rect = target.getBoundingClientRect();
-  const y = rect.top + window.pageYOffset - offset;
-
-  window.scrollTo({
-    top: y,
-    behavior: "smooth"
-  });
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });
 
         const playAgainBtn = document.createElement("button");
