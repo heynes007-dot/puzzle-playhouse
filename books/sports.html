@@ -579,7 +579,9 @@
   </div>
 
   <p class="sq-visually-hidden" id="sq-aria-status" aria-live="polite"></p>
-
+<audio id="sq-sound-cheer" src="/sounds/cheer.mp3" preload="auto"></audio>
+<audio id="sq-sound-ding" src="/sounds/ding.mp3" preload="auto"></audio>
+<audio id="sq-sound-buzz" src="/sounds/buzz.mp3" preload="auto"></audio>
   <script>
     // ===========================
     // Sports Quiz Widget Script
@@ -984,6 +986,12 @@
           input.addEventListener("change", function () {
             userAnswers[index] = optIndex;
             nextBtnEl.disabled = false;
+             // ⭐ Play correct or wrong sound
+  if (optIndex === q.correctIndex) {
+    document.getElementById("sq-sound-ding").play();
+  } else {
+    document.getElementById("sq-sound-buzz").play();
+  }
           });
 
           // Keyboard support: space/enter on label
@@ -1029,6 +1037,9 @@
 
         scoreMainEl.textContent = "Your score: " + score + "/" + TOTAL_QUESTIONS;
         scorePercentageEl.textContent = "That's " + percentage + "%";
+        // ⭐ Play final cheer sound
+  document.getElementById("sq-sound-cheer").play();
+}
 
         let message = "";
         if (score === 5) {
