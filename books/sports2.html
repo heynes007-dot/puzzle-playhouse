@@ -460,7 +460,7 @@
       </div>
     </footer>
   </div>
-
+<audio id="sq-sound-cheer" src="/puzzle-playhouse/Sounds/cheer.mp3" preload="auto"></audio>
   <script>
     // =========================
     // Sports Quiz Widget Script
@@ -711,12 +711,7 @@
         setTimeout(() => playTone(180, 120, "square", 0.22), 130);
       }
 
-      function playCheerSound() {
-        // Simple celebratory chord
-        playTone(523, 220, "sine", 0.25); // C
-        setTimeout(() => playTone(659, 220, "sine", 0.25), 40); // E
-        setTimeout(() => playTone(784, 220, "sine", 0.25), 80); // G
-      }
+     
 
       const cardEl = document.getElementById("quiz-card");
       const counterEl = document.getElementById("quiz-counter");
@@ -936,7 +931,7 @@
         playAgainBtn.className = "quiz-btn quiz-btn-primary";
         playAgainBtn.textContent = "Play Again";
         playAgainBtn.addEventListener("click", function () {
-          playCheerSound();
+         document.getElementById("sq-sound-cheer").play();
           createNewQuiz();
         });
 
