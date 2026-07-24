@@ -993,10 +993,17 @@
           }
 
           // Handle selection
-          input.addEventListener("change", function () {
-            userAnswers[index] = optIndex;
-            nextBtnEl.disabled = false;
-          });
+         input.addEventListener("change", function () {
+  userAnswers[index] = optIndex;
+  nextBtnEl.disabled = false;
+
+  // ⭐ Play correct or wrong sound
+  if (optIndex === q.correctIndex) {
+    document.getElementById("sq-sound-ding").play();
+  } else {
+    document.getElementById("sq-sound-buzz").play();
+  }
+});
 
           // Keyboard support: space/enter on label
           label.addEventListener("keydown", function (e) {
