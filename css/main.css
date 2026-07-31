@@ -554,3 +554,76 @@ nav.primary-nav {
 .monthly-puzzle .button {
   margin: 20px 0;
 }
+/* 🧩 Middle Section Layout */
+.page-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Grid for puzzle sections */
+.puzzle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+/* Column styling */
+.puzzle-col {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.puzzle-col:hover {
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+/* Headings and text */
+.puzzle-col h2 {
+  color: #ffd700;
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.puzzle-col p {
+  color: silver;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: silver;
+  color: black;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  background: #ffd700;
+  box-shadow: 0 0 15px #ffd700, 0 0 25px #ffea80;
+  transform: translateY(-2px);
+}
+
+/* Countdown text */
+.countdown-text {
+  font-size: 1.2rem;
+  color: #d9d9d9;
+  margin-top: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
