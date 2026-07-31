@@ -567,7 +567,7 @@ nav.primary-nav {
 /* Grid for puzzle sections */
 .puzzle-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ grid-template-columns: 1fr;
   gap: 50px;
   margin-top: 40px;
   text-align: center;
