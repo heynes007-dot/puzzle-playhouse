@@ -618,7 +618,6 @@ nav.primary-nav {
   box-shadow: 0 0 15px #ffd700, 0 0 25px #ffea80;
   transform: translateY(-2px);
 }
-
 /* Countdown text */
 .countdown-text {
   font-size: 1.2rem;
@@ -628,16 +627,14 @@ nav.primary-nav {
   letter-spacing: 1px;
 }
 body {
-  position: relative; /* establishes stacking context */
   background-color: #000;
   background-image:
     radial-gradient(rgba(255,215,0,0.04) 1px, transparent 1px),
     radial-gradient(rgba(255,215,0,0.04) 1px, transparent 1px);
   background-size: 60px 60px;
   background-position: 0 0, 30px 30px;
-  z-index: 0; /* base layer */
 }
-
+/* Side fade */
 body::before {
   content: "";
   position: fixed;
@@ -645,10 +642,12 @@ body::before {
   pointer-events: none;
   background: linear-gradient(
     to right,
-    rgba(0,0,0,0.6) 0%,
+    rgba(0,0,0,0.7) 0%,
     rgba(0,0,0,0) 20%,
     rgba(0,0,0,0) 80%,
-    rgba(0,0,0,0.6) 100%
+    rgba(0,0,0,0.7) 100%
   );
+  z-index: 1;
+}
   z-index: 1; /* sits above background but below content */
 }
