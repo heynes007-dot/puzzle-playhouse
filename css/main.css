@@ -393,7 +393,7 @@ nav.primary-nav {
 .terms-container p,
 .terms-container ul,
 .terms-container li {
-  text-align: center;
+  text-align: Left;
 }
 .terms-container ul + h2 {
   margin-top: 25px;
