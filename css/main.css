@@ -398,6 +398,9 @@ nav.primary-nav {
 .terms-container ul + h2 {
   margin-top: 25px;
 }
+.terms-container ul {
+  margin-bottom: 25px;
+}
 /* Shared promo container size */
 .book-promo,
 .mv-book-promo {
