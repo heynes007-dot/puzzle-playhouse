@@ -58,9 +58,6 @@
     </div>
   </header>
 
-    
-    
-    
     <div class="books-text" style="text-align:center;">
   <h1>Contact Us</h1>
   <p>We’d love to hear from you. Send us a message below.</p>
@@ -93,7 +90,21 @@
 </section>
 
 <!-- Thank You Popup -->
-<div id="thankYouPopup" class="popup" style="display:none;">
+<div id="thankYouPopup" class="popup" style="
+  display:none;
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform:translate(-50%, -50%);
+  background-color:#111;
+  color:#fff;
+  border:2px solid gold;
+  padding:25px 40px;
+  border-radius:10px;
+  text-align:center;
+  box-shadow:0 0 20px gold;
+  z-index:9999;
+">
   <h3>Thank you!</h3>
   <p>Your message has been sent. We’ll reply as soon as we can if a response is needed.</p>
   <p>Redirecting you to our sign‑up page…</p>
