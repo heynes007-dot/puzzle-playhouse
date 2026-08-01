@@ -395,6 +395,9 @@ nav.primary-nav {
 .terms-container li {
   text-align: right;
 }
+.terms-container ul + h2 {
+  margin-top: 25px;
+}
 /* Shared promo container size */
 .book-promo,
 .mv-book-promo {
