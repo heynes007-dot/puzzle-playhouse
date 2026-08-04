@@ -679,10 +679,66 @@ const formulaOneQuestions = [
   { category: "General Sports", question: "Which country won the first ever ICC T20 World Cup?", correct: "India", incorrect: ["Pakistan", "Australia", "South Africa"] },
   { category: "General Sports", question: "Which sport features the Diamond League?", correct: "Athletics", incorrect: ["Cycling", "Swimming", "Gymnastics"] }
       ];
+const cricketQuestions = [
+  { category: "Cricket", question: "What is the maximum number of overs in a T20 innings?", correct: "20 overs", incorrect: ["10 overs", "30 overs", "50 overs"] },
+  { category: "Cricket", question: "What does LBW stand for?", correct: "Leg Before Wicket", incorrect: ["Long Ball Wide", "Left Bat Wing", "Line Break Warning"] },
+  { category: "Cricket", question: "Which country won the first ever Cricket World Cup in 1975?", correct: "West Indies", incorrect: ["Australia", "India", "England"] },
+  { category: "Cricket", question: "How many players are on a cricket team?", correct: "11", incorrect: ["10", "12", "15"] },
+  { category: "Cricket", question: "What is the term for a bowler taking three wickets in three balls?", correct: "Hat-trick", incorrect: ["Triple strike", "Three-run burst", "Bowler’s sweep"] },
+  { category: "Cricket", question: "Which player is known as the 'Little Master'?", correct: "Sachin Tendulkar", incorrect: ["Virat Kohli", "Sunil Gavaskar", "Brian Lara"] },
+  { category: "Cricket", question: "What is the name of the line the bowler must not cross?", correct: "Crease", incorrect: ["Boundary", "Pitch line", "Field mark"] },
+  { category: "Cricket", question: "Which country hosts the Ashes along with England?", correct: "Australia", incorrect: ["India", "South Africa", "New Zealand"] },
+  { category: "Cricket", question: "What is the term for scoring 100 runs?", correct: "Century", incorrect: ["Half-century", "Double", "Ton-up"] },
+  { category: "Cricket", question: "Which format of cricket is played over five days?", correct: "Test cricket", incorrect: ["ODI", "T20", "Super Sixes"] },
 
+  { category: "Cricket", question: "What is the protective gear worn on the legs called?", correct: "Pads", incorrect: ["Guards", "Shields", "Leg wraps"] },
+  { category: "Cricket", question: "Which country won the 2019 ICC Cricket World Cup?", correct: "England", incorrect: ["India", "Australia", "New Zealand"] },
+  { category: "Cricket", question: "What is the term for a batsman getting out without scoring?", correct: "Duck", incorrect: ["Zero-out", "Blank", "No-run fall"] },
+  { category: "Cricket", question: "Who is known as the 'King of Swing'?", correct: "Wasim Akram", incorrect: ["James Anderson", "Brett Lee", "Shaun Pollock"] },
+  { category: "Cricket", question: "How many balls are in one over?", correct: "6", incorrect: ["5", "8", "10"] },
+  { category: "Cricket", question: "Which country is home to the IPL?", correct: "India", incorrect: ["Pakistan", "Sri Lanka", "Bangladesh"] },
+  { category: "Cricket", question: "What is the name of the central strip of the field?", correct: "Pitch", incorrect: ["Lane", "Track", "Runway"] },
+  { category: "Cricket", question: "Which player holds the record for the fastest ODI century?", correct: "AB de Villiers", incorrect: ["Chris Gayle", "Virat Kohli", "Shahid Afridi"] },
+  { category: "Cricket", question: "What is the term for a bowler delivering a ball too high or too wide?", correct: "Wide", incorrect: ["Loose", "Long", "High ball"] },
+  { category: "Cricket", question: "Which country is nicknamed the 'Black Caps'?", correct: "New Zealand", incorrect: ["South Africa", "Sri Lanka", "England"] },
+
+  { category: "Cricket", question: "What is the name of the trophy awarded in the Ashes?", correct: "The Ashes Urn", incorrect: ["Cricket Cup", "Test Trophy", "Empire Shield"] },
+  { category: "Cricket", question: "Which player is famous for the helicopter shot?", correct: "MS Dhoni", incorrect: ["Rohit Sharma", "Virat Kohli", "Hardik Pandya"] },
+  { category: "Cricket", question: "What is the term for a ball that bounces very high?", correct: "Bouncer", incorrect: ["High-rise", "Popper", "Lift ball"] },
+  { category: "Cricket", question: "Which country won the T20 World Cup in 2022?", correct: "England", incorrect: ["India", "Australia", "Pakistan"] },
+  { category: "Cricket", question: "What is the role of the wicketkeeper?", correct: "Catch balls behind the stumps", incorrect: ["Call field positions", "Start overs", "Mark boundaries"] },
+  { category: "Cricket", question: "Which player is known as 'The Wall'?", correct: "Rahul Dravid", incorrect: ["Virat Kohli", "Steve Smith", "Joe Root"] },
+  { category: "Cricket", question: "What is the term for a batsman scoring 50 runs?", correct: "Half-century", incorrect: ["Mini-ton", "Half-mark", "Fifty-up"] },
+  { category: "Cricket", question: "Which country is known as the Proteas?", correct: "South Africa", incorrect: ["Zimbabwe", "Sri Lanka", "Bangladesh"] },
+  { category: "Cricket", question: "What is the term for a ball that spins sharply?", correct: "Turn", incorrect: ["Flip", "Curve", "Roll"] },
+  { category: "Cricket", question: "Which player has the most Test runs?", correct: "Sachin Tendulkar", incorrect: ["Ricky Ponting", "Jacques Kallis", "Alastair Cook"] },
+
+  { category: "Cricket", question: "What is the term for a fielder close to the batsman?", correct: "Slip", incorrect: ["Guard", "Runner", "Marker"] },
+  { category: "Cricket", question: "Which country won the 1983 Cricket World Cup?", correct: "India", incorrect: ["Australia", "England", "Pakistan"] },
+  { category: "Cricket", question: "What is the term for a ball that doesn’t bounce?", correct: "Full toss", incorrect: ["Roller", "Flat ball", "No-bounce"] },
+  { category: "Cricket", question: "Which player is known for the 'Doosra' delivery?", correct: "Muttiah Muralitharan", incorrect: ["Shane Warne", "Harbhajan Singh", "Anil Kumble"] },
+  { category: "Cricket", question: "What is the term for changing the batting order?", correct: "Shuffle", incorrect: ["Switch", "Swap", "Rotate"] },
+  { category: "Cricket", question: "Which country is nicknamed the Men in Blue?", correct: "India", incorrect: ["Sri Lanka", "Pakistan", "Bangladesh"] },
+  { category: "Cricket", question: "What is the term for a ball that swings late?", correct: "Reverse swing", incorrect: ["Late curve", "Back swing", "Tail spin"] },
+  { category: "Cricket", question: "Which player scored 400* in a Test match?", correct: "Brian Lara", incorrect: ["Chris Gayle", "Steve Smith", "David Warner"] },
+  { category: "Cricket", question: "What is the term for a fielder stopping a boundary?", correct: "Save", incorrect: ["Block", "Hold", "Stopper"] },
+  { category: "Cricket", question: "Which country won the 2007 T20 World Cup?", correct: "India", incorrect: ["Australia", "Pakistan", "South Africa"] },
+
+  { category: "Cricket", question: "What is the term for a batsman hitting the ball over the boundary without bouncing?", correct: "Six", incorrect: ["Four", "Strike", "Clear"] },
+  { category: "Cricket", question: "Which player is known as 'Boom Boom'?", correct: "Shahid Afridi", incorrect: ["Shoaib Akhtar", "Babar Azam", "Mohammad Yousuf"] },
+  { category: "Cricket", question: "What is the term for a slow, looping delivery?", correct: "Lofted ball", incorrect: ["Dropper", "Floater", "Soft spin"] },
+  { category: "Cricket", question: "Which country won the 1999 Cricket World Cup?", correct: "Australia", incorrect: ["Pakistan", "England", "South Africa"] },
+  { category: "Cricket", question: "What is the term for a bowler who bowls fast deliveries?", correct: "Pace bowler", incorrect: ["Spin bowler", "Medium bowler", "Soft bowler"] },
+  { category: "Cricket", question: "Which player is known for the 'switch hit'?", correct: "Kevin Pietersen", incorrect: ["Joe Root", "Ben Stokes", "Eoin Morgan"] },
+  { category: "Cricket", question: "What is the term for a batsman running between the wickets?", correct: "Single", incorrect: ["Dash", "Sprint", "Run-up"] },
+  { category: "Cricket", question: "Which country is nicknamed the Tigers?", correct: "Bangladesh", incorrect: ["Sri Lanka", "Pakistan", "India"] },
+  { category: "Cricket", question: "What is the term for a ball that hits the stumps?", correct: "Bowled", incorrect: ["Hit-out", "Strike-down", "Stump-hit"] },
+  { category: "Cricket", question: "Which player has the most ODI runs?", correct: "Sachin Tendulkar", incorrect: ["Virat Kohli", "Ricky Ponting", "Kumar Sangakkara"] }
+];
       const allQuestions = footballQuestions.concat(
         formulaOneQuestions,
-        generalSportsQuestions
+        generalSportsQuestions,
+        cricketQuestions
       );
 
       // --- Utility: shuffle array in-place ---
