@@ -53,7 +53,41 @@
     </nav>
   </div>
 </header>
- 
+ <main class="colouring-wrapper">
+
+  <h1 class="colouring-title">Interactive Colouring Page</h1>
+  <p class="colouring-sub">Tap a colour, then tap the picture to fill it in.</p>
+
+  <!-- COLOUR PALETTE -->
+  <div class="colour-palette">
+    <button class="colour-btn" data-colour="#ff595e" style="background:#ff595e"></button>
+    <button class="colour-btn" data-colour="#ffca3a" style="background:#ffca3a"></button>
+    <button class="colour-btn" data-colour="#8ac926" style="background:#8ac926"></button>
+    <button class="colour-btn" data-colour="#1982c4" style="background:#1982c4"></button>
+    <button class="colour-btn" data-colour="#6a4c93" style="background:#6a4c93"></button>
+    <button class="colour-btn" data-colour="#000000" style="background:#000000"></button>
+    <button class="colour-btn" data-colour="#ffffff" style="background:#ffffff; border:1px solid #ccc"></button>
+  </div>
+
+  <!-- SVG COLOURING AREA -->
+  <div class="colouring-area">
+    <svg id="colouringSVG" viewBox="0 0 500 500">
+
+      <!-- ⭐ Replace these shapes with your real colouring SVG ⭐ -->
+      <rect x="50" y="50" width="150" height="150" fill="#fff" stroke="#000" class="colour-section"/>
+      <circle cx="300" cy="150" r="75" fill="#fff" stroke="#000" class="colour-section"/>
+      <polygon points="150,350 250,250 350,350" fill="#fff" stroke="#000" class="colour-section"/>
+
+    </svg>
+  </div>
+
+  <!-- ACTION BUTTONS -->
+  <div class="colour-actions">
+    <button id="resetBtn" class="action-btn">Reset</button>
+    <button id="downloadBtn" class="action-btn primary">Download</button>
+  </div>
+
+</main>
 <!-- FOOTER -->
 <footer class="pp-footer">
   <div class="footer-grid">
