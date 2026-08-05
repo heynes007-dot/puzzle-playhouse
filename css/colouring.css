@@ -1,0 +1,24 @@
+.colour-palette {
+  background: #111; /* subtle dark grey panel */
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.colour-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #d4af37; /* gold outline for visibility */
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.colour-btn:hover {
+  transform: scale(1.15);
+  border-color: #fff; /* highlight on hover */
+box-shadow: 0 0 8px #d4af37;
+}
