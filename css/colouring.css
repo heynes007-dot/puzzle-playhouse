@@ -132,3 +132,13 @@ box-shadow: 0 0 8px #d4af37;
 .etsy-btn:hover {
   background: #d85c17;
 }
+.colouring-book-preview {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.colouring-book-image {
+  width: 220px;        /* adjust size if needed */
+  border-radius: 10px; /* soft rounded corners */
+  display: inline-block;
+}
