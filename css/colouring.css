@@ -152,3 +152,6 @@ box-shadow: 0 0 8px #d4af37;
   z-index: 1;
   margin-top: 40px;
 }
+.site-header {
+  background: red !important;
+}
