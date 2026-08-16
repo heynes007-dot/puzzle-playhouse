@@ -632,3 +632,8 @@ body {
   background-color: #000;
   color: #fff;
 }
+.buy-colouring-book .btn.primary {
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+}
