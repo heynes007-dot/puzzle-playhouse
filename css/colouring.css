@@ -153,4 +153,15 @@ box-shadow: 0 0 8px #d4af37;
   z-index: 1;
   margin-top: 40px;
 }
+.site-header {
+  position: relative;
+  z-index: 100;
+  padding: 20px 0;
+}
 
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 120px;
+}
