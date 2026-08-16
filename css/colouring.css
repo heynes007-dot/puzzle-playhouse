@@ -142,3 +142,13 @@ box-shadow: 0 0 8px #d4af37;
   border-radius: 10px; /* soft rounded corners */
   display: inline-block;
 }
+.colouring-wrapper .site-header {
+  position: relative;
+  z-index: 100;
+}
+
+.colouring-wrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: 40px;
+}
