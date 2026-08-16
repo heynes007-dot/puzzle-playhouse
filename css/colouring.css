@@ -108,9 +108,10 @@ box-shadow: 0 0 8px #d4af37;
 }
 .buy-colouring-book .btn.primary {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 60px;
   position: relative;
 }
+
 .etsy-note {
   margin-top: 25px;
   font-size: 1rem;
