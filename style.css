@@ -759,7 +759,8 @@ input[type="email"] {
     height: 50px;
     object-fit: contain;
 }
-.buy-colouring-book {
-  display: block;
+.buy-colouring-book .btn.primary {
+  display: inline-block;
+  margin-top: 20px;
   position: relative;
 }
