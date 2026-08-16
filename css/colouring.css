@@ -106,3 +106,28 @@
   border-color: #fff; /* highlight on hover */
 box-shadow: 0 0 8px #d4af37;
 }
+.buy-colouring-book .btn.primary {
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+}
+.etsy-note {
+  margin-top: 25px;
+  font-size: 1rem;
+  color: #666;
+}
+
+.etsy-btn {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 10px 22px;
+  background: #f26a1b; /* Etsy orange */
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.etsy-btn:hover {
+  background: #d85c17;
+}
