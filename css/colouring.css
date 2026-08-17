@@ -169,3 +169,33 @@ box-shadow: 0 0 8px #d4af37;
   width: 80%;
   opacity: 0.4;
 }
+.sketch-card img {
+  width: 220px;       /* keeps them neat and consistent */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.sketch-card .btn {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+.sketch-books h2,
+.sketch-card h3 {
+  color: #d4af37; /* PP gold */
+  text-shadow: 0 0 8px rgba(212,175,55,0.4); /* soft glow */
+  font-weight: 700;
+}
+
+.sketch-books h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.sketch-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
