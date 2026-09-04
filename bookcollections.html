@@ -10,6 +10,131 @@
   <link rel="stylesheet" href="/puzzle-playhouse/css/index.css">
   <link rel="stylesheet" href="/puzzle-playhouse/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Page‑specific theme overrides -->
+  <style>
+    /* PAGE BACKGROUND */
+    body {
+      background: #000;
+      color: #f5d36c;
+    }
+
+    /* SECTION HEADER */
+    .books-text h1 {
+      color: #f5d36c;
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 10px rgba(245, 211, 108, 0.4);
+    }
+
+    .books-text .intro {
+      color: #e8e8e8;
+      font-size: 1.2rem;
+    }
+
+    /* GRID CARDS */
+    .grid .card {
+      background: #111;
+      border: 1px solid #f5d36c;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .grid .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 20px rgba(245, 211, 108, 0.5);
+    }
+
+    .grid .card h2 {
+      color: #f5d36c;
+      margin-top: 1rem;
+    }
+
+    .grid .card p {
+      color: #e8e8e8;
+    }
+
+    .grid .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #000;
+      background: #f5d36c;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .grid .card a:hover {
+      box-shadow: 0 0 12px rgba(245, 211, 108, 0.7);
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      text-align: center;
+      padding: 3rem 1rem;
+      background: #111;
+      margin-top: 3rem;
+    }
+
+    .cta-buttons .cta-btn {
+      margin: 0.5rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 8px;
+      font-weight: bold;
+      color: #000;
+      background: #f5d36c;
+      transition: box-shadow 0.2s ease;
+    }
+
+    .cta-buttons .cta-btn:hover {
+      box-shadow: 0 0 12px rgba(245, 211, 108, 0.7);
+    }
+
+    .cta-text {
+      color: #e8e8e8;
+      margin-top: 1rem;
+    }
+
+    .cta-link {
+      color: #f5d36c;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    /* FOOTER */
+    .pp-footer {
+      background: #000;
+      color: #f5d36c;
+      padding: 3rem 1rem;
+    }
+
+    .footer-col h4,
+    .footer-col h3 {
+      color: #f5d36c;
+    }
+
+    .footer-col a {
+      color: #e8e8e8;
+    }
+
+    .footer-col a:hover {
+      color: #f5d36c;
+      text-shadow: 0 0 10px rgba(245, 211, 108, 0.5);
+    }
+
+    .social i {
+      color: #f5d36c;
+      transition: transform 0.2s ease, text-shadow 0.2s ease;
+    }
+
+    .social:hover i {
+      transform: scale(1.2);
+      text-shadow: 0 0 12px rgba(245, 211, 108, 0.7);
+    }
+  </style>
 </head>
 
 <body>
@@ -62,7 +187,7 @@
 
       <div class="card">
         <img src="images/notebooks.png" class="image-frame" alt="">
-        <h2>📓 Notebooks and ✍️ Drawing Books</h2>
+        <h2>📓 Notebooks & ✍️ Drawing Books</h2>
         <p>Simple and stylish notebooks for everyday use.</p>
         <a href="/puzzle-playhouse/books/notebooks.html">View Notebooks</a>
       </div>
@@ -102,14 +227,12 @@
   <footer class="pp-footer">
     <div class="footer-grid">
 
-      <!-- Brand -->
       <div class="footer-col brand">
         <img src="/puzzle-playhouse/logo.png" alt="Puzzle Playhouse Logo" class="footer-logo">
         <h3>Puzzle Playhouse</h3>
         <p>Creating fun, engaging and educational books that inspire curious minds and bring families together.</p>
       </div>
 
-      <!-- Quick Links -->
       <div class="footer-col">
         <h4>Quick Links</h4>
         <ul>
@@ -121,7 +244,6 @@
         </ul>
       </div>
 
-      <!-- Shop -->
       <div class="footer-col">
         <h4>Shop</h4>
         <ul>
@@ -133,7 +255,6 @@
         </ul>
       </div>
 
-      <!-- Help -->
       <div class="footer-col">
         <h4>Help</h4>
         <ul>
@@ -144,7 +265,6 @@
         </ul>
       </div>
 
-      <!-- Follow Us -->
       <div class="footer-col follow">
         <h4>Follow Us</h4>
         <div class="social-icons">
