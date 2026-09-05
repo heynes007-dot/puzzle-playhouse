@@ -634,7 +634,7 @@ body {
 }
 #reviewGrid .image-frame {
   width: 100%;
-  height: 240px;        /* fixed frame height */
+  height: 280px;        /* fixed frame height */
   object-fit: cover;    /* crops consistently */
   object-position: center;
   border-radius: 8px;
