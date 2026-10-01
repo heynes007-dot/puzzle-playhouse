@@ -58,7 +58,39 @@
     <h2>Explore Our collection of Puzzle Books for Grown Ups</h2>
     <p>Crosswords, Word Searches, and more — designed for fun, learning and memory improvement.</p>
   </section>
+  <!-- Sudoku challange -->
+<div id="sudoku-wrapper">
+    <h2 class="gold-title">Sudoku Challenge</h2>
 
+    <div class="controls">
+        <label>Grid Size:</label>
+        <select id="gridSize">
+            <option value="4">4×4</option>
+            <option value="6">6×6</option>
+            <option value="9" selected>9×9</option>
+        </select>
+
+        <label>Difficulty:</label>
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+
+        <button class="gold-btn" id="generateBtn">Generate Puzzle</button>
+        <button class="gold-btn" id="resetBtn">Reset</button>
+        <button class="gold-btn" id="solutionBtn">Show Solution</button>
+    </div>
+
+    <div class="status-bar">
+        <div><strong>⏱ Timer:</strong> <span id="timer">00:00</span></div>
+        <div><strong>⭐ Score:</strong> <span id="score">0</span></div>
+    </div>
+
+    <div id="sudoku-grid"></div>
+</div>
+
+  
   <!-- PUZZLE BOOK GRID -->
   <section class="categories">
 
