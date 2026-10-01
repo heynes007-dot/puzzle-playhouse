@@ -1,70 +1,87 @@
 #sudoku-wrapper {
-    max-width: 500px;
-    margin: auto;
+    max-width: 600px;
+    margin: 40px auto;
     text-align: center;
     font-family: Arial, sans-serif;
     background: #000;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 12px;
     color: #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
 }
 
+/* Bigger, bolder heading */
 .gold-title {
+    font-size: 2.2rem;
+    font-weight: 700;
     color: #FFD700;
-    text-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+    margin-bottom: 20px;
 }
 
+/* Control section layout */
 .controls {
-    margin-bottom: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 20px;
 }
 
 label {
-    color: #FFD700;
-    margin: 0 5px;
+    font-size: 1.1rem;
+    margin-right: 6px;
 }
 
+/* Larger dropdowns */
 select {
-    padding: 5px;
-    margin: 5px;
+    padding: 8px 10px;
+    font-size: 1rem;
     background: #111;
     color: #FFD700;
     border: 1px solid #FFD700;
-    border-radius: 5px;
+    border-radius: 6px;
+    min-width: 90px;
 }
 
+/* Bigger, glowing buttons */
 .gold-btn {
     background: #111;
     color: #FFD700;
     border: 1px solid #FFD700;
-    padding: 8px 12px;
-    margin: 5px;
-    border-radius: 5px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    border-radius: 6px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.25s;
 }
 
 .gold-btn:hover {
-    box-shadow: 0 0 10px #FFD700;
+    box-shadow: 0 0 12px #FFD700;
+    transform: scale(1.05);
 }
 
+/* Timer and score bar */
 .status-bar {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0;
-    font-size: 1.1rem;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 1.2rem;
 }
 
+/* Sudoku grid */
 #sudoku-grid {
     display: grid;
-    gap: 2px;
-    margin-top: 10px;
+    gap: 3px;
+    margin-top: 15px;
 }
 
 #sudoku-grid input {
     width: 100%;
     aspect-ratio: 1 / 1;
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     background: #111;
     color: #FFD700;
     border: 1px solid #333;
@@ -73,16 +90,26 @@ select {
 #sudoku-grid input:focus {
     outline: none;
     border-color: #FFD700;
-    box-shadow: 0 0 6px #FFD700;
+    box-shadow: 0 0 8px #FFD700;
 }
 
+/* Mobile adjustments */
 @media (max-width: 600px) {
-    #sudoku-grid input {
-        font-size: 1rem;
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gold-title {
+        font-size: 1.8rem;
+    }
+
+    select, .gold-btn {
+        width: 100%;
     }
 
     .status-bar {
         flex-direction: column;
-        gap: 5px;
+        gap: 6px;
     }
 }
