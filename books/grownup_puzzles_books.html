@@ -208,6 +208,136 @@
 
   </div>
 </footer>
+const grid = document.getElementById("sudoku-grid");
+const generateBtn = document.getElementById("generateBtn");
+const resetBtn = document.getElementById("resetBtn");
+const solutionBtn = document.getElementById("solutionBtn");
+const timerDisplay = document.getElementById("timer");
+const scoreDisplay = document.getElementById("score");
+
+let timer = null;
+let seconds = 0;
+let solution = [];
+
+function startTimer() {
+    clearInterval(timer);
+    seconds = 0;
+    timer = setInterval(() => {
+        seconds++;
+        let mins = String(Math.floor(seconds / 60)).padStart(2, "0");
+        let secs = String(seconds % 60).padStart(2, "0");
+        timerDisplay.textContent = `${mins}:${secs}`;
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timer);
+}
+
+function calculateScore(difficulty) {
+    const base = difficulty === "easy" ? 100 :
+                 difficulty === "medium" ? 200 :
+                 300;
+
+    const timePenalty = Math.floor(seconds / 5);
+    return Math.max(base - timePenalty, 10);
+}
+
+function createGrid(size) {
+    grid.innerHTML = "";
+    grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+
+    for (let i = 0; i < size * size; i++) {
+        const cell = document.createElement("input");
+        cell.type = "number";
+        cell.min = 1;
+        cell.max = size;
+        cell.addEventListener("input", checkCompletion);
+        grid.appendChild(cell);
+    }
+}
+
+function generatePuzzle(size, difficulty) {
+    createGrid(size);
+
+    const cells = [...grid.children];
+    solution = [];
+
+    // Build solution pattern
+    for (let i = 0; i < size; i++) {
+        solution[i] = [];
+        for (let j = 0; j < size; j++) {
+            const value = ((i * Math.floor(Math.sqrt(size)) + j) % size) + 1;
+            solution[i][j] = value;
+            const index = i * size + j;
+            cells[index].value = value;
+        }
+    }
+
+    // Remove numbers based on difficulty
+    let removeCount = difficulty === "easy" ? size * 2 :
+                      difficulty === "medium" ? size * 3 :
+                      size * 4;
+
+    while (removeCount > 0) {
+        const idx = Math.floor(Math.random() * cells.length);
+        if (cells[idx].value !== "") {
+            cells[idx].value = "";
+            removeCount--;
+        }
+    }
+
+    startTimer();
+    scoreDisplay.textContent = "0";
+}
+
+function checkCompletion() {
+    const cells = [...grid.children];
+    if (cells.length === 0) return;
+
+    if (cells.every(c => c.value !== "")) {
+        stopTimer();
+        const difficulty = document.getElementById("difficulty").value;
+        const score = calculateScore(difficulty);
+        scoreDisplay.textContent = score;
+    }
+}
+
+function showSolution() {
+    const size = parseInt(document.getElementById("gridSize").value);
+    const cells = [...grid.children];
+    if (!solution.length || cells.length === 0) return;
+
+    for (let i = 0; i < size; i++) {
+        for (let j = 0; j < size; j++) {
+            const index = i * size + j;
+            cells[index].value = solution[i][j];
+        }
+    }
+
+    stopTimer();
+    scoreDisplay.textContent = "0";
+}
+
+generateBtn.addEventListener("click", () => {
+    const size = parseInt(document.getElementById("gridSize").value);
+    const difficulty = document.getElementById("difficulty").value;
+    generatePuzzle(size, difficulty);
+});
+
+resetBtn.addEventListener("click", () => {
+    const size = parseInt(document.getElementById("gridSize").value);
+    createGrid(size);
+    stopTimer();
+    timerDisplay.textContent = "00:00";
+    scoreDisplay.textContent = "0";
+    solution = [];
+});
+
+solutionBtn.addEventListener("click", showSolution);
+
+// Optional: create an empty grid on load
+createGrid(parseInt(document.getElementById("gridSize").value));
 
 </body>
 </html>
